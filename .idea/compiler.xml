@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bond-adapter" />
+        <module name="bond-domain" />
+        <module name="bond-app" />
+        <module name="bond-infrastructure" />
+        <module name="demo-adapter" />
+        <module name="demo-client" />
+        <module name="bond-client" />
+        <module name="demo-infrastructure" />
+        <module name="demo-app" />
+        <module name="demo-domain" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
