@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ddd</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.dangkang</groupId>
+    <artifactId>dangkang</artifactId>
     <packaging>pom</packaging>
     <version>1.0.1</version>
 
@@ -14,11 +14,12 @@
     </properties>
 
     <modules>
-        <module>demo-adapter</module>
-        <module>demo-app</module>
-        <module>demo-client</module>
-        <module>demo-domain</module>
-        <module>demo-infrastructure</module>
+        <module>dangkang-adapter</module>
+        <module>dangkang-app</module>
+        <module>dangkang-client</module>
+        <module>dangkang-domain</module>
+        <module>dangkang-infrastructure</module>
+        <module>dangkang-start</module>
     </modules>
 
     <dependencies>
@@ -75,7 +76,7 @@
             <version>2.4.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.4</version>
@@ -94,7 +95,7 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -110,7 +111,7 @@
     </dependencies>
 
     <build>
-        <finalName>ddd-bond-template</finalName>
+        <finalName>dangkang-ddd-template</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
