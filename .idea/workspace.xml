@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="配置文件读取方式修改">
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="启动配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +90,7 @@
       <recent name="com.ddd.domain.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DangkangApplication">
+  <component name="RunManager" selected="Spring Boot.DangkangApplication (1)">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -113,6 +118,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DangkangApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dangkang-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dangkang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dangkang.DangkangApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DangkangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="dangkang-start" />
       <extension name="coverage">
@@ -128,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DangkangApplication (1)" />
         <item itemvalue="Spring Boot.DangkangApplication" />
         <item itemvalue="JUnit.DemoFacadeImplTest.payTest" />
       </list>
@@ -154,7 +173,7 @@
       <workItem from="1672367012846" duration="583000" />
       <workItem from="1672367716631" duration="22721000" />
       <workItem from="1672476830072" duration="720000" />
-      <workItem from="1672659966388" duration="601000" />
+      <workItem from="1672659966388" duration="7186000" />
     </task>
     <task id="LOCAL-00001" summary="错误处理组件添加">
       <created>1671444720888</created>
@@ -233,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672476978291</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="启动配置">
+      <created>1672660656574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672660656574</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +284,8 @@
     <MESSAGE value="日志脱敏打印" />
     <MESSAGE value="模板项目生成组件添加" />
     <MESSAGE value="配置文件读取方式修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置文件读取方式修改" />
+    <MESSAGE value="启动配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="启动配置" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

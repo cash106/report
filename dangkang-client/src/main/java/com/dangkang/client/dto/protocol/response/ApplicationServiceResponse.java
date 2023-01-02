@@ -9,9 +9,6 @@ public class ApplicationServiceResponse {
     private String type;
     private String code;
     private String message;
-    private String investorName;
-    private String bondCode;
-    private String holdingQuota;
 
     public String getType() {
         return type;
@@ -37,27 +34,4 @@ public class ApplicationServiceResponse {
         this.message = message;
     }
 
-    public String getInvestorName() {
-        return investorName;
-    }
-
-    public void setInvestorName(String investorName) {
-        this.investorName = investorName;
-    }
-
-    public String getBondCode() {
-        return bondCode;
-    }
-
-    public void setBondCode(String bondCode) {
-        this.bondCode = bondCode;
-    }
-
-    public String getHoldingQuota() {
-        return holdingQuota;
-    }
-
-    public void setHoldingQuota(String holdingQuota) {
-        this.holdingQuota = holdingQuota;
-    }
 }
