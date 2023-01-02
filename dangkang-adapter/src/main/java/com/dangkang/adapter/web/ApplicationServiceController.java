@@ -25,7 +25,7 @@ public class ApplicationServiceController {
     @Autowired
     private ApplicationService applicationService;
 
-    @PostMapping("/")
+    @PostMapping("/hello")
     @ResponseBody
     public ApplicationServiceResponse execute(ApplicationServiceRequest request){
 

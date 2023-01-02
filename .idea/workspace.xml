@@ -4,102 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="模板项目生成组件添加">
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/DataBaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/ValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/database/DataBaseErrorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/CallRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/QueryRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/QueryResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ExternalConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-prd.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-uat.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-start/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="配置文件读取方式修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archetype.yml" beforeDir="false" afterPath="$PROJECT_DIR$/archetype.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-adapter/src/main/java/com/ddd/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/src/main/java/com/ddd/app/domain/model/trade/ability/factoryimpl/DomainObjectFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/domain/model/trade/ability/factoryimpl/DomainObjectFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/src/main/java/com/ddd/app/domain/model/trade/ability/ruleimpl/DomainLogicalRuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/domain/model/trade/ability/ruleimpl/DomainLogicalRuleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/src/main/java/com/ddd/app/domain/model/trade/ability/serviceimpl/DomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/domain/model/trade/ability/serviceimpl/DomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/src/main/java/com/ddd/app/service/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-app/src/main/java/com/ddd/app/transaction/ApplicationServiceTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/transaction/ApplicationServiceTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/api/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/protocol/request/ApplicationServiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/protocol/response/ApplicationServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/result/ApplicationServiceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/ApplicationServiceResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/validator/ApplicationServiceVoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/ApplicationServiceVoValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/validator/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/validator/PhoneNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/PhoneNumberValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-client/src/main/java/com/ddd/client/dto/valueobject/ApplicationServiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/valueobject/ApplicationServiceVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/BizException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/ApplicationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/Error.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/ErrorConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/ErrorManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/NetError.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/NetErrorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetErrorContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/NetErrorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetErrorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/BindErrorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/strategy/BindErrorStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/ConnectErrorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/strategy/ConnectErrorStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/DefaultNetErrorStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/NetErrorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/strategy/NetErrorStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/SocketErrorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/strategy/SocketErrorStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/exception/net/strategy/SocketTimeoutErrorStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/strategy/SocketTimeoutErrorStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/DomainObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/DomainObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/ability/domainService/DomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/ability/domainService/DomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/ability/facade/ExternalAccessFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/ability/facade/ExternalAccessFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/ability/factory/DomainObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/ability/factory/DomainObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/ability/rule/DomainLogicalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/ability/rule/DomainLogicalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/repository/DomainObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/repository/DomainObjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-domain/src/main/java/com/ddd/domain/model/trade/type/ExternalResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/CallResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/annotation/NotNull.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/annotation/NotNull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/annotation/Nullable.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/annotation/Nullable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/annotation/VisibleForTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/annotation/VisibleForTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/util/EncodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/util/EncodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/util/FormatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/util/FormatUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/common/util/HashUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/common/util/HashUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/converter/ApplicationServiceDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/converter/DomainObjectConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/DomainObjectConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/ExternalClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/ExternalClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/ExternalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/ExternalRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/ExternalResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/ExternalResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/NetClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/NetClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/QueryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/QueryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/QueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/QueryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/external/QueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/QueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/facadeimpl/ExternalAccessFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/facadeimpl/ExternalAccessFacadeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/MaskConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/MaskConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/DataMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/DataMask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/DataMaskJsonFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/DataMaskJsonFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/MaskMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/MaskMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/MaskStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/MaskStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/Sensitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/Sensitive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/SensitiveType.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/SensitiveType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/strategy/EmailMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/strategy/EmailMask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/strategy/HashMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/strategy/HashMask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/strategy/NameMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/strategy/NameMask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/log/datamasking/strategy/PartMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/datamasking/strategy/PartMask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/repositoryimpl/DomainObjectRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/DomainObjectRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/repositoryimpl/dataobject/DomainObjectDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/dataobject/DomainObjectDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/repositoryimpl/mapper/DomainObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/java/com/ddd/infrastructure/repositoryimpl/mapper/DomainObjectMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/resources/data_mask.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/data_mask.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-infrastructure/src/main/resources/mapper/DomainObjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/mapper/DomainObjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,6 +86,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.DangkangApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoFacadeImplTest.payTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dangkang-infrastructure" />
       <extension name="coverage">
@@ -235,6 +153,8 @@
       <workItem from="1672104831327" duration="2303000" />
       <workItem from="1672367012846" duration="583000" />
       <workItem from="1672367716631" duration="22721000" />
+      <workItem from="1672476830072" duration="720000" />
+      <workItem from="1672659966388" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="错误处理组件添加">
       <created>1671444720888</created>
@@ -306,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671692086714</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="配置文件读取方式修改">
+      <created>1672476978291</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672476978291</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +257,8 @@
     <MESSAGE value="日志输出" />
     <MESSAGE value="日志脱敏打印" />
     <MESSAGE value="模板项目生成组件添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="模板项目生成组件添加" />
+    <MESSAGE value="配置文件读取方式修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置文件读取方式修改" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

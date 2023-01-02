@@ -130,7 +130,7 @@
                 <artifactId>maven-archetype-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <propertyFile>archetype.yaml</propertyFile>
+                    <propertyFile>archetype.yml</propertyFile>
                     <encoding>UTF-8</encoding>
                     <archetypeFilteredExtentions>java,xml,yaml,yml,properties</archetypeFilteredExtentions>
                 </configuration>
