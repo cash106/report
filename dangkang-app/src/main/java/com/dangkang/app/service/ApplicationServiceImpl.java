@@ -1,6 +1,7 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
+import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.ApplicationServiceDTO;
@@ -16,6 +17,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.validation.Validation;
 
 import static com.baidu.unbiz.fluentvalidator.ResultCollectors.toSimple;
 
@@ -46,7 +49,7 @@ public class ApplicationServiceImpl implements ApplicationService {
             logger.info("ApplicationServiceImpl.validateParameter输入参数验证成功");
 
             // 2.1 调用存储服务(ddd Repository)
-            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceDTO.getEmail());
+            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceDTO.getPhoneNumber());
             // 2.2 业务规则验证逻辑(ddd 业务规则封装)
             domainLogicalRule.check(domainObject);
             logger.info("DomainLogicalRule.check领域逻辑规则校验成功");
@@ -83,6 +86,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 
     private void validateParameter(ApplicationServiceDTO applicationServiceDTO){
         com.baidu.unbiz.fluentvalidator.Result result = FluentValidator.checkAll().failOver()
+                .on(applicationServiceDTO,new HibernateSupportedValidator<>().setHiberanteValidator(Validation.buildDefaultValidatorFactory().getValidator()))
                 .on(applicationServiceDTO.getPhoneNumber(),new PhoneNumberValidator())
                 .doValidate().result(toSimple());
         if(!result.isSuccess()){

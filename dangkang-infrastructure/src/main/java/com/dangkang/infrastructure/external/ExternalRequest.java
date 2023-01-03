@@ -8,40 +8,22 @@ import java.math.BigDecimal;
  */
 public class ExternalRequest {
 
-    private String orderId;
-    private String sourceAccount;//付款账户
-    private String targetAccount;//收款账户
-    private BigDecimal amount;//支付金额
+    private String email;
+    private String phoneNumber;
 
-    public String getSourceAccount() {
-        return sourceAccount;
+    public String getEmail() {
+        return email;
     }
 
-    public String getOrderId() {
-        return orderId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setSourceAccount(String sourceAccount) {
-        this.sourceAccount = sourceAccount;
-    }
-
-    public String getTargetAccount() {
-        return targetAccount;
-    }
-
-    public void setTargetAccount(String targetAccount) {
-        this.targetAccount = targetAccount;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

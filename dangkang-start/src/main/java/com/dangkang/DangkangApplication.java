@@ -20,7 +20,7 @@ public class DangkangApplication {
     public static void main(String[] args) {
 
         System.setProperty("profile","dev");
-        ApplicationContext applicationContext = SpringApplication.run(DangkangApplication.class, args);
+        SpringApplication.run(DangkangApplication.class, args);
 
     }
 }

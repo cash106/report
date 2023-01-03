@@ -8,8 +8,8 @@ import com.sun.org.apache.regexp.internal.RE;
  */
 public class Result {
 
-    public static final String SYSTEM_CODE="dangkang";
-    public static final String SYSTEM_DESCRIPTION="dangkang-ddd-template";
+    public static final String SYSTEM_CODE="A01";
+    public static final String SYSTEM_DESCRIPTION="dangkang";
 
     public static final String APPLICATIONSERVICE_EXECUTE_ERROR_CODE_UNHANDLE_EXCEPTION="U001";//为所有交易未处理的异常定义的错误码
 
@@ -18,14 +18,14 @@ public class Result {
      * 1、成功返回码=系统编码+交易编码+交易执行成功返回码(所有交易执行成功返回码默认为“0000”)
      * 2、失败返回码=系统编码+交易编码+交易执行错误返回码(由交易执行过程中的错误码产生)
      */
-    private StringBuffer resultCode = new StringBuffer();
+    private String resultCode;
     public static final String APPLICATIONSERVICE_EXECUTE_SUCCESS_CODE = "0000";//所有交易成功时的返回码
     /**
      * 返回消息：
      * 1、成功返回消息=系统描述+交易描述+交易执行成功描述(所有交易执行成功返回码默认为“交易成功”)
      * 2、错误返回消息=系统描述+交易描述+交易执行具体错误描述(由交易过程中的错误消息产生)
      */
-    private StringBuffer resultDescription = new StringBuffer();
+    private String resultDescription ;
     public static final String APPLICATIONSERVICE_EXECUTE_SUCCESS_MESSAGE = "交易成功";
     /**
      * 返回类型 s-成功 f-失败
@@ -37,30 +37,32 @@ public class Result {
 
     public Result buildSuccess(String tradeCode,String tradeDescription){
         this.resultType=RESULT_TYPE_SUCCESS;
-        this.resultCode.append(SYSTEM_CODE).append(tradeCode).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_CODE);
-        this.resultDescription.append(SYSTEM_DESCRIPTION).append(tradeDescription).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_MESSAGE);
+        this.resultCode=new StringBuffer().append(SYSTEM_CODE).append(tradeCode).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_CODE).toString();
+        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION).append(tradeDescription).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_MESSAGE).toString();
         return this;
     }
 
     public Result buildFailure(String tradeCode,String tradeDescription,String errorCode,String errorMessage){
         this.resultType=RESULT_TYPE_FAILURE;
-        this.resultCode.append(SYSTEM_CODE)
+        this.resultCode=new StringBuffer().append(SYSTEM_CODE)
                 .append(tradeCode)
-                .append(errorCode);
-        this.resultDescription.append(SYSTEM_DESCRIPTION)
+                .append(errorCode).toString();
+        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
                 .append(tradeDescription)
-                .append(errorMessage);
+                .append(errorMessage).toString();
         return this;
     }
 
     public Result buildUnknownFailure(String tradeCode,String tradeDescription,String errorMessage){
         this.resultType=RESULT_TYPE_FAILURE;
-        this.resultCode.append(SYSTEM_CODE)
+        this.resultCode=new StringBuffer().append(SYSTEM_CODE)
                 .append(tradeCode)
-                .append(APPLICATIONSERVICE_EXECUTE_ERROR_CODE_UNHANDLE_EXCEPTION);
-        this.resultDescription.append(SYSTEM_DESCRIPTION)
+                .append(APPLICATIONSERVICE_EXECUTE_ERROR_CODE_UNHANDLE_EXCEPTION)
+                .toString();
+        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
                 .append(tradeDescription)
-                .append(errorMessage);
+                .append(errorMessage)
+                .toString();
         return this;
     }
 
@@ -73,20 +75,20 @@ public class Result {
         return this;
     }
 
-    public StringBuffer getResultCode() {
+    public String getResultCode() {
         return resultCode;
     }
 
-    public Result setResultCode(StringBuffer resultCode) {
+    public Result setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
 
-    public StringBuffer getResultDescription() {
+    public String getResultDescription() {
         return resultDescription;
     }
 
-    public Result setResultDescription(StringBuffer resultDescription) {
+    public Result setResultDescription(String resultDescription) {
         this.resultDescription = resultDescription;
         return this;
     }

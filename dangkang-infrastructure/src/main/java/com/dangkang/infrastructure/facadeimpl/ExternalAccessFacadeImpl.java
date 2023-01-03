@@ -36,6 +36,8 @@ public class ExternalAccessFacadeImpl implements ExternalAccessFacade {
         try {
             //todo 根据上下文创建第三方接口toCall方法请求的数据报文
             ExternalRequest request = new ExternalRequest();
+            request.setEmail(callRequestDto.getEmail());
+            request.setPhoneNumber(callRequestDto.getPhoneNumber());
             logger.info("第三方toCall方法调用：request = [{}]",request);
             ExternalResponse externalResponse = externalClient.toCall(request);
             logger.info("第三方toCall方法调用结果：response = [{}]",externalResponse);

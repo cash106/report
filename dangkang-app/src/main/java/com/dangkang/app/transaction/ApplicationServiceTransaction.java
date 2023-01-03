@@ -5,6 +5,7 @@ import com.dangkang.domain.model.trade.ability.facade.ExternalAccessFacade;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import com.dangkang.domain.model.trade.type.CallRequestDto;
 import com.dangkang.domain.model.trade.type.CallResult;
+import com.dangkang.infrastructure.converter.DomainObjectConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,12 +33,8 @@ public class ApplicationServiceTransaction {
         domainObjectRepository.update(domainObject);
 
         //1.2 第三方服务调用
-        externalAccessFacade.call(getCallRequestDto());
+        externalAccessFacade.call(DomainObjectConverter.INSTANCE.toCallRequestDto(domainObject));
 
     }
 
-    private CallRequestDto getCallRequestDto(){
-        //todo 根据上下文产生第三方接口调用的请求数据dto
-        return new CallRequestDto();
-    }
 }
