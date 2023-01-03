@@ -5,6 +5,7 @@ package com.dangkang.infrastructure.external;
  * @date 2022/12/23 15:40
  */
 public class NetClient {
+    public static final String SUCCEED = "0000";
     public static final String IP = "0.0.0.0";
 
     protected String ip;

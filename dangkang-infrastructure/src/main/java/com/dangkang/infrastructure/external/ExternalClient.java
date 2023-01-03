@@ -22,7 +22,7 @@ public class ExternalClient extends NetClient {
             throw new RemoteException("远程连接被拒绝",new ConnectException("Connection refused"));
         }
 
-        return new ExternalResponse().setCode(Constant.SUCCEED);
+        return new ExternalResponse().setCode(SUCCEED);
     }
 
 

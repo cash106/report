@@ -13,10 +13,17 @@ import java.util.stream.Stream;
  * @date 2022/12/21 16:18
  */
 public class MaskConverter  extends MessageConverter {
+    public MaskConverter(){
+
+    }
 
     @Override
     public String convert(ILoggingEvent event) {
-        return super.convert(event);
+        try {
+            return this.doMask(event);
+        } catch (Exception e) {
+            return super.convert(event);
+        }
     }
 
     private String doMask(ILoggingEvent event){
@@ -26,7 +33,6 @@ public class MaskConverter  extends MessageConverter {
                if(obj instanceof String){
                    msg = obj.toString();
                }else{
-                   System.out.println("开始转换对象==============="+"\n"+"================");
                    msg = DataMask.toJSONString(obj);
                }
                return msg;

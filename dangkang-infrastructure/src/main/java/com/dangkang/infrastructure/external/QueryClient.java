@@ -20,7 +20,7 @@ public class QueryClient extends NetClient{
         if(url == null || !url.contains(IP)){
             throw new RemoteException("远程连接被拒绝",new ConnectException("Connection refused"));
         }
-        return new QueryResponse().setCode(Constant.SUCCEED);
+        return new QueryResponse().setCode(SUCCEED);
     }
 
 

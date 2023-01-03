@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @date 2022/12/30 11:27
  */
 @Component
-@PropertySource("classpath:META-INF/config/external-${profile}.properties")
+@PropertySource("classpath:config/external-${profile}.properties")
 @ConfigurationProperties(prefix = "external.system")
     public class ExternalConfig {
 
