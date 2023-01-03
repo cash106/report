@@ -3,9 +3,9 @@ package com.dangkang.app.service;
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
+import com.dangkang.client.dto.ApplicationServiceDTO;
 import com.dangkang.client.dto.result.ApplicationServiceResult;
 import com.dangkang.client.dto.validator.PhoneNumberValidator;
-import com.dangkang.client.dto.valueobject.ApplicationServiceVO;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
@@ -37,16 +37,16 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @Override
-    public ApplicationServiceResult execute(ApplicationServiceVO applicationServiceVO) {
+    public ApplicationServiceResult execute(ApplicationServiceDTO applicationServiceDTO) {
         ApplicationServiceResult applicationServiceResult = new ApplicationServiceResult();
         try {
             //todo 业务逻辑编排
             // 1 输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
-            validateParameter(applicationServiceVO);
+            validateParameter(applicationServiceDTO);
             logger.info("ApplicationServiceImpl.validateParameter输入参数验证成功");
 
             // 2.1 调用存储服务(ddd Repository)
-            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceVO.getEmail());
+            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceDTO.getEmail());
             // 2.2 业务规则验证逻辑(ddd 业务规则封装)
             domainLogicalRule.check(domainObject);
             logger.info("DomainLogicalRule.check领域逻辑规则校验成功");
@@ -81,9 +81,9 @@ public class ApplicationServiceImpl implements ApplicationService {
         }
     }
 
-    private void validateParameter(ApplicationServiceVO applicationServiceVO){
+    private void validateParameter(ApplicationServiceDTO applicationServiceDTO){
         com.baidu.unbiz.fluentvalidator.Result result = FluentValidator.checkAll().failOver()
-                .on(applicationServiceVO.getPhoneNumber(),new PhoneNumberValidator())
+                .on(applicationServiceDTO.getPhoneNumber(),new PhoneNumberValidator())
                 .doValidate().result(toSimple());
         if(!result.isSuccess()){
             StringBuffer stringBuffer = new StringBuffer();

@@ -18,12 +18,9 @@ import org.springframework.context.annotation.ComponentScans;
 public class DangkangApplication {
 
     public static void main(String[] args) {
+
         System.setProperty("profile","dev");
         ApplicationContext applicationContext = SpringApplication.run(DangkangApplication.class, args);
-        String[] names = applicationContext.getBeanDefinitionNames();
-        for (String name :names){
-            if(name.contains("applicationServiceController"))
-            System.out.println(name);
-        }
+
     }
 }

@@ -36,4 +36,5 @@ public class NetError {
      return new NetError().setErrorCode(this.errorCode).setErrorMessage(String.format(this.errorMessage,values));
     }
 
+
 }

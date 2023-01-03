@@ -1,13 +1,16 @@
-package com.dangkang.client.dto.valueobject;
+package com.dangkang.client.dto;
 
+
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  */
-public class ApplicationServiceVO {
+public class ApplicationServiceDTO {
 
 
     private String email;
 
+    @NotBlank
     private String phoneNumber;
 
 

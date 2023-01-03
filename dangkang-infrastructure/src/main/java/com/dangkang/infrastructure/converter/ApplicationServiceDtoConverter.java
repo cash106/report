@@ -3,7 +3,7 @@ package com.dangkang.infrastructure.converter;
 import com.dangkang.client.dto.protocol.request.ApplicationServiceRequest;
 import com.dangkang.client.dto.protocol.response.ApplicationServiceResponse;
 import com.dangkang.client.dto.result.ApplicationServiceResult;
-import com.dangkang.client.dto.valueobject.ApplicationServiceVO;
+import com.dangkang.client.dto.ApplicationServiceDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -15,7 +15,7 @@ import org.mapstruct.factory.Mappers;
 public interface ApplicationServiceDtoConverter {
     ApplicationServiceDtoConverter INSTANCE = Mappers.getMapper(ApplicationServiceDtoConverter.class);
 
-    ApplicationServiceVO toApplicationServiceVO(ApplicationServiceRequest applicationServiceRequest);
+    ApplicationServiceDTO toApplicationServiceVO(ApplicationServiceRequest applicationServiceRequest);
 
     ApplicationServiceResponse toApplicationServiceResponse(ApplicationServiceResult applicationServiceResult);
 }

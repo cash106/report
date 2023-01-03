@@ -26,6 +26,7 @@ public class MaskConverter  extends MessageConverter {
                if(obj instanceof String){
                    msg = obj.toString();
                }else{
+                   System.out.println("开始转换对象==============="+"\n"+"================");
                    msg = DataMask.toJSONString(obj);
                }
                return msg;

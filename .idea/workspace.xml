@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="启动配置">
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="配置报错解决">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/ApplicationServiceVoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/ApplicationServiceDtoValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/valueobject/ApplicationServiceVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/ApplicationServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetError.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/MaskConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/log/MaskConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/external-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-prd.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/external-prd.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/META-INF/config/external-uat.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/external-uat.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/start/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +81,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.33095723" />
   </component>
   <component name="RecentsManager">
@@ -82,6 +92,10 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.dangkang.domain.exception.net.NetErrorManager" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ddd-demo\dangkang\dangkang-infrastructure\src\main\resources\config" />
+      <recent name="F:\ddd-demo\dangkang\dangkang-infrastructure\src\main\resources" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.ddd.infrastructure.external" />
     </key>
@@ -91,13 +105,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.DangkangApplication (1)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,7 +189,8 @@
       <workItem from="1672367012846" duration="583000" />
       <workItem from="1672367716631" duration="22721000" />
       <workItem from="1672476830072" duration="720000" />
-      <workItem from="1672659966388" duration="7186000" />
+      <workItem from="1672659966388" duration="8498000" />
+      <workItem from="1672709411952" duration="6384000" />
     </task>
     <task id="LOCAL-00001" summary="错误处理组件添加">
       <created>1671444720888</created>
@@ -259,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672660656574</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="配置报错解决">
+      <created>1672667729322</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672667729322</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +309,8 @@
     <MESSAGE value="模板项目生成组件添加" />
     <MESSAGE value="配置文件读取方式修改" />
     <MESSAGE value="启动配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="启动配置" />
+    <MESSAGE value="配置报错解决" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置报错解决" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

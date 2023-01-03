@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @date 2022/12/30 11:10
  */
 @Component
-@PropertySource(value = "classpath:META-INF/config/application.properties")
+@PropertySource(value = "classpath:config/application.properties")
 public class ApplicationConfig {
 
     private String systemCode;
