@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="日志脱敏bug解决">
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="unittest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/transaction/ApplicationServiceTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/transaction/ApplicationServiceTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/CallRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/type/CallRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetErrorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/exception/net/NetErrorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/DomainObjectConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/DomainObjectConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/ExternalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/external/ExternalRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/facadeimpl/ExternalAccessFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/facadeimpl/ExternalAccessFacadeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/dataobject/DomainObjectDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/dataobject/DomainObjectDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/data_mask.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/data_mask.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +93,7 @@
       <recent name="com.ddd.domain.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DangkangApplication (1)">
+  <component name="RunManager" selected="JUnit.DomainLogicalRuleImplTest.checkTest">
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dangkang.infrastructure.test.test" />
       <module name="dangkang-infrastructure" />
@@ -112,19 +103,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,9 +167,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DomainLogicalRuleImplTest.checkTest" />
         <item itemvalue="Spring Boot.DangkangApplication (1)" />
         <item itemvalue="Application.test" />
-        <item itemvalue="JUnit.DomainLogicalRuleImplTest.checkTest" />
         <item itemvalue="Spring Boot.DangkangApplication" />
         <item itemvalue="JUnit.DemoFacadeImplTest.payTest" />
       </list>
@@ -219,7 +197,8 @@
       <workItem from="1672367716631" duration="22721000" />
       <workItem from="1672476830072" duration="720000" />
       <workItem from="1672659966388" duration="8498000" />
-      <workItem from="1672709411952" duration="19675000" />
+      <workItem from="1672709411952" duration="21515000" />
+      <workItem from="1672795730770" duration="6631000" />
     </task>
     <task id="LOCAL-00001" summary="错误处理组件添加">
       <created>1671444720888</created>
@@ -326,7 +305,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672731726488</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="对象赋值打印">
+      <created>1672737015989</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672737015989</updated>
+    </task>
+    <task id="LOCAL-00017" summary="unittest">
+      <created>1672737652878</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672737652878</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +348,10 @@
     <MESSAGE value="配置报错解决" />
     <MESSAGE value="dto优化" />
     <MESSAGE value="日志脱敏bug解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志脱敏bug解决" />
+    <MESSAGE value="对象赋值打印" />
+    <MESSAGE value="final commit" />
+    <MESSAGE value="unittest" />
+    <option name="LAST_COMMIT_MESSAGE" value="unittest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

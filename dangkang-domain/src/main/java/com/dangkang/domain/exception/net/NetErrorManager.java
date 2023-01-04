@@ -26,6 +26,8 @@ public class NetErrorManager {
     public static final String CONNECTION_RESET = "Connection reset";
     public static final String BROKEN_PIPE = "Broken pipe";
 
+
+    public static final NetError ERR_NETWORK = new NetError("N000","网络错误");
     public static final NetError ERR_SOCKET_READ_TIMEOUT = new NetError("N001","本机[%s]远程连接到URL[%s]后读取超时,设定超时时间为[%s]ms");
     public static final NetError ERR_CONNECTION_TIMEOUT = new NetError("N002","本机[%s]远程连接到RUL[%s]超时,设定超时时间为[%s]ms");
     public static final NetError ERR_SOCKET_CLOSED = new NetError("N003","本机[%s]连接客户端地址[%s]被关闭，检查服务端代码中是否主动关闭了连接(显式或隐式的调用了socket.closed())");
@@ -58,13 +60,12 @@ public class NetErrorManager {
     }
 
     public static String parse(NetErrorContext context){
-        NetError error =null;
+        NetError error = ERR_NETWORK;
         Throwable t = context.getThrowable();
 
         boolean done=false;
 
         while(t != null){
-
             for(NetErrorStrategy strategy : strategyList){
                 if(strategy.accept(t)){
                     error = strategy.parseNetError(context);

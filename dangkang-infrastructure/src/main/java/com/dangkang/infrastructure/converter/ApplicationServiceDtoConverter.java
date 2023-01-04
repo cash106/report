@@ -16,7 +16,7 @@ import org.mapstruct.factory.Mappers;
 public interface ApplicationServiceDtoConverter {
     ApplicationServiceDtoConverter INSTANCE = Mappers.getMapper(ApplicationServiceDtoConverter.class);
 
-    ApplicationServiceDTO toApplicationServiceVO(ApplicationServiceRequest applicationServiceRequest);
+    ApplicationServiceDTO toApplicationServiceDTO(ApplicationServiceRequest applicationServiceRequest);
 
     @Mapping(source = "resultType",target = "type")
     @Mapping(source = "resultCode",target = "code")

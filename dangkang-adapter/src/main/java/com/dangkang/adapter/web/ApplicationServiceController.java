@@ -28,7 +28,7 @@ public class ApplicationServiceController {
     public ApplicationServiceResponse execute(@RequestBody ApplicationServiceRequest request){
 
         logger.info("ApplicationService请求参数 request = [{}]",request);
-        ApplicationServiceDTO applicationServiceDTO = ApplicationServiceDtoConverter.INSTANCE.toApplicationServiceVO(request);
+        ApplicationServiceDTO applicationServiceDTO = ApplicationServiceDtoConverter.INSTANCE.toApplicationServiceDTO(request);
         ApplicationServiceResult applicationServiceResult = applicationService.execute(applicationServiceDTO);
         ApplicationServiceResponse response = ApplicationServiceDtoConverter.INSTANCE.toApplicationServiceResponse(applicationServiceResult);
         logger.info("ApplicationService响应参数 response = [{}]",response);
