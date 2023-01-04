@@ -6,7 +6,6 @@ import java.net.ConnectException;
 import java.rmi.RemoteException;
 
 /**
- * @author anzj
  * @date 2022/12/21 10:54
  */
 public class QueryClient extends NetClient{

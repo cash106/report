@@ -11,8 +11,6 @@ import com.dangkang.infrastructure.repositoryimpl.mapper.DomainObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/**
- */
 @Component
 public class DomainObjectRepositoryImpl implements DomainObjectRepository {
 

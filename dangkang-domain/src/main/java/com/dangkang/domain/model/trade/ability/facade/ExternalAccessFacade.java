@@ -6,7 +6,6 @@ import com.dangkang.domain.model.trade.type.QueryRequestDto;
 import com.dangkang.domain.model.trade.type.QueryResult;
 
 /**
- * @author anzj
  * @date 2022/12/23 10:23
  */
 public interface ExternalAccessFacade {

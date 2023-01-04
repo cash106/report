@@ -7,13 +7,7 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author anzj
- * @date 2022/12/20 15:28
- */
 public class NetErrorManager {
-
-
 
     public static final String ERR_NETWORK_CODE="N001";
     /*网络异常消息*/

@@ -3,7 +3,6 @@ package com.dangkang.domain.model.trade.repository;
 import com.dangkang.domain.model.trade.DomainObject;
 
 /**
- * @author anzj
  * @date 2022/12/23 10:23
  */
 public interface DomainObjectRepository {

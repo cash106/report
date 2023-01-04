@@ -1,14 +1,9 @@
 package com.dangkang.domain.exception.net;
 
-
-import org.omg.CosNaming.NamingContextExtPackage.AddressHelper;
-
 import java.net.InetAddress;
-import java.net.InterfaceAddress;
 import java.net.UnknownHostException;
 
 /**
- * @author anzj
  * @date 2022/12/20 15:43
  */
 public class NetErrorContext {

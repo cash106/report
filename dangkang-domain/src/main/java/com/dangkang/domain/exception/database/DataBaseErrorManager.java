@@ -1,7 +1,6 @@
 package com.dangkang.domain.exception.database;
 
 /**
- * @author anzj
  * @date 2022/12/30 16:06
  */
 public class DataBaseErrorManager {

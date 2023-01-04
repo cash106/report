@@ -1,7 +1,5 @@
 package com.dangkang.client.dto.result;
 
-import com.sun.org.apache.regexp.internal.RE;
-
 /**
  * 定义applicationService的返回结果
  * 所有applicationService返回结果DTO的父类

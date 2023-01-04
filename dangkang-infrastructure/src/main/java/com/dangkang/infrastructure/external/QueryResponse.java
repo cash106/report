@@ -1,7 +1,6 @@
 package com.dangkang.infrastructure.external;
 
 /**
- * @author anzj
  * @date 2022/12/21 10:54
  */
 public class QueryResponse {

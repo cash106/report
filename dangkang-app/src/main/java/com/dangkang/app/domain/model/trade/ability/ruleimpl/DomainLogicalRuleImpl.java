@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 业务领域规则对象:复杂业务规则的封装
- * @author anzj
  * @date 2022/12/23 13:53
  */
 @Component

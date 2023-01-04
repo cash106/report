@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author anzj
  * @date 2022/12/19 14:14
  */
 @Component

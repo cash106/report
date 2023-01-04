@@ -7,10 +7,10 @@ import com.dangkang.domain.exception.net.NetErrorManager;
 import java.net.ConnectException;
 
 /**
- * @author anzj
  * @date 2022/12/20 15:42
  */
 public class ConnectErrorStrategy implements NetErrorStrategy {
+
     @Override
     public NetError parseNetError(NetErrorContext context) {
         NetError error = null;
@@ -21,10 +21,8 @@ public class ConnectErrorStrategy implements NetErrorStrategy {
         }else if(message.contains(NetErrorManager.CONNECTION_TIMEOUT)){
             error = NetErrorManager.ERR_CONNECTION_TIMEOUT.buildError(context.getLocalhost(),context.getRemoteIp(),String.valueOf(context.getConnectTimeout()));
         }
-
         return error;
     }
-
     @Override
     public boolean accept(Throwable t) {
         if(t instanceof ConnectException){

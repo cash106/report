@@ -1,7 +1,6 @@
 package com.dangkang.domain.exception;
 
 /**
- * @author anzj
  * @date 2022/12/30 15:46
  */
 public class ValidationException extends ApplicationException{

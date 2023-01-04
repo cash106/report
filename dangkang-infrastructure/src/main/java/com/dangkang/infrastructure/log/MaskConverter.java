@@ -9,7 +9,6 @@ import org.slf4j.helpers.MessageFormatter;
 import java.util.stream.Stream;
 
 /**
- * @author anzj
  * @date 2022/12/21 16:18
  */
 public class MaskConverter  extends MessageConverter {

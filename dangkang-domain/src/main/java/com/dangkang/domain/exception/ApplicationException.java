@@ -1,7 +1,6 @@
 package com.dangkang.domain.exception;
 
 /**
- * @author anzj
  * @date 2022/12/19 11:05
  */
 public class ApplicationException extends RuntimeException {

@@ -3,7 +3,6 @@ package com.dangkang.infrastructure.external;
 import java.math.BigDecimal;
 
 /**
- * @author anzj
  * @date 2022/12/20 17:37
  */
 public class ExternalRequest {

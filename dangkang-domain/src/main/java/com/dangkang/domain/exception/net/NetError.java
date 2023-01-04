@@ -1,7 +1,5 @@
 package com.dangkang.domain.exception.net;
 
-/**
- */
 public class NetError {
 
     String errorCode;

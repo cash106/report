@@ -5,7 +5,6 @@ import com.baidu.unbiz.fluentvalidator.ValidatorContext;
 import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
 
 /**
- * @author anzj
  * @date 2022/12/23 11:45
  */
 public class EmailValidator extends ValidatorHandler<String> implements Validator<String> {

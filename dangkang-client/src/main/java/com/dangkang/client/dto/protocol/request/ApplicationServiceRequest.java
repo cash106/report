@@ -1,7 +1,6 @@
 package com.dangkang.client.dto.protocol.request;
 
 /**
- * @author anzj
  * @date 2022/12/19 17:06
  */
 public class ApplicationServiceRequest {

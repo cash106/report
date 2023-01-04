@@ -4,10 +4,6 @@ import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.factory.DomainObjectFactory;
 import org.springframework.stereotype.Component;
 
-/**
- * @author anzj
- * @date 2022/12/23 14:08
- */
 @Component
 public class DomainObjectFactoryImpl implements DomainObjectFactory {
 

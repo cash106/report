@@ -7,7 +7,6 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
- * @author anzj
  * @date 2022/12/23 18:01
  */
 @Mapper

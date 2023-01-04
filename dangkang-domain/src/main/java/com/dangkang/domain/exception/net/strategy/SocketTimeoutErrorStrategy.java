@@ -7,7 +7,6 @@ import com.dangkang.domain.exception.net.NetErrorManager;
 import java.net.SocketTimeoutException;
 
 /**
- * @author anzj
  * @date 2022/12/20 15:42
  */
 public class SocketTimeoutErrorStrategy implements NetErrorStrategy {

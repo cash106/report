@@ -4,7 +4,7 @@ import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
 import org.springframework.stereotype.Component;
 
 /**
- * @author anzj
+ * 暂无dataSource，自定义mapper实现
  * @date 2022/12/23 18:13
  */
 @Component

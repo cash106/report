@@ -7,7 +7,6 @@ import com.baidu.unbiz.fluentvalidator.ValidatorContext;
 import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
 
 /**
- * @author anzj
  * @date 2022/12/19 10:25
  */
 public class PhoneNumberValidator extends ValidatorHandler<String> implements Validator<String> {

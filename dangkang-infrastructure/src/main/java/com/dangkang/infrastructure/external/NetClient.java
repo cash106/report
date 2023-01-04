@@ -1,7 +1,6 @@
 package com.dangkang.infrastructure.external;
 
 /**
- * @author anzj
  * @date 2022/12/23 15:40
  */
 public class NetClient {

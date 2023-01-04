@@ -1,7 +1,6 @@
 package com.dangkang.domain.model.trade;
 
 /**
- * @author anzj
  * @date 2022/12/23 10:22
  */
 public class DomainObject {

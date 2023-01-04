@@ -1,7 +1,6 @@
 package com.dangkang.domain.model.trade.type;
 
 /**
- * @author anzj
  * @date 2022/12/20 17:48
  */
 public class CallResult<T> {

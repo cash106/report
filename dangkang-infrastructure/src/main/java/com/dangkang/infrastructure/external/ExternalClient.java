@@ -7,7 +7,6 @@ import java.net.ConnectException;
 import java.rmi.RemoteException;
 
 /**
- * @author anzj
  * @date 2022/12/20 17:38
  */
 public class ExternalClient extends NetClient {

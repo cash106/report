@@ -3,13 +3,9 @@ package com.dangkang.client.dto;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-/**
- */
 public class ApplicationServiceDTO {
 
-
     private String email;
-
     @NotBlank
     private String phoneNumber;
 
