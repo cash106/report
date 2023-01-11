@@ -1,12 +1,14 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
+import com.baidu.unbiz.fluentvalidator.Result;
 import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
-import com.dangkang.client.dto.ApplicationServiceDTO;
-import com.dangkang.client.dto.result.ApplicationServiceResult;
-import com.dangkang.client.dto.validator.PhoneNumberValidator;
+import com.dangkang.client.dto.request.ApplicationServiceRequestDTO;
+import com.dangkang.client.dto.response.resultdata.ApplicationServiceResultDataDTO;
+import com.dangkang.client.dto.response.SingleResponse;
+import com.dangkang.client.dto.request.validator.PhoneNumberValidator;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
@@ -40,16 +42,17 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @Override
-    public ApplicationServiceResult execute(ApplicationServiceDTO applicationServiceDTO) {
-        ApplicationServiceResult applicationServiceResult = new ApplicationServiceResult();
+    public SingleResponse<ApplicationServiceResultDataDTO> execute(ApplicationServiceRequestDTO applicationServiceRequestDTO) {
+        SingleResponse<ApplicationServiceResultDataDTO> response = new SingleResponse<>();
+        ApplicationServiceResultDataDTO applicationServiceResultDataDTO = new ApplicationServiceResultDataDTO();
         try {
             //todo 业务逻辑编排
             // 1 输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
-            validateParameter(applicationServiceDTO);
+            validateParameter(applicationServiceRequestDTO);
             logger.info("ApplicationServiceImpl.validateParameter输入参数验证成功");
 
             // 2.1 调用存储服务(ddd Repository)
-            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceDTO.getPhoneNumber());
+            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceRequestDTO.getPhoneNumber());
             // 2.2 业务规则验证逻辑(ddd 业务规则封装)
             domainLogicalRule.check(domainObject);
             logger.info("DomainLogicalRule.check领域逻辑规则校验成功");
@@ -63,9 +66,9 @@ public class ApplicationServiceImpl implements ApplicationService {
             logger.info("ApplicationServiceTransaction.transaction事务服务执行成功");
 
             // 4 构建成功返回
-            applicationServiceResult.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
-            setDataFromApplicationService(applicationServiceResult);
-            return applicationServiceResult;
+            response.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
+            response.setData(applicationServiceResultDataDTO);
+            return response;
         } catch (ApplicationException e) {
             if(e.getCause()!=null){//应用异常是自定义或转换为ApplicationException，系统异常会内嵌在ApplicationException中
                 logger.error(e.getDetailMessage(),e); //系统环境出错
@@ -74,20 +77,20 @@ public class ApplicationServiceImpl implements ApplicationService {
             }
 
             // 4.1 构建错误返回
-            applicationServiceResult.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e.getErrorCode(),e.getPromptMessage());
-            return applicationServiceResult;
+            response.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e.getErrorCode(),e.getPromptMessage());
+            return response;
         }catch (Throwable t){
             logger.error("未处理的异常",t);
             //4.2 构建未处理异常返回
-            applicationServiceResult.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t.getMessage());
-            return applicationServiceResult;
+            response.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t.getMessage());
+            return response;
         }
     }
 
-    private void validateParameter(ApplicationServiceDTO applicationServiceDTO){
-        com.baidu.unbiz.fluentvalidator.Result result = FluentValidator.checkAll().failOver()
-                .on(applicationServiceDTO,new HibernateSupportedValidator<>().setHiberanteValidator(Validation.buildDefaultValidatorFactory().getValidator()))
-                .on(applicationServiceDTO.getPhoneNumber(),new PhoneNumberValidator())
+    private void validateParameter(ApplicationServiceRequestDTO applicationServiceRequestDTO){
+        Result result = FluentValidator.checkAll().failOver()
+                .on(applicationServiceRequestDTO,new HibernateSupportedValidator<>().setHiberanteValidator(Validation.buildDefaultValidatorFactory().getValidator()))
+                .on(applicationServiceRequestDTO.getPhoneNumber(),new PhoneNumberValidator())
                 .doValidate().result(toSimple());
         if(!result.isSuccess()){
             StringBuffer stringBuffer = new StringBuffer();
@@ -97,13 +100,5 @@ public class ApplicationServiceImpl implements ApplicationService {
             throw new ValidationException().setPromptMessage(stringBuffer.toString());
         }
     }
-
-    private ApplicationServiceResult setDataFromApplicationService(ApplicationServiceResult applicationServiceResult){
-        //todo 从applicationService上下文中获取返回数据
-        applicationServiceResult.setData("");
-        return applicationServiceResult;
-    }
-
-
 
 }

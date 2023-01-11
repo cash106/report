@@ -3,6 +3,7 @@ package com.dangkang.domain.model.trade.repository;
 import com.dangkang.domain.model.trade.DomainObject;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @date 2022/12/23 10:23
@@ -19,8 +20,8 @@ public interface DomainObjectRepository {
     void update(DomainObject domainObject);
 
     /**
-     * 按条件多条查询
+     * 获取分页信息
      */
-    List<DomainObject> findList(String... condition);
+    Map<String,Object> findPage(int index, int size, String email);
 
 }

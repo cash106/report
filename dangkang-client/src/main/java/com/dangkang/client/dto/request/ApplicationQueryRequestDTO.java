@@ -1,13 +1,15 @@
-package com.dangkang.client.dto;
+package com.dangkang.client.dto.request;
 
-import javax.validation.constraints.NotNull;
+import com.dangkang.client.dto.request.QueryRequest;
 
-public class ApplicationServiceDTO {
+/**
+ * @date 2023/1/11 10:48
+ */
+public class ApplicationQueryRequestDTO extends QueryRequest {
 
-    @NotNull
     private String email;
-    private String phoneNumber;
 
+    private String phoneNumber;
 
     public String getEmail() {
         return email;
@@ -24,4 +26,5 @@ public class ApplicationServiceDTO {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 }

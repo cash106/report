@@ -1,5 +1,6 @@
 package com.dangkang.infrastructure.repositoryimpl;
 
+import com.dangkang.client.dto.response.resultdata.QueryResultDataDTO;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.exception.DataBaseException;
 import com.dangkang.domain.exception.database.DataBaseErrorManager;
@@ -8,10 +9,14 @@ import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import com.dangkang.infrastructure.converter.DomainObjectConverter;
 import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
 import com.dangkang.infrastructure.repositoryimpl.mapper.DomainObjectMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class DomainObjectRepositoryImpl implements DomainObjectRepository {
@@ -50,7 +55,17 @@ public class DomainObjectRepositoryImpl implements DomainObjectRepository {
     }
 
     @Override
-    public List<DomainObject> findList(String... condition) {
-        return DomainObjectConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(condition));
+    public Map<String,Object> findPage(int index, int size, String email) {
+        PageHelper.startPage(index,size);
+        List<DomainObject> domainObjects = DomainObjectConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(index,size,email));
+        List<QueryResultDataDTO> queryResultDataDTOS = DomainObjectConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
+        PageInfo<QueryResultDataDTO> pageInfo = new PageInfo<>(queryResultDataDTOS);
+        Map<String,Object> pageMap = new HashMap<>();
+        pageMap.put("totalPages",pageInfo.getPages());
+        pageMap.put("totalSize",pageInfo.getSize());
+        pageMap.put("currentIndex",pageInfo.getPageNum());
+        pageMap.put("pageSize",pageInfo.getPageSize());
+        pageMap.put("dataList",pageInfo.getList());
+        return pageMap ;
     }
 }

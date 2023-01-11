@@ -1,10 +1,10 @@
-package com.dangkang.client.dto.result;
+package com.dangkang.client.dto.response;
 
 /**
  * 定义applicationService的返回结果
  * 所有applicationService返回结果DTO的父类
  */
-public class Result {
+public class Response {
 
     public static final String SYSTEM_CODE="A01";
     public static final String SYSTEM_DESCRIPTION="dangkang";
@@ -33,14 +33,14 @@ public class Result {
     public static final String RESULT_TYPE_FAILURE="F";
 
 
-    public Result buildSuccess(String tradeCode,String tradeDescription){
+    public Response buildSuccess(String tradeCode, String tradeDescription){
         this.resultType=RESULT_TYPE_SUCCESS;
         this.resultCode=new StringBuffer().append(SYSTEM_CODE).append(tradeCode).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_CODE).toString();
         this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION).append(tradeDescription).append(APPLICATIONSERVICE_EXECUTE_SUCCESS_MESSAGE).toString();
         return this;
     }
 
-    public Result buildFailure(String tradeCode,String tradeDescription,String errorCode,String errorMessage){
+    public Response buildFailure(String tradeCode, String tradeDescription, String errorCode, String errorMessage){
         this.resultType=RESULT_TYPE_FAILURE;
         this.resultCode=new StringBuffer().append(SYSTEM_CODE)
                 .append(tradeCode)
@@ -51,7 +51,7 @@ public class Result {
         return this;
     }
 
-    public Result buildUnknownFailure(String tradeCode,String tradeDescription,String errorMessage){
+    public Response buildUnknownFailure(String tradeCode, String tradeDescription, String errorMessage){
         this.resultType=RESULT_TYPE_FAILURE;
         this.resultCode=new StringBuffer().append(SYSTEM_CODE)
                 .append(tradeCode)
@@ -68,7 +68,7 @@ public class Result {
         return resultType;
     }
 
-    public Result setResultType(String resultType) {
+    public Response setResultType(String resultType) {
         this.resultType = resultType;
         return this;
     }
@@ -77,7 +77,7 @@ public class Result {
         return resultCode;
     }
 
-    public Result setResultCode(String resultCode) {
+    public Response setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
@@ -86,7 +86,7 @@ public class Result {
         return resultDescription;
     }
 
-    public Result setResultDescription(String resultDescription) {
+    public Response setResultDescription(String resultDescription) {
         this.resultDescription = resultDescription;
         return this;
     }

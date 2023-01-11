@@ -1,13 +1,12 @@
-package com.dangkang.client.dto.protocol.request;
+package com.dangkang.client.dto.request;
 
 /**
- * @date 2023/1/11 14:03
+ * @date 2023/1/11 17:08
  */
-public class QueryRequest {
+public class QueryRequest extends Request{
 
     private int index;//页码
-    private int size;//每页记录数
-
+    private int size;//页大小
 
     public int getIndex() {
         return index;

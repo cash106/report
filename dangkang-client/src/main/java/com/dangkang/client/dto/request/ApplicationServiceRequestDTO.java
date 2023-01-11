@@ -1,12 +1,11 @@
-package com.dangkang.client.dto.protocol.request;
+package com.dangkang.client.dto.request;
 
-/**
- * @date 2023/1/10 17:44
- */
-public class ApplicationQueryRequest extends QueryRequest{
+import javax.validation.constraints.NotNull;
 
+public class ApplicationServiceRequestDTO extends Request{
+
+    @NotNull
     private String email;
-
     private String phoneNumber;
 
     public String getEmail() {

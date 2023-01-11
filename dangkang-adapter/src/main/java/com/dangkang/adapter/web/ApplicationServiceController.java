@@ -2,16 +2,12 @@ package com.dangkang.adapter.web;
 
 import com.dangkang.client.api.ApplicationQueryService;
 import com.dangkang.client.api.ApplicationService;
-import com.dangkang.client.dto.ApplicationQueryConditionDTO;
-import com.dangkang.client.dto.ApplicationQueryResultDTO;
-import com.dangkang.client.dto.ApplicationServiceDTO;
-import com.dangkang.client.dto.protocol.request.ApplicationQueryRequest;
-import com.dangkang.client.dto.protocol.request.ApplicationServiceRequest;
-import com.dangkang.client.dto.protocol.response.ApplicationQueryDataResponse;
-import com.dangkang.client.dto.protocol.response.ApplicationServiceResponse;
-import com.dangkang.client.dto.result.ApplicationQueryResult;
-import com.dangkang.client.dto.result.ApplicationServiceResult;
-import com.dangkang.infrastructure.converter.ApplicationServiceDtoConverter;
+import com.dangkang.client.dto.request.ApplicationQueryRequestDTO;
+import com.dangkang.client.dto.request.ApplicationServiceRequestDTO;
+import com.dangkang.client.dto.response.resultdata.ApplicationServiceResultDataDTO;
+import com.dangkang.client.dto.response.MultipleResponse;
+import com.dangkang.client.dto.response.resultdata.QueryResultDataDTO;
+import com.dangkang.client.dto.response.SingleResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,25 +25,21 @@ public class ApplicationServiceController {
 
     @PostMapping("/hello")
     @ResponseBody
-    public ApplicationServiceResponse execute(@RequestBody ApplicationServiceRequest request){
+    public SingleResponse<ApplicationServiceResultDataDTO> execute(@RequestBody ApplicationServiceRequestDTO applicationServiceRequestDTO){
 
-        logger.info("ApplicationService请求参数 request = [{}]",request);
-        ApplicationServiceDTO applicationServiceDTO = ApplicationServiceDtoConverter.INSTANCE.toApplicationServiceDTO(request);
-        ApplicationServiceResult applicationServiceResult = applicationService.execute(applicationServiceDTO);
-        ApplicationServiceResponse response = ApplicationServiceDtoConverter.INSTANCE.toApplicationServiceResponse(applicationServiceResult);
+        logger.info("ApplicationService请求参数 request = [{}]",applicationServiceRequestDTO);
+        SingleResponse<ApplicationServiceResultDataDTO> response = applicationService.execute(applicationServiceRequestDTO);
         logger.info("ApplicationService响应参数 response = [{}]",response);
         return response;
     }
 
     @PostMapping("/query")
     @ResponseBody
-    public ApplicationQueryDataResponse queryService(ApplicationQueryRequest applicationQueryRequest){
+    public MultipleResponse queryService(ApplicationQueryRequestDTO applicationQueryRequest){
         logger.info("ApplicationQueryService请求参数 request = [{}]",applicationQueryRequest);
-        ApplicationQueryConditionDTO applicationQueryConditionDTO = ApplicationServiceDtoConverter.INSTANCE.toQueryConditionDTO(applicationQueryRequest);
-        ApplicationQueryResult<ApplicationQueryResultDTO> applicationQueryResult = applicationQueryService.queryService(applicationQueryConditionDTO);
-        ApplicationQueryDataResponse<ApplicationQueryResultDTO> applicationQueryDataResponse = ApplicationServiceDtoConverter.INSTANCE.toQueryDataResponse(applicationQueryResult);
-        logger.info("ApplicationQueryService响应参数 response = [{}]",applicationQueryDataResponse);
-        return applicationQueryDataResponse;
+        MultipleResponse<QueryResultDataDTO> response = applicationQueryService.queryService(applicationQueryRequest);
+        logger.info("ApplicationQueryService响应参数 response = [{}]",response);
+        return response;
 
     }
 

@@ -28,7 +28,7 @@ public class DomainObjectMapperImpl implements DomainObjectMapper{
     }
 
     @Override
-    public List<DomainObjectDO> findList(String... condition) {
+    public List<DomainObjectDO> findList(int index,int size,String email) {
         List<DomainObjectDO> domainObjectDOS = new ArrayList<>();
         domainObjectDOS.add(new DomainObjectDO("DomainObjectMapper@email.com","176*****"));
         domainObjectDOS.add(new DomainObjectDO("DomainObjectMapper@email.com","199*****"));

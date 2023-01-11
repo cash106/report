@@ -14,5 +14,5 @@ public interface DomainObjectMapper {
 
     int save(DomainObjectDO domainObjectDO);
 
-    List<DomainObjectDO> findList(String... condition);
+    List<DomainObjectDO> findList(int index,int size, String email);
 }

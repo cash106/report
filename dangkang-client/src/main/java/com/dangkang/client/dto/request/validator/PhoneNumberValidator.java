@@ -1,4 +1,4 @@
-package com.dangkang.client.dto.validator;
+package com.dangkang.client.dto.request.validator;
 
 import com.baidu.unbiz.fluentvalidator.Validator;
 import com.baidu.unbiz.fluentvalidator.ValidatorContext;

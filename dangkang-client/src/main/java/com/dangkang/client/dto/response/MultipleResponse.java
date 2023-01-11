@@ -1,9 +1,11 @@
-package com.dangkang.client.dto.protocol.response;
+package com.dangkang.client.dto.response;
+
+import java.util.List;
 
 /**
- * @date 2023/1/10 17:46
+ * @date 2023/1/11 17:00
  */
-public class ApplicationQueryResponse extends ApplicationServiceResponse{
+public class MultipleResponse<T> extends Response {
 
     private int totalPages;//总页数
     private long totalSize;//总记录数
@@ -11,6 +13,17 @@ public class ApplicationQueryResponse extends ApplicationServiceResponse{
     private int pageSize;//每页记录数
     private int startPosition;//当前页起始位置
     private int endPosition;//当前页结束位置
+
+    private List<T> data;
+
+
+    public List<T> getData() {
+        return data;
+    }
+
+    public void setData(List<T> data) {
+        this.data = data;
+    }
 
     public int getTotalPages() {
         return totalPages;
