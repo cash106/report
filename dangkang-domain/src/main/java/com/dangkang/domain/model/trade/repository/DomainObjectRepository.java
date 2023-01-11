@@ -2,6 +2,8 @@ package com.dangkang.domain.model.trade.repository;
 
 import com.dangkang.domain.model.trade.DomainObject;
 
+import java.util.List;
+
 /**
  * @date 2022/12/23 10:23
  */
@@ -13,5 +15,12 @@ public interface DomainObjectRepository {
     DomainObject findAndCheckEmpty(String email);
 
     void save(DomainObject domainObject);
+
     void update(DomainObject domainObject);
+
+    /**
+     * 按条件多条查询
+     */
+    List<DomainObject> findList(String... condition);
+
 }

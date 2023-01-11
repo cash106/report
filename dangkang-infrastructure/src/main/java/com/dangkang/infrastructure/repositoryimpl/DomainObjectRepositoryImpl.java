@@ -11,6 +11,8 @@ import com.dangkang.infrastructure.repositoryimpl.mapper.DomainObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class DomainObjectRepositoryImpl implements DomainObjectRepository {
 
@@ -45,5 +47,10 @@ public class DomainObjectRepositoryImpl implements DomainObjectRepository {
             throw new DataBaseException().setPromptMessage(DataBaseErrorManager.ERR_DATABASE_MESSAGE)
                                          .setCause(e);
         }
+    }
+
+    @Override
+    public List<DomainObject> findList(String... condition) {
+        return DomainObjectConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(condition));
     }
 }

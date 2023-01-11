@@ -2,6 +2,8 @@ package com.dangkang.infrastructure.repositoryimpl.mapper;
 
 import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
 
+import java.util.List;
+
 /**
  * @date 2022/12/23 10:39
  */
@@ -11,4 +13,6 @@ public interface DomainObjectMapper {
     DomainObjectDO select(String phoneNumber);
 
     int save(DomainObjectDO domainObjectDO);
+
+    List<DomainObjectDO> findList(String... condition);
 }

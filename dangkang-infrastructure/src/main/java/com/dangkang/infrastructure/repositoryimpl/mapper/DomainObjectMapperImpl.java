@@ -3,6 +3,9 @@ package com.dangkang.infrastructure.repositoryimpl.mapper;
 import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 暂无dataSource，自定义mapper实现
  * @date 2022/12/23 18:13
@@ -22,5 +25,13 @@ public class DomainObjectMapperImpl implements DomainObjectMapper{
     @Override
     public int save(DomainObjectDO domainObjectDO) {
         return 0;
+    }
+
+    @Override
+    public List<DomainObjectDO> findList(String... condition) {
+        List<DomainObjectDO> domainObjectDOS = new ArrayList<>();
+        domainObjectDOS.add(new DomainObjectDO("DomainObjectMapper@email.com","176*****"));
+        domainObjectDOS.add(new DomainObjectDO("DomainObjectMapper@email.com","199*****"));
+        return domainObjectDOS;
     }
 }
