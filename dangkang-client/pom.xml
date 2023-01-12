@@ -15,4 +15,11 @@
     </properties>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.dangkang</groupId>
+            <artifactId>dangkang-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

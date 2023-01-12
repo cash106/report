@@ -4,39 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="查询类功能服务编写">
-      <change afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/QueryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/MultipleResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/SingleResponse.java" afterDir="false" />
+    <list default="true" id="2ee855d5-2bb6-4a15-9611-97107043391a" name="Default Changelist" comment="请求dto及查询applicationService流程优化">
+      <change afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/AbstractResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/IocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/validator/AppValidateCallBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationQueryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationQueryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/service/ApplicationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationQueryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/api/ApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/ApplicationQueryConditionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/ApplicationQueryRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/ApplicationQueryResultDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/ApplicationServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/ApplicationServiceRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationQueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdata/QueryResultDataDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/ApplicationServiceRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/request/QueryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationQueryDataResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationQueryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/protocol/response/ApplicationServiceResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/ApplicationQueryResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/ApplicationServiceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdata/ApplicationServiceResultDataDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/PageQueryResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/ApplicationServiceDtoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/ApplicationServiceDtoValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/validator/PhoneNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/PhoneNumberValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/repository/DomainObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/model/trade/repository/DomainObjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/ApplicationQueryRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/requestdto/ApplicationQueryRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/ApplicationServiceRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/requestdto/ApplicationServiceRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/QueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/QueryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/AbstractRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/ApplicationServiceDtoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/validator/ApplicationServiceDtoValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/EmailValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/request/validator/PhoneNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/validator/PhoneNumberValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/MultipleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/MultipleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/SingleResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdata/ApplicationServiceResultDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdto/ApplicationServiceResultDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdata/QueryResultDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/dto/response/resultdto/QueryResultDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/config/ConfigManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/ApplicationServiceDtoConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/DomainObjectConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/converter/DomainObjectConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/DomainObjectRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/DomainObjectRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/repositoryimpl/mapper/DomainObjectMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,15 +130,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,7 +243,8 @@
       <workItem from="1672882151233" duration="7397000" />
       <workItem from="1673230388504" duration="1645000" />
       <workItem from="1673343323014" duration="2189000" />
-      <workItem from="1673403195222" duration="18695000" />
+      <workItem from="1673403195222" duration="18891000" />
+      <workItem from="1673488769713" duration="5536000" />
     </task>
     <task id="LOCAL-00001" summary="错误处理组件添加">
       <created>1671444720888</created>
@@ -392,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673421040373</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="请求dto及查询applicationService流程优化">
+      <created>1673432581716</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1673432581716</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +427,8 @@
     <MESSAGE value="unittest" />
     <MESSAGE value="网络错误bug解决" />
     <MESSAGE value="查询类功能服务编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询类功能服务编写" />
+    <MESSAGE value="请求dto及查询applicationService流程优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="请求dto及查询applicationService流程优化" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

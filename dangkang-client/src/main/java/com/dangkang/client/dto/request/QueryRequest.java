@@ -3,7 +3,7 @@ package com.dangkang.client.dto.request;
 /**
  * @date 2023/1/11 17:08
  */
-public class QueryRequest extends Request{
+public class QueryRequest extends AbstractRequest {
 
     private int index;//页码
     private int size;//页大小

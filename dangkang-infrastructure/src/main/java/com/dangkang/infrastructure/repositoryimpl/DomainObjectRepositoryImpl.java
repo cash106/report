@@ -1,6 +1,6 @@
 package com.dangkang.infrastructure.repositoryimpl;
 
-import com.dangkang.client.dto.response.resultdata.QueryResultDataDTO;
+import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.exception.DataBaseException;
 import com.dangkang.domain.exception.database.DataBaseErrorManager;
@@ -57,15 +57,18 @@ public class DomainObjectRepositoryImpl implements DomainObjectRepository {
     @Override
     public Map<String,Object> findPage(int index, int size, String email) {
         PageHelper.startPage(index,size);
+
         List<DomainObject> domainObjects = DomainObjectConverter.INSTANCE.toDomainObjectList(domainObjectMapper.findList(index,size,email));
-        List<QueryResultDataDTO> queryResultDataDTOS = DomainObjectConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
-        PageInfo<QueryResultDataDTO> pageInfo = new PageInfo<>(queryResultDataDTOS);
+        List<QueryResultDTO> queryResultDtoList = DomainObjectConverter.INSTANCE.toQueryResultDataDtoList(domainObjects);
+
+        PageInfo<QueryResultDTO> pageInfo = new PageInfo<>(queryResultDtoList);
         Map<String,Object> pageMap = new HashMap<>();
         pageMap.put("totalPages",pageInfo.getPages());
         pageMap.put("totalSize",pageInfo.getSize());
         pageMap.put("currentIndex",pageInfo.getPageNum());
         pageMap.put("pageSize",pageInfo.getPageSize());
         pageMap.put("dataList",pageInfo.getList());
+
         return pageMap ;
     }
 }

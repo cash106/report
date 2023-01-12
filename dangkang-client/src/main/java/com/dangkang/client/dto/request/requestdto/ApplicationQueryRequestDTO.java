@@ -1,4 +1,4 @@
-package com.dangkang.client.dto.request;
+package com.dangkang.client.dto.request.requestdto;
 
 import com.dangkang.client.dto.request.QueryRequest;
 

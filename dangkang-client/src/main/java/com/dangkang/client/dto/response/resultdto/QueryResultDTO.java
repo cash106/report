@@ -1,10 +1,10 @@
-package com.dangkang.client.dto.request;
+package com.dangkang.client.dto.response.resultdto;
 
-import javax.validation.constraints.NotNull;
-
-public class ApplicationServiceRequestDTO extends Request{
-
-    @NotNull
+/**
+ * @date 2023/1/11 17:17
+ */
+public class QueryResultDTO {
+    //todo 查询返回结果的数据属性定义
     private String email;
     private String phoneNumber;
 

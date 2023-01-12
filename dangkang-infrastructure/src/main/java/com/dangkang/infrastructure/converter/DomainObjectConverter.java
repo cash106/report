@@ -1,6 +1,6 @@
 package com.dangkang.infrastructure.converter;
 
-import com.dangkang.client.dto.response.resultdata.QueryResultDataDTO;
+import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.type.CallRequestDto;
 import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
@@ -24,6 +24,6 @@ public interface DomainObjectConverter {
 
     List<DomainObject> toDomainObjectList(List<DomainObjectDO> domainObjects);
 
-    List<QueryResultDataDTO> toQueryResultDataDtoList(List<DomainObject> domainObjects);
+    List<QueryResultDTO> toQueryResultDataDtoList(List<DomainObject> domainObjects);
 
 }

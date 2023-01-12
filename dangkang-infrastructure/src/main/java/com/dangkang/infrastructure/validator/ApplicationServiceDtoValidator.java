@@ -1,9 +1,9 @@
-package com.dangkang.client.dto.request.validator;
+package com.dangkang.infrastructure.validator;
 
 import com.baidu.unbiz.fluentvalidator.Validator;
 import com.baidu.unbiz.fluentvalidator.ValidatorContext;
 import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
-import com.dangkang.client.dto.request.ApplicationServiceRequestDTO;
+import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 
 /**
  * 入参校验器示例

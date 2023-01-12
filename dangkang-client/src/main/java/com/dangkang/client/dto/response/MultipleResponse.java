@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @date 2023/1/11 17:00
  */
-public class MultipleResponse<T> extends Response {
+public class MultipleResponse<T> extends AbstractResponse {
 
     private int totalPages;//总页数
     private long totalSize;//总记录数

@@ -2,13 +2,14 @@ package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
 import com.baidu.unbiz.fluentvalidator.Result;
+import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
 import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
-import com.dangkang.client.dto.request.ApplicationServiceRequestDTO;
-import com.dangkang.client.dto.response.resultdata.ApplicationServiceResultDataDTO;
-import com.dangkang.client.dto.response.SingleResponse;
-import com.dangkang.client.dto.request.validator.PhoneNumberValidator;
+import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
+import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
+import com.dangkang.client.dto.response.Response;
+import com.dangkang.infrastructure.validator.PhoneNumberValidator;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
@@ -42,14 +43,12 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @Override
-    public SingleResponse<ApplicationServiceResultDataDTO> execute(ApplicationServiceRequestDTO applicationServiceRequestDTO) {
-        SingleResponse<ApplicationServiceResultDataDTO> response = new SingleResponse<>();
-        ApplicationServiceResultDataDTO applicationServiceResultDataDTO = new ApplicationServiceResultDataDTO();
+    public Response<ApplicationServiceResultDTO> execute(@FluentValid ApplicationServiceRequestDTO applicationServiceRequestDTO) {
+        Response<ApplicationServiceResultDTO> response = new Response<>();
+        ApplicationServiceResultDTO applicationServiceResultDTO = new ApplicationServiceResultDTO();
         try {
             //todo 业务逻辑编排
-            // 1 输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
-            validateParameter(applicationServiceRequestDTO);
-            logger.info("ApplicationServiceImpl.validateParameter输入参数验证成功");
+            // 1 使用@FluentValid注解进行输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
 
             // 2.1 调用存储服务(ddd Repository)
             DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceRequestDTO.getPhoneNumber());
@@ -67,38 +66,15 @@ public class ApplicationServiceImpl implements ApplicationService {
 
             // 4 构建成功返回
             response.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
-            response.setData(applicationServiceResultDataDTO);
-            return response;
+            response.setData(applicationServiceResultDTO);
         } catch (ApplicationException e) {
-            if(e.getCause()!=null){//应用异常是自定义或转换为ApplicationException，系统异常会内嵌在ApplicationException中
-                logger.error(e.getDetailMessage(),e); //系统环境出错
-            }else{
-                logger.warn(e.getDetailMessage());//业务异常warn
-            }
-
             // 4.1 构建错误返回
-            response.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e.getErrorCode(),e.getPromptMessage());
-            return response;
+            response.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e);
         }catch (Throwable t){
-            logger.error("未处理的异常",t);
             //4.2 构建未处理异常返回
-            response.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t.getMessage());
-            return response;
+            response.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t);
         }
-    }
-
-    private void validateParameter(ApplicationServiceRequestDTO applicationServiceRequestDTO){
-        Result result = FluentValidator.checkAll().failOver()
-                .on(applicationServiceRequestDTO,new HibernateSupportedValidator<>().setHiberanteValidator(Validation.buildDefaultValidatorFactory().getValidator()))
-                .on(applicationServiceRequestDTO.getPhoneNumber(),new PhoneNumberValidator())
-                .doValidate().result(toSimple());
-        if(!result.isSuccess()){
-            StringBuffer stringBuffer = new StringBuffer();
-            for(String error : result.getErrors()){
-                stringBuffer.append(error);
-            }
-            throw new ValidationException().setPromptMessage(stringBuffer.toString());
-        }
+        return response;
     }
 
 }
