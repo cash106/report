@@ -1,4 +1,4 @@
-package com.dangkang.client.dto.validator;
+package com.dangkang.client.dto.fluentvalidator;
 
 import com.baidu.unbiz.fluentvalidator.DefaultValidateCallback;
 import com.baidu.unbiz.fluentvalidator.ValidateCallback;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @date 2023/1/12 15:02
  */
-public class AppValidateCallBack extends DefaultValidateCallback implements ValidateCallback {
+public class FluentValidateCallBack extends DefaultValidateCallback implements ValidateCallback {
 
     @Override
     public void onSuccess(ValidatorElementList validatorElementList) {

@@ -1,7 +1,6 @@
-package com.dangkang.infrastructure.config;
+package com.dangkang.client.dto.fluentvalidator;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
-import com.dangkang.client.dto.validator.AppValidateCallBack;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2023/1/12 15:09
  */
 @Configuration
-public class IocConfig {
+public class FluentValidatorConfiguration {
 
     @Bean
     public FluentValidateInterceptor fluentValidateInterceptor() {
@@ -18,8 +17,8 @@ public class IocConfig {
         fluentValidateInterceptor.setCallback(validateCallback());
         return fluentValidateInterceptor;
     }
-    public AppValidateCallBack validateCallback() {
-        return new AppValidateCallBack();
+    public FluentValidateCallBack validateCallback() {
+        return new FluentValidateCallBack();
     }
 
     @Bean

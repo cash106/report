@@ -41,11 +41,7 @@ public class ApplicationQueryServiceImpl implements ApplicationQueryService {
             Map<String,Object> pages = domainObjectRepository.findPage(index,size,email);
 
             //3 构建成功返回结果
-            response.setTotalSize((long)pages.get("totalSize"));
-            response.setTotalPages((int)pages.get("totalPages"));
-            response.setCurrentIndex((int)pages.get("currentIndex"));
-            response.setPageSize((int)pages.get("pageSize"));
-            response.setData((List<QueryResultDTO>) pages.get("dataList"));
+            response.buildPage( pages);
             response.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
             return response;
         }catch (ApplicationException e){

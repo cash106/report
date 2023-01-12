@@ -1,6 +1,9 @@
 package com.dangkang.client.dto.response;
 
+import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
+
 import java.util.List;
+import java.util.Map;
 
 /**
  * @date 2023/1/11 17:00
@@ -15,6 +18,15 @@ public class MultipleResponse<T> extends AbstractResponse {
     private int endPosition;//当前页结束位置
 
     private List<T> data;
+
+    public  MultipleResponse  buildPage(Map<String, Object> pages) {
+        this.setTotalSize((long) pages.get("totalSize"));
+        this.setTotalPages((int) pages.get("totalPages"));
+        this.setCurrentIndex((int) pages.get("currentIndex"));
+        this.setPageSize((int) pages.get("pageSize"));
+        this.setData((List<T>)pages.get("dataList"));
+        return this;
+    }
 
 
     public List<T> getData() {
