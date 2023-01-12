@@ -1,11 +1,11 @@
 package com.dangkang.client.dto.request.requestdto;
 
-import com.dangkang.client.dto.request.QueryRequest;
+import com.dangkang.client.dto.request.MultipleQueryRequest;
 
 /**
  * @date 2023/1/11 10:48
  */
-public class ApplicationQueryRequestDTO extends QueryRequest {
+public class ApplicationQueryRequestDTO extends MultipleQueryRequest {
 
     private String email;
 
