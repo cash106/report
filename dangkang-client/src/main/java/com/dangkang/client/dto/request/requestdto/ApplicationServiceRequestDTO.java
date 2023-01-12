@@ -2,7 +2,7 @@ package com.dangkang.client.dto.request.requestdto;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValidate;
 import com.dangkang.client.dto.request.AbstractRequest;
-import com.dangkang.infrastructure.validator.PhoneNumberValidator;
+import com.dangkang.client.dto.validator.PhoneNumberValidator;
 
 import javax.validation.constraints.NotNull;
 

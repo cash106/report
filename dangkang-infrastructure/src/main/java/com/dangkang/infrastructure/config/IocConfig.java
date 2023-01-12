@@ -1,7 +1,7 @@
 package com.dangkang.infrastructure.config;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
-import com.dangkang.infrastructure.validator.AppValidateCallBack;
+import com.dangkang.client.dto.validator.AppValidateCallBack;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

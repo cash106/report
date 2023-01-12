@@ -1,26 +1,19 @@
 package com.dangkang.app.service;
 
-import com.baidu.unbiz.fluentvalidator.FluentValidator;
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
-import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
 import com.dangkang.client.api.ApplicationQueryService;
 import com.dangkang.client.dto.request.requestdto.ApplicationQueryRequestDTO;
 import com.dangkang.client.dto.response.MultipleResponse;
 import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
-import com.dangkang.infrastructure.validator.PhoneNumberValidator;
 import com.dangkang.domain.exception.ApplicationException;
-import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.validation.Validation;
 import java.util.List;
 import java.util.Map;
-
-import static com.baidu.unbiz.fluentvalidator.ResultCollectors.toSimple;
 
 /**
  * @date 2023/1/11 10:51

@@ -1,4 +1,4 @@
-package com.dangkang.infrastructure.validator;
+package com.dangkang.client.dto.validator;
 
 import com.baidu.unbiz.fluentvalidator.DefaultValidateCallback;
 import com.baidu.unbiz.fluentvalidator.ValidateCallback;

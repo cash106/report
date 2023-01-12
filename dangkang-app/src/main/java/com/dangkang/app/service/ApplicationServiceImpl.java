@@ -1,17 +1,12 @@
 package com.dangkang.app.service;
 
-import com.baidu.unbiz.fluentvalidator.FluentValidator;
-import com.baidu.unbiz.fluentvalidator.Result;
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
-import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.Response;
-import com.dangkang.infrastructure.validator.PhoneNumberValidator;
 import com.dangkang.domain.exception.ApplicationException;
-import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.domainService.DomainService;
 import com.dangkang.domain.model.trade.ability.rule.DomainLogicalRule;
@@ -20,10 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.validation.Validation;
-
-import static com.baidu.unbiz.fluentvalidator.ResultCollectors.toSimple;
 
 /**
  * 应用服务层:1、逻辑错误异常等统一处理  2、业务主逻辑步骤
