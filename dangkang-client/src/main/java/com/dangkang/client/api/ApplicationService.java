@@ -8,8 +8,8 @@ import com.dangkang.client.dto.response.Response;
  * 应用服务
  */
 public interface ApplicationService {
-    String TRADE_CODE ="T001";
-    String TRADE_DESCRIPTION ="dangkang-ddd应用服务描述信息";
+    String SERVICE_CODE ="T001";
+    String SERVICE_DESCRIPTION ="dangkang-ddd应用服务描述信息";
 
     Response<ApplicationServiceResultDTO> execute(ApplicationServiceRequestDTO applicationServiceRequestDTO);
 

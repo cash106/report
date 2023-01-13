@@ -23,7 +23,7 @@ public class FluentValidateCallBack extends DefaultValidateCallback implements V
     public void onFail(ValidatorElementList validatorElementList, List<ValidationError> errors) {
         StringBuffer stringBuffer = new StringBuffer();
         for(ValidationError error : errors){
-            stringBuffer.append(error.getErrorMsg());
+            stringBuffer.append(error.getField()).append(":").append(error.getErrorMsg()).append(",");
         }
         throw new ValidationException().setPromptMessage(stringBuffer.toString());
     }

@@ -6,11 +6,11 @@ import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.Response;
-import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.domainService.DomainService;
 import com.dangkang.domain.model.trade.ability.rule.DomainLogicalRule;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
+import com.dangkang.app.exception.ExceptionResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,12 +34,13 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @Override
-    public Response<ApplicationServiceResultDTO> execute(@FluentValid ApplicationServiceRequestDTO applicationServiceRequestDTO) {
+    @ExceptionResolver
+    public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast = false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
         Response<ApplicationServiceResultDTO> response = new Response<>();
         ApplicationServiceResultDTO applicationServiceResultDTO = new ApplicationServiceResultDTO();
-        try {
             //todo 业务逻辑编排
             // 1 使用@FluentValid注解进行输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
+
 
             // 2.1 调用存储服务(ddd Repository)
             DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceRequestDTO.getPhoneNumber());
@@ -56,15 +57,8 @@ public class ApplicationServiceImpl implements ApplicationService {
             logger.info("ApplicationServiceTransaction.transaction事务服务执行成功");
 
             // 4 构建成功返回
-            response.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
+            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
             response.setData(applicationServiceResultDTO);
-        } catch (ApplicationException e) {
-            // 4.1 构建错误返回
-            response.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e);
-        }catch (Throwable t){
-            //4.2 构建未处理异常返回
-            response.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t);
-        }
         return response;
     }
 

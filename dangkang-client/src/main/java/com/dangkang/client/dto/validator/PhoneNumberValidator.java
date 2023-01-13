@@ -1,5 +1,6 @@
 package com.dangkang.client.dto.validator;
 
+import com.baidu.unbiz.fluentvalidator.ValidationError;
 import com.baidu.unbiz.fluentvalidator.Validator;
 import com.baidu.unbiz.fluentvalidator.ValidatorContext;
 import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
@@ -32,9 +33,11 @@ public class PhoneNumberValidator extends ValidatorHandler<String> implements Va
     public boolean validate(ValidatorContext context, String s) {
         if (s != null) {
             if (checkChinaMobile(s) || checkChinaUnicom(s) || checkChinaTelecom(s)) {
+
                 return true;
             }
         }
+        context.addError(ValidationError.create("手机号码不符合").setInvalidValue(s).setField("phoneNumber"));
         return false;
     }
 

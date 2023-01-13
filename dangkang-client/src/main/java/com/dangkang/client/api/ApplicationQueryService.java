@@ -9,8 +9,8 @@ import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
  */
 public interface ApplicationQueryService {
 
-    String TRADE_CODE ="T002";
-    String TRADE_DESCRIPTION ="dangkang-ddd应用查询类服务描述信息";
+    String SERVICE_CODE ="T002";
+    String SERVICE_DESCRIPTION ="dangkang-ddd应用查询类服务描述信息";
 
     MultipleResponse<QueryResultDTO> queryService(ApplicationQueryRequestDTO applicationQueryRequestDTO);
 }

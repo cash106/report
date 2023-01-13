@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,16 +41,14 @@ public class ApplicationQueryServiceImpl implements ApplicationQueryService {
 
             //3 构建成功返回结果
             response.buildPage( pages);
-            response.buildSuccess(TRADE_CODE, TRADE_DESCRIPTION);
-            return response;
+            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
         }catch (ApplicationException e){
             //3.1 构建失败返回结果
-            response.buildFailure(TRADE_CODE, TRADE_DESCRIPTION,e);
-            return response;
+            response.buildFailure(SERVICE_CODE, SERVICE_DESCRIPTION,e);
         }catch (Throwable t){
             //3.2 构建未处理异常返回
-            response.buildUnknownFailure(TRADE_CODE,TRADE_DESCRIPTION,t);
-            return response;
+            response.buildUnknownFailure(SERVICE_CODE, SERVICE_DESCRIPTION,t);
         }
+        return response;
     }
 }

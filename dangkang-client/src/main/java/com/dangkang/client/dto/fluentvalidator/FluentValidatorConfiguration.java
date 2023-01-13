@@ -1,6 +1,7 @@
 package com.dangkang.client.dto.fluentvalidator;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
+import com.dangkang.client.dto.validator.PhoneNumberValidator;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,4 +32,8 @@ public class FluentValidatorConfiguration {
         return proxyCreator;
     }
 
+    @Bean
+    public PhoneNumberValidator phoneNumberValidator(){
+        return new PhoneNumberValidator();
+    }
 }
