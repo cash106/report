@@ -1,4 +1,4 @@
-package com.dangkang.app.exception;
+package com.dangkang.adapter.exception;
 
 import com.dangkang.client.dto.response.AbstractResponse;
 import com.dangkang.domain.exception.ApplicationException;
@@ -25,7 +25,7 @@ public class ExceptionAspect {
     }
     public static final Logger logger = LoggerFactory.getLogger(ExceptionAspect.class);
 
-    @Pointcut("@within(ExceptionResolver) && execution(public * *(..))")
+    @Pointcut("@within(ExceptionResolver) && execution(* com.dangkang.adapter.web.*.*(..))")
     public void pointcut() {
     }
 
@@ -33,14 +33,10 @@ public class ExceptionAspect {
     public AbstractResponse around(ProceedingJoinPoint joinPoint){
         Object methodResponse = null;
         try{
-            if(logger.isDebugEnabled()){
-                logger.debug("开始执行service方法");
-            }
+            logger.info("开始执行service方法");
             methodResponse = joinPoint.proceed();
         }catch (Throwable e){
-            if(logger.isDebugEnabled()){
-                logger.debug("执行service方法出现异常");
-            }
+            logger.info("执行service方法出现异常");
             return resolveException(joinPoint,e);
         }
         return (AbstractResponse)methodResponse;

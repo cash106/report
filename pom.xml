@@ -24,6 +24,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.4.1</version>
@@ -57,30 +61,14 @@
             <groupId>com.baidu.unbiz</groupId>
             <artifactId>fluent-validator-spring</artifactId>
             <version>1.0.9</version>
-        </dependency>
-
-<!--        <dependency>
-            <groupId>com.baidu.unbiz</groupId>
-            <artifactId>fluent-validator</artifactId>
-            <version>1.0.9</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.baidu.unbiz</groupId>
-            <artifactId>fluent-validator-jsr303</artifactId>
-            <version>1.0.9</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-log4j12</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
+
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>

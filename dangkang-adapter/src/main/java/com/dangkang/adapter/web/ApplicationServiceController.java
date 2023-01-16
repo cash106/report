@@ -1,5 +1,6 @@
 package com.dangkang.adapter.web;
 
+import com.dangkang.adapter.exception.ExceptionResolver;
 import com.dangkang.client.api.ApplicationQueryService;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationQueryRequestDTO;
@@ -25,11 +26,12 @@ public class ApplicationServiceController {
 
     @PostMapping("/hello")
     @ResponseBody
+    @ExceptionResolver
     public Response<ApplicationServiceResultDTO> execute(@RequestBody ApplicationServiceRequestDTO applicationServiceRequestDTO){
 
-        logger.info("ApplicationService请求参数 request = [{}]",applicationServiceRequestDTO);
+//        logger.info("ApplicationService请求参数 request = [{}]",applicationServiceRequestDTO);
         Response<ApplicationServiceResultDTO> response = applicationService.execute(applicationServiceRequestDTO);
-        logger.info("ApplicationService响应参数 response = [{}]",response);
+//        logger.info("ApplicationService响应参数 response = [{}]",response);
         return response;
     }
 

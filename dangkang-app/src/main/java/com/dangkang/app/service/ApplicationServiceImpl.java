@@ -10,7 +10,6 @@ import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.domainService.DomainService;
 import com.dangkang.domain.model.trade.ability.rule.DomainLogicalRule;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
-import com.dangkang.app.exception.ExceptionResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,6 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @Override
-    @ExceptionResolver
     public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast = false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
         Response<ApplicationServiceResultDTO> response = new Response<>();
         ApplicationServiceResultDTO applicationServiceResultDTO = new ApplicationServiceResultDTO();

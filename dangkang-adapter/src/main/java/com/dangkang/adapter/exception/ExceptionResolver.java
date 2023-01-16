@@ -1,4 +1,4 @@
-package com.dangkang.app.exception;
+package com.dangkang.adapter.exception;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
