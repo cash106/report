@@ -16,17 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.dangkang</groupId>
-            <artifactId>dangkang-client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dangkang</groupId>
-            <artifactId>dangkang-domain</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dangkang</groupId>
-            <artifactId>dangkang-infrastructure</artifactId>
+            <artifactId>dangkang-app</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

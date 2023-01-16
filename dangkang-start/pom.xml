@@ -19,12 +19,7 @@
         <dependency>
             <artifactId>dangkang-adapter</artifactId>
             <groupId>com.dangkang</groupId>
-            <version>1.0.1</version>
-        </dependency>
-        <dependency>
-            <artifactId>dangkang-app</artifactId>
-            <groupId>com.dangkang</groupId>
-            <version>1.0.1</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

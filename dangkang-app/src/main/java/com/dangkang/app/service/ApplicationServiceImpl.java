@@ -1,11 +1,13 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
+import com.dangkang.app.exception.ExceptionResolver;
 import com.dangkang.app.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.Response;
+import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.domainService.DomainService;
 import com.dangkang.domain.model.trade.ability.rule.DomainLogicalRule;
@@ -13,13 +15,16 @@ import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
  * 应用服务层:1、逻辑错误异常等统一处理  2、业务主逻辑步骤
  */
 @Service
-public class ApplicationServiceImpl implements ApplicationService {
+public class ApplicationServiceImpl implements ApplicationService{
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationServiceImpl.class);
 
@@ -32,8 +37,9 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Autowired
     private ApplicationServiceTransaction applicationServiceTransaction;
 
-    @Override
+    @ExceptionResolver
     public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast = false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
+
         Response<ApplicationServiceResultDTO> response = new Response<>();
         ApplicationServiceResultDTO applicationServiceResultDTO = new ApplicationServiceResultDTO();
             //todo 业务逻辑编排
@@ -55,7 +61,7 @@ public class ApplicationServiceImpl implements ApplicationService {
             logger.info("ApplicationServiceTransaction.transaction事务服务执行成功");
 
             // 4 构建成功返回
-            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
+//            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
             response.setData(applicationServiceResultDTO);
         return response;
     }

@@ -1,24 +1,23 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
-import com.dangkang.app.exception.ExceptionResolver;
 import com.dangkang.client.api.ApplicationQueryService;
 import com.dangkang.client.dto.request.requestdto.ApplicationQueryRequestDTO;
 import com.dangkang.client.dto.response.MultipleResponse;
 import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
-import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 /**
  * @date 2023/1/11 10:51
  */
-@Component
+@Service
 public class ApplicationQueryServiceImpl implements ApplicationQueryService {
     private static final Logger logger = LoggerFactory.getLogger(ApplicationQueryServiceImpl.class);
 
@@ -26,7 +25,6 @@ public class ApplicationQueryServiceImpl implements ApplicationQueryService {
     private DomainObjectRepository domainObjectRepository;
 
     @Override
-    @ExceptionResolver
     public MultipleResponse<QueryResultDTO> queryService(@FluentValid ApplicationQueryRequestDTO applicationQueryRequestDTO) {
 
         MultipleResponse<QueryResultDTO> response = new MultipleResponse<>();

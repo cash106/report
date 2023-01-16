@@ -1,6 +1,6 @@
 package com.dangkang.adapter.web;
 
-import com.dangkang.adapter.exception.ExceptionResolver;
+import com.dangkang.app.service.ApplicationServiceImpl;
 import com.dangkang.client.api.ApplicationQueryService;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationQueryRequestDTO;
@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 @RestController
 public class ApplicationServiceController {
 
@@ -26,7 +28,6 @@ public class ApplicationServiceController {
 
     @PostMapping("/hello")
     @ResponseBody
-    @ExceptionResolver
     public Response<ApplicationServiceResultDTO> execute(@RequestBody ApplicationServiceRequestDTO applicationServiceRequestDTO){
 
 //        logger.info("ApplicationService请求参数 request = [{}]",applicationServiceRequestDTO);
