@@ -38,7 +38,7 @@ public class ApplicationServiceImpl implements ApplicationService{
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @ExceptionResolver
-    public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast = false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
+    public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast=false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
 
         Response<ApplicationServiceResultDTO> response = new Response<>();
         ApplicationServiceResultDTO applicationServiceResultDTO = new ApplicationServiceResultDTO();
@@ -61,7 +61,7 @@ public class ApplicationServiceImpl implements ApplicationService{
             logger.info("ApplicationServiceTransaction.transaction事务服务执行成功");
 
             // 4 构建成功返回
-//            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
+            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
             response.setData(applicationServiceResultDTO);
         return response;
     }

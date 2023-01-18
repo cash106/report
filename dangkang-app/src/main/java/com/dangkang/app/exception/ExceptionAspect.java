@@ -21,6 +21,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 /**
@@ -60,26 +61,31 @@ public class ExceptionAspect {
     }
 
     private Object resolveException(ProceedingJoinPoint joinPoint,Throwable t)  {
-        AbstractResponse response = null;
-        try{
+            AbstractResponse response;
             MethodSignature ms = (MethodSignature) joinPoint.getSignature();
             Class returnType = ms.getReturnType();
             if(returnType == Response.class){
-                response = (Response)returnType.newInstance();
+                response = new Response<>();
             }else {
-                response = (MultipleResponse)returnType.newInstance();
+                response = new MultipleResponse<>();
             }
-            Class targetClass = joinPoint.getTarget().getClass();
-            String SERVICE_CODE ="";
-            String SERVICE_DESCRIPTION="";
-            SERVICE_CODE = (String)targetClass.getField("SERVICE_CODE").get(targetClass);
-            SERVICE_DESCRIPTION = (String)targetClass.getField("SERVICE_DESCRIPTION").get(targetClass);
 
+            Class targetClass = joinPoint.getTarget().getClass();
+            String SERVICE_CODE = "";
+            String SERVICE_DESCRIPTION = "";
+            try {
+                SERVICE_CODE = (String) targetClass.getField("SERVICE_CODE").get(targetClass);
+                SERVICE_DESCRIPTION = (String) targetClass.getField("SERVICE_DESCRIPTION").get(targetClass);
+            }catch (Exception e){
+                //...找不到字段不做处理：默认空字符串
+                logger.warn("服务接口未定义SERVICE_CODE和SERVICE_DESCRIPTION属性");
+            }
             if (t instanceof ApplicationException) {
                 //处理应用异常
                 ApplicationException ae = (ApplicationException) t;
                 if (t.getCause() != null) {//应用异常是自定义或转换为ApplicationException，系统异常会内嵌在ApplicationException中
                     logger.error(ae.getDetailMessage(), t); //系统环境出错
+
                 } else {
                     logger.warn(ae.getPromptMessage());//业务异常warn
                 }
@@ -88,11 +94,7 @@ public class ExceptionAspect {
                 //未捕获的其他异常
                 response.buildUnknownFailure(SERVICE_CODE, SERVICE_DESCRIPTION, t.getMessage());
             }
-
-        } catch (Exception x){
-            logger.warn("",x);
-        }
-        return response;
+            return response;
     }
 
     private void invokeValidate(JoinPoint joinPoint) throws Throwable{
