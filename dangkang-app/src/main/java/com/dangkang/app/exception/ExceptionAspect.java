@@ -8,6 +8,7 @@ import com.dangkang.domain.exception.ApplicationException;
 import org.aopalliance.intercept.MethodInvocation;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -23,6 +24,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * @date 2023/1/13 14:42
@@ -46,10 +48,9 @@ public class ExceptionAspect {
 
     @Around(value = "pointcut()")
     public Object around(ProceedingJoinPoint joinPoint){
-        Object methodResponse = null;
-        try{
-            invokeValidate(joinPoint);
+        Object methodResponse;
 
+        try{
             methodResponse = joinPoint.proceed();
         }catch (Throwable e){
             if(logger.isDebugEnabled()){
@@ -60,7 +61,7 @@ public class ExceptionAspect {
         return methodResponse;
     }
 
-    private Object resolveException(ProceedingJoinPoint joinPoint,Throwable t)  {
+    private Object resolveException(JoinPoint joinPoint,Throwable t)  {
             AbstractResponse response;
             MethodSignature ms = (MethodSignature) joinPoint.getSignature();
             Class returnType = ms.getReturnType();
@@ -83,7 +84,8 @@ public class ExceptionAspect {
             if (t instanceof ApplicationException) {
                 //处理应用异常
                 ApplicationException ae = (ApplicationException) t;
-                if (t.getCause() != null) {//应用异常是自定义或转换为ApplicationException，系统异常会内嵌在ApplicationException中
+                if (t.getCause() != null) {//应用异常是自定
+                    // 义或转换为ApplicationException，系统异常会内嵌在ApplicationException中
                     logger.error(ae.getDetailMessage(), t); //系统环境出错
 
                 } else {

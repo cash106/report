@@ -9,4 +9,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 public @interface ExceptionResolver {
+
+    boolean isValidate() default true;
+
 }
