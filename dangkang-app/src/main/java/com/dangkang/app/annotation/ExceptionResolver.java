@@ -1,4 +1,4 @@
-package com.dangkang.app.aspect;
+package com.dangkang.app.annotation;
 
 import java.lang.annotation.*;
 

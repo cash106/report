@@ -1,8 +1,8 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
-import com.dangkang.app.aspect.ExceptionResolver;
-import com.dangkang.app.aspect.Validation;
+import com.dangkang.app.annotation.ExceptionResolver;
+import com.dangkang.app.annotation.Validation;
 import com.dangkang.app.service.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
@@ -36,6 +36,7 @@ public class ApplicationServiceImpl implements ApplicationService{
 
     @ExceptionResolver
     @Validation
+    @com.dangkang.app.annotation.ApplicationService(ServiceCode = "T001",ServiceName = "当康应用服务")
     public Response<ApplicationServiceResultDTO> execute(@FluentValid(isFailFast=false) ApplicationServiceRequestDTO applicationServiceRequestDTO) {
 
         Response<ApplicationServiceResultDTO> response = new Response<>();
@@ -59,7 +60,7 @@ public class ApplicationServiceImpl implements ApplicationService{
             logger.info("ApplicationServiceTransaction.transaction事务服务执行成功");
 
             // 4 构建成功返回
-            response.buildSuccess(SERVICE_CODE, SERVICE_DESCRIPTION);
+            response.buildSuccess(SERVICE_CODE, SERVICE_NAME);
             response.setData(applicationServiceResultDTO);
         return response;
     }

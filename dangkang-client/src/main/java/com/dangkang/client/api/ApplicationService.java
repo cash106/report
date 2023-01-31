@@ -9,7 +9,7 @@ import com.dangkang.client.dto.response.Response;
  */
 public interface ApplicationService {
     String SERVICE_CODE ="T001";
-    String SERVICE_DESCRIPTION ="dangkang-ddd应用服务描述信息";
+    String SERVICE_NAME ="dangkang-ddd应用服务描述信息";
 
     Response<ApplicationServiceResultDTO> execute(ApplicationServiceRequestDTO applicationServiceRequestDTO);
 
