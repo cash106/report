@@ -1,14 +1,13 @@
 package com.dangkang.app.service;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
-import com.dangkang.app.exception.ExceptionResolver;
-import com.dangkang.app.exception.Validation;
-import com.dangkang.app.transaction.ApplicationServiceTransaction;
+import com.dangkang.app.aspect.ExceptionResolver;
+import com.dangkang.app.aspect.Validation;
+import com.dangkang.app.service.transaction.ApplicationServiceTransaction;
 import com.dangkang.client.api.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.Response;
-import com.dangkang.domain.exception.ValidationException;
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.domainService.DomainService;
 import com.dangkang.domain.model.trade.ability.rule.DomainLogicalRule;
@@ -16,9 +15,6 @@ import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,10 +1,8 @@
-package com.dangkang.app.transaction;
+package com.dangkang.app.service.transaction;
 
 import com.dangkang.domain.model.trade.DomainObject;
 import com.dangkang.domain.model.trade.ability.facade.ExternalAccessFacade;
 import com.dangkang.domain.model.trade.repository.DomainObjectRepository;
-import com.dangkang.domain.model.trade.type.CallRequestDto;
-import com.dangkang.domain.model.trade.type.CallResult;
 import com.dangkang.infrastructure.converter.DomainObjectConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

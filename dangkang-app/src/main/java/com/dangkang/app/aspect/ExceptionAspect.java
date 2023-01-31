@@ -1,14 +1,12 @@
-package com.dangkang.app.exception;
+package com.dangkang.app.aspect;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
 import com.dangkang.client.dto.response.AbstractResponse;
 import com.dangkang.client.dto.response.MultipleResponse;
 import com.dangkang.client.dto.response.Response;
 import com.dangkang.domain.exception.ApplicationException;
-import org.aopalliance.intercept.MethodInvocation;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -19,12 +17,9 @@ import org.springframework.aop.ProxyMethodInvocation;
 import org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 /**
  * @date 2023/1/13 14:42
@@ -42,7 +37,7 @@ public class ExceptionAspect {
     public static final Logger logger = LoggerFactory.getLogger(ExceptionAspect.class);
 
 //    @Pointcut("execution(* com.dangkang.app.service.*.*(..))")
-    @Pointcut(value="@annotation(com.dangkang.app.exception.ExceptionResolver)")
+    @Pointcut(value="@annotation(com.dangkang.app.aspect.ExceptionResolver)")
     public void pointcut() {
     }
 

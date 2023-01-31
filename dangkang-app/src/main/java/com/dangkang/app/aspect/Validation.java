@@ -1,4 +1,4 @@
-package com.dangkang.app.exception;
+package com.dangkang.app.aspect;
 
 /**
  * @date 2023/1/30 15:58
