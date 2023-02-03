@@ -30,8 +30,6 @@ public class ApplicationServiceImpl implements ApplicationService{
     @Autowired
     private DomainLogicalRule domainLogicalRule;
     @Autowired
-    private DomainObjectRepository domainObjectRepository;
-    @Autowired
     private ApplicationServiceTransaction applicationServiceTransaction;
 
     @ExceptionResolver
