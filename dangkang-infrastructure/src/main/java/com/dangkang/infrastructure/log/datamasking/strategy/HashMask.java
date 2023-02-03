@@ -1,8 +1,8 @@
 package com.dangkang.infrastructure.log.datamasking.strategy;
 
 import com.dangkang.infrastructure.log.datamasking.MaskStrategy;
-import com.dangkang.infrastructure.common.util.EncodeUtil;
-import com.dangkang.infrastructure.common.util.HashUtil;
+import com.dangkang.infrastructure.log.util.EncodeUtil;
+import com.dangkang.infrastructure.log.util.HashUtil;
 
 /**
  * Hash掩码，主要用于一些敏感信息掩码后查询。

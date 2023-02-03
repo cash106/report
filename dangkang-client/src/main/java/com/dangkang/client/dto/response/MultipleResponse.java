@@ -1,7 +1,5 @@
 package com.dangkang.client.dto.response;
 
-import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
-
 import java.util.List;
 import java.util.Map;
 

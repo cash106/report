@@ -1,6 +1,6 @@
 package com.dangkang.app.domain.model.tradecontext.ability.ruleimpl;
 
-import com.dangkang.domain.model.tradecontext.DomainObject;
+import com.dangkang.domain.tradecontext.model.DomainObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;

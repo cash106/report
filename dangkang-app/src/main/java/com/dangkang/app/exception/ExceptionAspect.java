@@ -38,7 +38,7 @@ public class ExceptionAspect {
     }
     public static final Logger logger = LoggerFactory.getLogger(ExceptionAspect.class);
 
-//    @Pointcut("execution(* com.dangkang.app.service.*.*(..))")
+//    @Pointcut("execution(* com.dangkang.app.customercontext.service.*.*(..))")
     @Pointcut(value="@annotation(com.dangkang.app.annotation.ExceptionResolver)")
     public void pointcut() {
     }
