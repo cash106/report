@@ -13,7 +13,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 /**
  * @date 2022/12/30 11:32
  */
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//@SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@SpringBootApplication
 public class DangkangApplication {
 
     public static void main(String[] args) {

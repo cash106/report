@@ -13,7 +13,7 @@ public class AbstractResponse {
     private static final Logger logger = LoggerFactory.getLogger(AbstractResponse.class);
 
     public static final String SYSTEM_CODE="A01";
-    public static final String SYSTEM_DESCRIPTION="dangkang";
+    public static final String SYSTEM_NAME ="dangkang";
 
     public static final String ERROR_CODE_UNHANDLE_EXCEPTION ="U001";//为所有交易未处理的异常定义的错误码
 
@@ -45,7 +45,7 @@ public class AbstractResponse {
                                           .append(serviceCode)
                                           .append(EXECUTE_SUCCESS_CODE)
                                           .toString();
-        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
+        this.resultDescription=new StringBuffer().append(SYSTEM_NAME)
                                                  .append(serviceDescription)
                                                  .append(EXECUTE_SUCCESS_MESSAGE)
                                                  .toString();
@@ -60,7 +60,7 @@ public class AbstractResponse {
                                           .append(serviceCode)
                                           .append(errorCode)
                                           .toString();
-        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
+        this.resultDescription=new StringBuffer().append(SYSTEM_NAME)
                                           .append(serviceDescription)
                                           .append(errorMessage)
                                           .toString();
@@ -80,7 +80,7 @@ public class AbstractResponse {
                                           .append(serviceCode)
                                           .append(e.getErrorCode())
                                           .toString();
-        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
+        this.resultDescription=new StringBuffer().append(SYSTEM_NAME)
                                                  .append(serviceDescription)
                                                  .append(e.getPromptMessage())
                                                  .toString();
@@ -93,7 +93,7 @@ public class AbstractResponse {
                                           .append(serviceCode)
                                           .append(ERROR_CODE_UNHANDLE_EXCEPTION)
                                           .toString();
-        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
+        this.resultDescription=new StringBuffer().append(SYSTEM_NAME)
                                                  .append(serviceDescription)
                                                  .append(errorMessage)
                                                  .toString();
@@ -107,7 +107,7 @@ public class AbstractResponse {
                                           .append(serviceCode)
                                           .append(ERROR_CODE_UNHANDLE_EXCEPTION)
                                           .toString();
-        this.resultDescription=new StringBuffer().append(SYSTEM_DESCRIPTION)
+        this.resultDescription=new StringBuffer().append(SYSTEM_NAME)
                                           .append(serviceDescription)
                                           .append(e.getMessage())
                                           .toString();

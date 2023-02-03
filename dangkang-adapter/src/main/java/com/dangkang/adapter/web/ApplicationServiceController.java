@@ -1,8 +1,7 @@
 package com.dangkang.adapter.web;
 
-import com.dangkang.app.service.ApplicationServiceImpl;
-import com.dangkang.client.api.ApplicationQueryService;
-import com.dangkang.client.api.ApplicationService;
+import com.dangkang.client.api.tradecontext.ApplicationQueryService;
+import com.dangkang.client.api.tradecontext.ApplicationService;
 import com.dangkang.client.dto.request.requestdto.ApplicationQueryRequestDTO;
 import com.dangkang.client.dto.request.requestdto.ApplicationServiceRequestDTO;
 import com.dangkang.client.dto.response.resultdto.ApplicationServiceResultDTO;
@@ -13,8 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.Resource;
 
 @RestController
 public class ApplicationServiceController {

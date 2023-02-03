@@ -1,9 +1,9 @@
 package com.dangkang.infrastructure.converter;
 
 import com.dangkang.client.dto.response.resultdto.QueryResultDTO;
-import com.dangkang.domain.model.trade.DomainObject;
-import com.dangkang.domain.model.trade.type.CallRequestDto;
-import com.dangkang.infrastructure.repositoryimpl.dataobject.DomainObjectDO;
+import com.dangkang.domain.model.tradecontext.DomainObject;
+import com.dangkang.domain.model.tradecontext.type.CallRequestDto;
+import com.dangkang.infrastructure.domain.tradecontext.repositoryimpl.dataobject.DomainObjectDO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
