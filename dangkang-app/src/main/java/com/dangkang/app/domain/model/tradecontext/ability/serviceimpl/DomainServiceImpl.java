@@ -3,8 +3,10 @@ package com.dangkang.app.domain.model.tradecontext.ability.serviceimpl;
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.model.tradecontext.DomainObject;
 import com.dangkang.domain.model.tradecontext.ability.domainService.DomainService;
+import com.dangkang.domain.model.tradecontext.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +17,9 @@ import org.springframework.stereotype.Component;
 public class DomainServiceImpl implements DomainService {
 
     private static final Logger logger = LoggerFactory.getLogger(DomainServiceImpl.class);
+
+    @Autowired
+    private DomainObjectRepository domainObjectRepository;
 
     @Override
     public void doService(DomainObject domainObject) {
@@ -27,5 +32,10 @@ public class DomainServiceImpl implements DomainService {
                                             .setPromptMessage(ERR_DOMAIN_SERVICE_MESSAGE);
         }
         logger.info("DomainServiceImpl.doService领域服务执行成功");
+    }
+
+    @Override
+    public DomainObject findAndCheckEmpty(String phoneNumber) {
+        return domainObjectRepository.findAndCheckEmpty(phoneNumber);
     }
 }

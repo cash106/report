@@ -45,8 +45,8 @@ public class ApplicationServiceImpl implements ApplicationService{
             // 1 使用@FluentValid注解进行输入参数校验 (应用Fluent-Validator + Hibernate-Validator )
 
 
-            // 2.1 调用存储服务(ddd Repository)
-            DomainObject domainObject = domainObjectRepository.findAndCheckEmpty(applicationServiceRequestDTO.getPhoneNumber());
+            // 2.1 调用领域内提供的查询服务(ddd Repository)
+            DomainObject domainObject = domainService.findAndCheckEmpty(applicationServiceRequestDTO.getPhoneNumber());
             // 2.2 业务规则验证逻辑(ddd 业务规则封装)
             domainLogicalRule.check(domainObject);
             logger.info("DomainLogicalRule.check领域逻辑规则校验成功");

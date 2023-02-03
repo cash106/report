@@ -12,7 +12,7 @@ public interface DomainObjectRepository {
     String ERR_DOMAINOBJECT_NOT_FOUND_CODE="R001";
     String ERR_DOMAINOBJECT_NOT_FOUND_MESSAGE="未查询到领域对象";
 
-    DomainObject findAndCheckEmpty(String email);
+    DomainObject findAndCheckEmpty(String phoneNumber);
 
     void save(DomainObject domainObject);
 

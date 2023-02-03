@@ -12,4 +12,5 @@ public interface DomainService {
 
     void doService(DomainObject domainObject);
 
+    DomainObject findAndCheckEmpty(String phoneNumber);
 }
