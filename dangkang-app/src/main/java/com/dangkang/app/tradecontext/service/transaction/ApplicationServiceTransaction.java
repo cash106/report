@@ -1,4 +1,4 @@
-package com.dangkang.app.tradecontext.transaction;
+package com.dangkang.app.tradecontext.service.transaction;
 
 import com.dangkang.domain.tradecontext.model.DomainObject;
 import com.dangkang.domain.tradecontext.ability.facade.ExternalAccessFacade;

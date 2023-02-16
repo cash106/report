@@ -1,4 +1,4 @@
-package com.dangkang.app.annotation;
+package com.dangkang.app.validation;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
 import org.aspectj.lang.JoinPoint;
@@ -24,7 +24,7 @@ public class ValidationAspect {
     @Autowired
     private FluentValidateInterceptor fluentValidateInterceptor;
 
-    @Pointcut(value="@annotation(com.dangkang.app.annotation.Validation)")
+    @Pointcut(value="@annotation(com.dangkang.app.validation.Validation)")
     public void pointcut() {
     }
 

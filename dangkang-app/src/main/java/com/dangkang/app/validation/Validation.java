@@ -1,4 +1,4 @@
-package com.dangkang.app.annotation;
+package com.dangkang.app.validation;
 
 /**
  * @date 2023/1/30 15:58

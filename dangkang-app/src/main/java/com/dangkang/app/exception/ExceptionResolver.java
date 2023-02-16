@@ -1,4 +1,4 @@
-package com.dangkang.app.annotation;
+package com.dangkang.app.exception;
 
 import java.lang.annotation.*;
 

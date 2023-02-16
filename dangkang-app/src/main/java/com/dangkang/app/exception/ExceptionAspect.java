@@ -1,6 +1,7 @@
-package com.dangkang.app.annotation;
+package com.dangkang.app.exception;
 
 import com.baidu.unbiz.fluentvalidator.interceptor.FluentValidateInterceptor;
+import com.dangkang.app.annotation.ApplicationService;
 import com.dangkang.client.dto.response.AbstractResponse;
 import com.dangkang.client.dto.response.MultipleResponse;
 import com.dangkang.client.dto.response.Response;
@@ -35,7 +36,7 @@ public class ExceptionAspect {
     public static final Logger logger = LoggerFactory.getLogger(ExceptionAspect.class);
 
 //    @Pointcut("execution(* com.dangkang.app.customercontext.service.*.*(..))")
-    @Pointcut(value="@annotation(com.dangkang.app.annotation.ExceptionResolver)")
+    @Pointcut(value="@annotation(com.dangkang.app.exception.ExceptionResolver)")
     public void pointcut() {
     }
 

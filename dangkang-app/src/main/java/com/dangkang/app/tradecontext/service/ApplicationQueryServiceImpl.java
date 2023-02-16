@@ -2,8 +2,8 @@ package com.dangkang.app.tradecontext.service;
 
 import com.baidu.unbiz.fluentvalidator.annotation.FluentValid;
 import com.dangkang.app.annotation.ApplicationService;
-import com.dangkang.app.annotation.ExceptionResolver;
-import com.dangkang.app.annotation.Validation;
+import com.dangkang.app.exception.ExceptionResolver;
+import com.dangkang.app.validation.Validation;
 import com.dangkang.client.tradecontext.api.ApplicationQueryService;
 import com.dangkang.client.tradecontext.dto.request.ApplicationQueryRequestDTO;
 import com.dangkang.client.dto.response.MultipleResponse;
