@@ -1,12 +1,12 @@
 package com.dangkang.adapter.web;
 
-import com.dangkang.client.tradecontext.api.ApplicationQueryService;
-import com.dangkang.client.tradecontext.api.ApplicationService;
-import com.dangkang.client.tradecontext.dto.request.ApplicationQueryRequestDTO;
-import com.dangkang.client.tradecontext.dto.request.ApplicationServiceRequestDTO;
-import com.dangkang.client.tradecontext.dto.response.ApplicationServiceResultDTO;
+import com.dangkang.client.examplecontext.api.ApplicationQueryService;
+import com.dangkang.client.examplecontext.api.ApplicationService;
+import com.dangkang.client.examplecontext.dto.request.ApplicationQueryRequestDTO;
+import com.dangkang.client.examplecontext.dto.request.ApplicationServiceRequestDTO;
+import com.dangkang.client.examplecontext.dto.response.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.MultipleResponse;
-import com.dangkang.client.tradecontext.dto.response.QueryResultDTO;
+import com.dangkang.client.examplecontext.dto.response.QueryResultDTO;
 import com.dangkang.client.dto.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
