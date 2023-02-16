@@ -1,4 +1,4 @@
-package com.dangkang.domain.tradecontext.type;
+package com.dangkang.domain.tradecontext.ability.facade;
 
 public class QueryResult<T> {
 

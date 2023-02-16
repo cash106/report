@@ -2,7 +2,7 @@ package com.dangkang.app.tradecontext.ability.serviceimpl;
 
 import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.tradecontext.model.DomainObject;
-import com.dangkang.domain.tradecontext.ability.domainService.DomainService;
+import com.dangkang.domain.tradecontext.ability.service.DomainService;
 import com.dangkang.domain.tradecontext.repository.DomainObjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

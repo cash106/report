@@ -1,10 +1,5 @@
 package com.dangkang.domain.tradecontext.ability.facade;
 
-import com.dangkang.domain.tradecontext.type.CallRequestDto;
-import com.dangkang.domain.tradecontext.type.CallResult;
-import com.dangkang.domain.tradecontext.type.QueryRequestDto;
-import com.dangkang.domain.tradecontext.type.QueryResult;
-
 /**
  * @date 2022/12/23 10:23
  */

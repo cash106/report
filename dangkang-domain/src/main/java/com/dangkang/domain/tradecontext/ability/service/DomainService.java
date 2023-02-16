@@ -1,4 +1,4 @@
-package com.dangkang.domain.tradecontext.ability.domainService;
+package com.dangkang.domain.tradecontext.ability.service;
 
 import com.dangkang.domain.tradecontext.model.DomainObject;
 

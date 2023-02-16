@@ -9,7 +9,7 @@ import com.dangkang.client.tradecontext.dto.request.ApplicationServiceRequestDTO
 import com.dangkang.client.tradecontext.dto.response.ApplicationServiceResultDTO;
 import com.dangkang.client.dto.response.Response;
 import com.dangkang.domain.tradecontext.model.DomainObject;
-import com.dangkang.domain.tradecontext.ability.domainService.DomainService;
+import com.dangkang.domain.tradecontext.ability.service.DomainService;
 import com.dangkang.domain.tradecontext.ability.rule.DomainLogicalRule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -2,7 +2,7 @@ package com.dangkang.infrastructure.tradecontext.converter;
 
 import com.dangkang.client.tradecontext.dto.response.QueryResultDTO;
 import com.dangkang.domain.tradecontext.model.DomainObject;
-import com.dangkang.domain.tradecontext.type.CallRequestDto;
+import com.dangkang.domain.tradecontext.ability.facade.CallRequestDto;
 import com.dangkang.infrastructure.tradecontext.repositoryimpl.dataobject.DomainObjectDO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
