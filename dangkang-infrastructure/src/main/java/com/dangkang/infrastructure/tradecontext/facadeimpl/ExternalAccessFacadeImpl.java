@@ -9,7 +9,6 @@ import com.dangkang.domain.tradecontext.ability.facade.CallResult;
 import com.dangkang.domain.tradecontext.ability.facade.QueryRequestDto;
 import com.dangkang.domain.tradecontext.ability.facade.QueryResult;
 import com.dangkang.infrastructure.tradecontext.config.ExternalConfig;
-import com.dangkang.infrastructure.external.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

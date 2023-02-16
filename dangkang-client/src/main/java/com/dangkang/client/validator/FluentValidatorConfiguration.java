@@ -20,19 +20,4 @@ public class FluentValidatorConfiguration {
         return new FluentValidateCallBack();
     }
 
-/*    @Bean
-    public BeanNameAutoProxyCreator beanNameAutoProxyCreator() {
-        // 使用BeanNameAutoProxyCreator来创建代理
-        BeanNameAutoProxyCreator proxyCreator = new BeanNameAutoProxyCreator();
-        // 设置要创建代理的那些Bean的名字
-//        proxyCreator.setBeanNames("*ServiceImpl");
-        proxyCreator.setInterceptorNames("fluentValidateInterceptor");
-        return proxyCreator;
-    }*/
-
-    @Bean
-    public PhoneNumberValidator phoneNumberValidator(){
-        return new PhoneNumberValidator();
-    }
-
 }

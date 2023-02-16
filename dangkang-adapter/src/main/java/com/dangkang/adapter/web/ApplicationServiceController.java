@@ -40,8 +40,6 @@ public class ApplicationServiceController {
         MultipleResponse<QueryResultDTO> response = applicationQueryService.queryService(applicationQueryRequest);
         logger.info("ApplicationQueryService响应参数 response = [{}]",response);
         return response;
-
     }
-
 
 }
