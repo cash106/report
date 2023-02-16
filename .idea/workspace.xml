@@ -4,48 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="重构app包结构">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ApplicationServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/ability/factoryimpl/DomainObjectFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/ability/factoryimpl/DomainObjectFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/ability/ruleimpl/DomainLogicalRuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/ability/ruleimpl/DomainLogicalRuleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/ability/serviceimpl/DomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/ability/serviceimpl/DomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/service/ApplicationQueryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/service/ApplicationQueryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/service/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/service/ApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/tradecontext/service/transaction/ApplicationServiceTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/examplecontext/service/transaction/ApplicationServiceTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/test/java/com/dangkang/app/domain/model/tradecontext/ability/ruleimpl/DomainLogicalRuleImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/test/java/com/dangkang/app/domain/model/tradecontext/ability/ruleimpl/DomainLogicalRuleImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/api/ApplicationQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/api/ApplicationQueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/api/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/api/ApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/dto/request/ApplicationQueryRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/dto/request/ApplicationQueryRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/dto/request/ApplicationServiceRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/dto/request/ApplicationServiceRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/dto/response/ApplicationServiceResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/dto/response/ApplicationServiceResultDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/dto/response/QueryResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/dto/response/QueryResultDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/tradecontext/dto/validator/ApplicationServiceDtoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/src/main/java/com/dangkang/client/examplecontext/dto/validator/ApplicationServiceDtoValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/facade/CallRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/facade/CallRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/facade/CallResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/facade/CallResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/facade/ExternalAccessFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/facade/ExternalAccessFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/facade/QueryRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/facade/QueryRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/facade/QueryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/facade/QueryResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/factory/DomainObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/factory/DomainObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/rule/DomainLogicalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/rule/DomainLogicalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/ability/service/DomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/ability/service/DomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/model/DomainObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/model/DomainObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/tradecontext/repository/DomainObjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/examplecontext/repository/DomainObjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/config/ExternalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/config/ExternalConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/converter/ApplicationServiceDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/converter/DomainObjectConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/ExternalAccessFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalAccessFacadeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/ExternalClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/ExternalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/ExternalResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/NetClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/NetClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/QueryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/QueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/facadeimpl/QueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/repositoryimpl/DomainObjectRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/repositoryimpl/DomainObjectRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/repositoryimpl/dataobject/DomainObjectDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/repositoryimpl/dataobject/DomainObjectDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/repositoryimpl/mapper/DomainObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/repositoryimpl/mapper/DomainObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/tradecontext/repositoryimpl/mapper/DomainObjectMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/examplecontext/repositoryimpl/mapper/DomainObjectMapperImpl.java" afterDir="false" />
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="将tradecontext重构为examplecontext">
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/test/java/com/dangkang/app/domain/model/tradecontext/ability/ruleimpl/DomainLogicalRuleImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/test/java/com/dangkang/app/domain/examplecontext/ability/ruleimpl/DomainLogicalRuleImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +236,7 @@
       <workItem from="1675041138524" duration="21998000" />
       <workItem from="1676249987384" duration="2045000" />
       <workItem from="1676432887920" duration="5934000" />
-      <workItem from="1676536151788" duration="4419000" />
+      <workItem from="1676536151788" duration="5142000" />
     </task>
     <task id="LOCAL-00001" summary="domainService包重命名为service，type包的类移到facade">
       <created>1676536361583</created>
@@ -299,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676539935694</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="将tradecontext重构为examplecontext">
+      <created>1676540615694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676540615694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +276,7 @@
     <MESSAGE value="domainService包重命名为service，type包的类移到facade" />
     <MESSAGE value="在模板项目中重构boundarycontext包模块，重新调整包定义" />
     <MESSAGE value="重构app包结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构app包结构" />
+    <MESSAGE value="将tradecontext重构为examplecontext" />
+    <option name="LAST_COMMIT_MESSAGE" value="将tradecontext重构为examplecontext" />
   </component>
 </project>

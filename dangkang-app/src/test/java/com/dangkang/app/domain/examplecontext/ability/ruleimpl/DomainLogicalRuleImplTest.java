@@ -1,4 +1,4 @@
-package com.dangkang.app.domain.model.tradecontext.ability.ruleimpl;
+package com.dangkang.app.domain.examplecontext.ability.ruleimpl;
 
 import com.dangkang.domain.examplecontext.model.DomainObject;
 import org.junit.Test;
