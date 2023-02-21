@@ -1,4 +1,6 @@
-package com.dangkang.domain.reportcontext.model.type.fields.openedAccounts;
+package com.dangkang.domain.reportcontext.model.openedaccounts.field;
+
+import com.dangkang.domain.reportcontext.model.Field;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.Date;
  * @date 2023/2/21 13:32
  * 描述 :         日期Field对象
  */
-public class DateField {
+public class DateField implements Field {
 
     public static final String SH_FORMAT_DATE = "yyyyMMdd" ;
 
@@ -23,7 +25,7 @@ public class DateField {
         return this.format() ;
     }
 
-    private String format() {
+    public String format() {
         return this.openedDate ;
     }
 }

@@ -1,9 +1,8 @@
 package com.dangkang.domain.reportcontext.repository;
 
-import com.dangkang.domain.reportcontext.model.type.Node;
+import com.dangkang.domain.reportcontext.model.Page;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author Orkesh
@@ -12,14 +11,15 @@ import java.util.List;
  */
 public interface ReportRepository {
 
-    public List<Node> getNodes(Date date, int index, int size) ;
+    public Page getPage(Date date, int index, int size) ;
 
-    public Integer getTotalRecords(Date date, String reportFileName) ;
+    public Integer getTotalRecords(Date date) ;
 
-    public String saveAll (List<Node> nodes) ;
+    public String saveToReportFile(Page page) ;
+
+
 
     public default int computePageCount (Integer totalRecords, Integer pageSize) {
-        Double pages = Math.ceil((double) totalRecords / pageSize) ;
-        return pages.intValue() ;
+       return new Double(Math.ceil((double) totalRecords / pageSize)).intValue() ;
     }
 }

@@ -1,4 +1,4 @@
-package com.dangkang.domain.reportcontext.model.type;
+package com.dangkang.domain.reportcontext.model;
 
 /**
  * @author Orkesh

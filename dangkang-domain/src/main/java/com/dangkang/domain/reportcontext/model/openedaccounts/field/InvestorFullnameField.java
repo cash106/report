@@ -1,20 +1,21 @@
-package com.dangkang.domain.reportcontext.model.type.fields.openedAccounts;
+package com.dangkang.domain.reportcontext.model.openedaccounts.field;
 
-import com.dangkang.domain.reportcontext.util.SuplementColumnLengthUtil;
+import com.dangkang.domain.reportcontext.model.Field;
+import com.dangkang.domain.reportcontext.model.util.FieldFormat;
 
 /**
  * @author Orkesh
  * @date 2023/2/21 13:29
  * 描述 :         投资人全称 Field 对象
  */
-public class InvestorFullnameField {
+public class InvestorFullnameField implements Field {
 
     public static final Integer SH_FORMAT_C_200 = 200 ;
 
     private String investorFullName ;
 
     public InvestorFullnameField(String originalFullname ) {
-        this.investorFullName = SuplementColumnLengthUtil.completeLengthOfC(originalFullname,
+        this.investorFullName = FieldFormat.rightFillFormat(originalFullname,
                 SH_FORMAT_C_200) ;
     }
 
@@ -23,7 +24,7 @@ public class InvestorFullnameField {
         return this.format() ;
     }
 
-    private String format() {
+    public String format() {
         return this.investorFullName ;
     }
 }

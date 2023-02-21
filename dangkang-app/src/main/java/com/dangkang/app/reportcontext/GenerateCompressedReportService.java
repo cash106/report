@@ -1,7 +1,8 @@
 package com.dangkang.app.reportcontext;
 
 import com.dangkang.domain.reportcontext.ability.BusinessDateService;
-import com.dangkang.domain.reportcontext.model.type.Node;
+import com.dangkang.domain.reportcontext.model.Node;
+import com.dangkang.domain.reportcontext.model.Page;
 import com.dangkang.domain.reportcontext.repository.ReportRepository;
 import com.dangkang.infrastructure.reportcontext.config.ReportConfig;
 import com.dangkang.infrastructure.reportcontext.repositoryimpl.OpenedAccountsRepositoryImpl;
@@ -33,16 +34,15 @@ public class GenerateCompressedReportService {
     public String generateOpenedAccountsReport() {return generateReportFile(openedAccountsRepository) ; }
 
     private String generateReportFile (ReportRepository reportRepository) {
-        String reportFileName = null ;
-        Integer totalRecords = reportRepository.getTotalRecords(businessDateService.businessDate(), reportFileName) ;
+        String reportFileName = "" ;
+        Integer totalRecords = reportRepository.getTotalRecords(businessDateService.businessDate()) ;
         Integer pageCount = reportRepository.computePageCount(totalRecords, reportConfig.getPageSize()) ;
         for(int i = 0 ; i < pageCount ; ++ i) {
             int pageIndex = i + 1 ;
-            List<Node> nodes = reportRepository.getNodes(businessDateService.businessDate(), pageIndex, reportConfig.getPageSize()) ;
-            reportFileName = reportRepository.saveAll(nodes) ;
+            Page page = reportRepository.getPage(businessDateService.businessDate(), pageIndex, reportConfig.getPageSize()) ;
+            reportFileName = reportRepository.saveToReportFile(page) ;
             LOG.info("第{}页数据已被写入报表文件{}", pageIndex, reportFileName);
         }
-        LOG.info("全部数据总量为{}，已被写入报表文件{}", totalRecords, reportFileName);
         return reportFileName ;
     }
 }

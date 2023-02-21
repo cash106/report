@@ -1,9 +1,11 @@
 package com.dangkang.infrastructure.reportcontext.repositoryimpl;
 
 import com.dangkang.domain.exception.ApplicationException;
-import com.dangkang.domain.reportcontext.model.type.Node;
+import com.dangkang.domain.reportcontext.model.Node;
+import com.dangkang.domain.reportcontext.model.Page;
 import com.dangkang.infrastructure.reportcontext.config.ReportConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.List;
@@ -13,13 +15,15 @@ import java.util.List;
  * @date 2023/2/21 13:52
  * 描述 :         报表文件的操作因是IO操作，故在基础设施层准备了进行IO输出（相当于数据库写）操作的数据仓
  */
+@Component
 public class ReportFile {
 
     @Autowired
     ReportConfig reportConfig ;
 
-    public void save(List<Node> nodes, String reportFileName) {
-        if(nodes == null || nodes.size() == 0)
+    public void save(Page page, String reportFileName) {
+        List<Node> nodeList=page.getNodeList();
+        if(nodeList == null || nodeList.size() == 0)
             return ;
         File file = new File(reportConfig.getRootPath() + reportFileName) ;
         try (
@@ -30,11 +34,7 @@ public class ReportFile {
                                 )
                         )
         ){
-            StringBuffer fullContent = new StringBuffer() ;
-            for (int i = 0 ; i < nodes.size() ; ++ i )
-                fullContent.append(nodes.get(i)) ;
-
-            reportWriter.write(fullContent.toString()) ;
+            reportWriter.write(page.format()) ;
             reportWriter.flush() ;
         } catch (UnsupportedEncodingException e) {
             throw new ApplicationException().setPromptMessage("当前用的字符集是: %s", reportConfig.getCharset()).setCause(e) ;

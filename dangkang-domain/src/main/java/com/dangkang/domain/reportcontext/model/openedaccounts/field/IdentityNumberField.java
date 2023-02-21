@@ -1,20 +1,21 @@
-package com.dangkang.domain.reportcontext.model.type.fields.openedAccounts;
+package com.dangkang.domain.reportcontext.model.openedaccounts.field;
 
-import com.dangkang.domain.reportcontext.util.SuplementColumnLengthUtil;
+import com.dangkang.domain.reportcontext.model.Field;
+import com.dangkang.domain.reportcontext.model.util.FieldFormat;
 
 /**
  * @author Orkesh
  * @date 2023/2/21 12:27
  * 描述 :         身份识别码Field对象
  */
-public class IdentityNumberField {
+public class IdentityNumberField implements Field {
 
     public static final Integer SH_FORMAT_C_20 = 20 ;
 
     private String identityNumber ;
 
     public IdentityNumberField (String originalIdentityNumber) {
-        this.identityNumber = SuplementColumnLengthUtil.completeLengthOfC(originalIdentityNumber,
+        this.identityNumber = FieldFormat.rightFillFormat(originalIdentityNumber,
                 SH_FORMAT_C_20) ;
     }
 
@@ -23,7 +24,7 @@ public class IdentityNumberField {
         return this.format() ;
     }
 
-    private String format() {
+    public String format() {
         return this.identityNumber ;
     }
 }

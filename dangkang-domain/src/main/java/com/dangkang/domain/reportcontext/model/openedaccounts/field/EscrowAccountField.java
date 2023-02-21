@@ -1,20 +1,21 @@
-package com.dangkang.domain.reportcontext.model.type.fields.openedAccounts;
+package com.dangkang.domain.reportcontext.model.openedaccounts.field;
 
-import com.dangkang.domain.reportcontext.util.SuplementColumnLengthUtil;
+import com.dangkang.domain.reportcontext.model.Field;
+import com.dangkang.domain.reportcontext.model.util.FieldFormat;
 
 /**
  * @author Orkesh
  * @date 2023/2/21 13:10
  * 描述 :         二级托管账号Field对象
  */
-public class EscrowAccountField {
+public class EscrowAccountField implements Field {
 
     public static final Integer SH_FORMAT_C_18 = 18 ;
 
     private String escrowAccount ;
 
     public EscrowAccountField(String originalEscrowAccount) {
-        this.escrowAccount = SuplementColumnLengthUtil.completeLengthOfC(originalEscrowAccount,
+        this.escrowAccount = FieldFormat.rightFillFormat(originalEscrowAccount,
                 SH_FORMAT_C_18) ;
     }
 
@@ -23,7 +24,7 @@ public class EscrowAccountField {
         return this.format() ;
     }
 
-    private String format() {
+    public String format() {
         return this.escrowAccount ;
     }
 }

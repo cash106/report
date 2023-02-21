@@ -54,13 +54,4 @@ public class ReportConfig {
         this.shanghaiToken = shanghaiToken;
     }
 
-    public String decrypthShToken () {
-        //TODO 报表加密压缩的密码
-        return "" ;
-    }
-
-    public String ecryptShToken() {
-        //TODO 报表加密压缩的密码
-        return "" ;
-    }
 }

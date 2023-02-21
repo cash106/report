@@ -1,10 +1,10 @@
-package com.dangkang.domain.reportcontext.model.type.nodes;
+package com.dangkang.domain.reportcontext.model.openedaccounts.node;
 
-import com.dangkang.domain.reportcontext.model.type.ReportNode;
-import com.dangkang.domain.reportcontext.model.type.fields.openedAccounts.DateField;
-import com.dangkang.domain.reportcontext.model.type.fields.openedAccounts.EscrowAccountField;
-import com.dangkang.domain.reportcontext.model.type.fields.openedAccounts.IdentityNumberField;
-import com.dangkang.domain.reportcontext.model.type.fields.openedAccounts.InvestorFullnameField;
+import com.dangkang.domain.reportcontext.model.ReportNode;
+import com.dangkang.domain.reportcontext.model.openedaccounts.field.DateField;
+import com.dangkang.domain.reportcontext.model.openedaccounts.field.EscrowAccountField;
+import com.dangkang.domain.reportcontext.model.openedaccounts.field.IdentityNumberField;
+import com.dangkang.domain.reportcontext.model.openedaccounts.field.InvestorFullnameField;
 
 import java.util.Date;
 
@@ -49,9 +49,10 @@ public class OpenedAccountNode extends ReportNode {
     }
 
     public String format() {
-        StringBuffer node = new StringBuffer() ;
-        node.append(date).append(escrowAccount).append(identityNumber).append(investorFullName)
-                .append(this.newLine()) ;
-        return node.toString() ;
+        return  new StringBuffer() .append(date).
+                                                    append(escrowAccount).
+                                                    append(identityNumber).
+                                                    append(investorFullName).
+                                                    append(this.newLine()) .toString();
     }
 }

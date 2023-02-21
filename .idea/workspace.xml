@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,26 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="将tradecontext重构为examplecontext">
-      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/EodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/GenerateCompressedReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/BusinessDateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/ReportNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/DateField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/EscrowAccountField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/IdentityNumberField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/InvestorFullnameField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/nodes/OpenedAccountNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/repository/ReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/util/SuplementColumnLengthUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/config/ReportConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/ReportFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/ReportField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/util/FieldFormat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/GenerateCompressedReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/GenerateCompressedReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/ReportNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/ReportNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/DateField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/DateField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/EscrowAccountField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/EscrowAccountField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/IdentityNumberField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/IdentityNumberField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/fields/openedAccounts/InvestorFullnameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/InvestorFullnameField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/type/nodes/OpenedAccountNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/node/OpenedAccountNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/repository/ReportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/util/SuplementColumnLengthUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/config/ReportConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/config/ReportConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/ReportFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/ReportFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="D:\Git\cmd\git.exe" />
+    <option name="PATH_TO_GIT" value="D:\Program Files\Git\cmd\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,16 +79,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "b833a6c74d277cdf79f20bcd97106f16",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ddd-template\dangkang-domain\src\test" />
@@ -99,6 +103,7 @@
       <recent name="D:\ddd-template\dangkang-infrastructure\src\test\java\com\ddd\infrastructure\test" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dangkang.domain.reportcontext.model.type.fields" />
       <recent name="com.dangkang.infrastructure" />
       <recent name="com.dangkang.app.service" />
       <recent name="com.dangkang.domain.test" />
@@ -141,13 +146,6 @@
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ddd-template" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,33 +153,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="ddd-template" />
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -265,7 +236,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -283,6 +254,8 @@
       <workItem from="1676249987384" duration="2045000" />
       <workItem from="1676432887920" duration="5934000" />
       <workItem from="1676536151788" duration="5142000" />
+      <workItem from="1676965087080" duration="680000" />
+      <workItem from="1676965769482" duration="11990000" />
     </task>
     <task id="LOCAL-00001" summary="domainService包重命名为service，type包的类移到facade">
       <created>1676536361583</created>
@@ -336,39 +309,5 @@
     <MESSAGE value="重构app包结构" />
     <MESSAGE value="将tradecontext重构为examplecontext" />
     <option name="LAST_COMMIT_MESSAGE" value="将tradecontext重构为examplecontext" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="312" y="0" key="#Project_Structure" timestamp="1676951876583">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="312" y="0" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1676951876583" />
-    <state x="621" y="296" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1676953492933">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="621" y="296" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1676953492933" />
-    <state x="718" y="154" key="#com.intellij.ide.util.MemberChooser" timestamp="1676961331493">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="718" y="154" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1676961331493" />
-    <state width="1842" height="455" key="GridCell.Tab.0.bottom" timestamp="1676953008365">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1842" height="455" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1676953008365" />
-    <state width="1842" height="455" key="GridCell.Tab.0.center" timestamp="1676953008364">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1842" height="455" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1676953008364" />
-    <state width="1842" height="455" key="GridCell.Tab.0.left" timestamp="1676953008364">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1842" height="455" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1676953008364" />
-    <state width="1842" height="455" key="GridCell.Tab.0.right" timestamp="1676953008365">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1842" height="455" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1676953008365" />
-    <state x="329" y="63" width="1481" height="913" key="SettingsEditor" timestamp="1676952608435">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="329" y="63" width="1481" height="913" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1676952608435" />
   </component>
 </project>
