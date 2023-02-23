@@ -10,7 +10,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-02-21T12:16:17+0800",
+    date = "2023-02-23T11:21:38+0800",
     comments = "version: 1.5.0.Beta1, compiler: javac, environment: Java 1.8.0_211 (Oracle Corporation)"
 )
 public class DomainObjectConverterImpl implements DomainObjectConverter {

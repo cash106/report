@@ -6,17 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dangkang-domain" />
-        <module name="bond-adapter" />
-        <module name="bond-domain" />
         <module name="dangkang-start" />
-        <module name="bond-app" />
-        <module name="bond-infrastructure" />
-        <module name="dangkang-adapter" />
-        <module name="bond-client" />
         <module name="dangkang-client" />
-        <module name="dangkang-app" />
+        <module name="bond-domain" />
+        <module name="bond-client" />
         <module name="dangkang-infrastructure" />
+        <module name="bond-infrastructure" />
+        <module name="bond-adapter" />
+        <module name="dangkang-app" />
+        <module name="dangkang-adapter" />
+        <module name="bond-app" />
+        <module name="dangkang-domain" />
       </profile>
     </annotationProcessing>
   </component>

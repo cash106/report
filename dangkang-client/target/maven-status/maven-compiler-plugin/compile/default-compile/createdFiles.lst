@@ -1,0 +1,15 @@
+com\dangkang\client\validator\FluentValidateCallBack.class
+com\dangkang\client\examplecontext\dto\request\ApplicationQueryRequestDTO.class
+com\dangkang\client\validator\FluentValidatorConfiguration.class
+com\dangkang\client\examplecontext\api\ApplicationService.class
+com\dangkang\client\examplecontext\dto\validator\ApplicationServiceDtoValidator.class
+com\dangkang\client\dto\response\AbstractResponse.class
+com\dangkang\client\examplecontext\api\ApplicationQueryService.class
+com\dangkang\client\dto\response\MultipleResponse.class
+com\dangkang\client\dto\response\Response.class
+com\dangkang\client\dto\request\MultipleQueryRequest.class
+com\dangkang\client\examplecontext\dto\response\QueryResultDTO.class
+com\dangkang\client\examplecontext\dto\request\ApplicationServiceRequestDTO.class
+com\dangkang\client\dto\request\AbstractRequest.class
+com\dangkang\client\examplecontext\dto\response\ApplicationServiceResultDTO.class
+com\dangkang\client\validator\PhoneNumberValidator.class
