@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="修整了sql语句有关错误&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="修整了native方法的调用部分并用粗略的adapter请求生成了一各简单报表&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Field.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Page.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/ReportField.java" afterDir="false" />
@@ -328,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677132511087</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修整了native方法的调用部分并用粗略的adapter请求生成了一各简单报表&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
+      <created>1677133462205</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677133462205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +362,8 @@
     <MESSAGE value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
     <MESSAGE value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
     <MESSAGE value="修整了sql语句有关错误&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修整了sql语句有关错误&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <MESSAGE value="修整了native方法的调用部分并用粗略的adapter请求生成了一各简单报表&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修整了native方法的调用部分并用粗略的adapter请求生成了一各简单报表&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1677127474195">
@@ -406,14 +414,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1858" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677133330875" />
-    <state x="329" y="63" key="SettingsEditor" timestamp="1677128547089">
+    <state x="329" y="63" key="SettingsEditor" timestamp="1677133516602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="329" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1677128547089" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1677132514525">
+    <state x="329" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1677133516602" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1677133469532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1677132514525" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1677133469532" />
     <state x="532" y="231" key="run.anything.popup" timestamp="1677125590348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
