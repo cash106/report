@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -33,8 +34,7 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository {
     public com.dangkang.domain.reportcontext.model.Page getPage(Date date, int index, int size) {
         Pageable pageable = PageRequest.of(index - 1, size, Direction.DESC, "id") ;
         Page<OpenedAccountDO> openedAccountDOPage = openedAccountMapper.findAllByDate(
-                this.generateConditionerDate(date)[0],
-                this.generateConditionerDate(date)[1],
+                new SimpleDateFormat(DB_DATE_FORMAT).format(date),
                 pageable) ;
         com.dangkang.domain.reportcontext.model.Page page = this.pageOf(
                 index,
@@ -47,7 +47,7 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository {
 
     @Override
     public Integer getTotalRecords(Date date) {
-        return openedAccountMapper.getTotalElementCount(this.generateConditionerDate(date)[0], this.generateConditionerDate(date)[1]) ;
+        return openedAccountMapper.getTotalElementCount(new SimpleDateFormat(DB_DATE_FORMAT).format(date)) ;
     }
 
     @Override

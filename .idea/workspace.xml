@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Field.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Page.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/ReportField.java" afterDir="false" />
@@ -314,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677128562326</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
+      <created>1677130416701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677130416701</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,44 +346,85 @@
     <MESSAGE value="重构app包结构" />
     <MESSAGE value="将tradecontext重构为examplecontext" />
     <MESSAGE value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
-    <option name="LAST_COMMIT_MESSAGE" value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <MESSAGE value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <option name="LAST_COMMIT_MESSAGE" value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1677127474195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1677127474195" />
+    <state x="655" y="146" key="#xdebugger.evaluate" timestamp="1677131510899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="146" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1677131510899" />
+    <state width="568" height="560" key="DebuggerActiveHint" timestamp="1677131978701">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="568" height="560" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1677131978701" />
     <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1677128537950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1677128537950" />
-    <state width="1858" height="189" key="GridCell.Tab.0.bottom" timestamp="1677130142174">
+    <state width="1858" height="300" key="GridCell.Tab.0.bottom" timestamp="1677132419671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142174" />
-    <state width="1858" height="189" key="GridCell.Tab.0.center" timestamp="1677130142173">
+    <state width="1858" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419671" />
+    <state width="1858" height="300" key="GridCell.Tab.0.center" timestamp="1677132419671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142173" />
-    <state width="1858" height="189" key="GridCell.Tab.0.left" timestamp="1677130142173">
+    <state width="1858" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419671" />
+    <state width="1858" height="300" key="GridCell.Tab.0.left" timestamp="1677132419670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142173" />
-    <state width="1858" height="189" key="GridCell.Tab.0.right" timestamp="1677130142174">
+    <state width="1858" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419670" />
+    <state width="1858" height="300" key="GridCell.Tab.0.right" timestamp="1677132419671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142174" />
+    <state width="1858" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419671" />
+    <state width="1858" height="300" key="GridCell.Tab.1.bottom" timestamp="1677132419672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419672" />
+    <state width="1858" height="300" key="GridCell.Tab.1.center" timestamp="1677132419672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419672" />
+    <state width="1858" height="300" key="GridCell.Tab.1.left" timestamp="1677132419671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419671" />
+    <state width="1858" height="300" key="GridCell.Tab.1.right" timestamp="1677132419672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677132419672" />
     <state x="329" y="63" key="SettingsEditor" timestamp="1677128547089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="329" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1677128547089" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1677128566568">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1677130420043">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1677128566568" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1677130420043" />
     <state x="532" y="231" key="run.anything.popup" timestamp="1677125590348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1677125590348" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/GenerateCompressedReportService.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

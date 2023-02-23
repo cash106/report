@@ -28,12 +28,6 @@ public interface ReportRepository {
        return new Double(Math.ceil((double) totalRecords / pageSize)).intValue() ;
     }
 
-    public default Date[] generateConditionerDate (Date dateFromDb) {
-        long msAfterOneDay = dateFromDb.getTime() + (1 * 24 * 3600 * 1000l) ;
-        Date afterOneDay = new Date(msAfterOneDay) ;
-        return new Date[] {dateFromDb, afterOneDay} ;
-    }
-
     public default Page pageOf(int pageIndex, long totalElementsCount, int totalPagesCount, List<Node> nodes) {
         Page page = new Page();
         page.setCurrentPage(pageIndex) ;
