@@ -10,5 +10,5 @@ import java.util.Date;
  */
 public interface BusinessDateService {
 
-    public Date businessDate() ;
+    public Date getBusinessDate() ;
 }

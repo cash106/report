@@ -1,11 +1,15 @@
 package com.dangkang.app.reportcontext;
 
+import com.dangkang.app.reportcontext.openedaccounts.serviceimpl.OpenedAccountGenerateReportFileService;
 import com.dangkang.domain.exception.ApplicationException;
+import com.dangkang.domain.reportcontext.ability.GenerateReportFileService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.*;
 
 /**
@@ -19,12 +23,8 @@ public class EodService {
     private static final Logger LOG = LoggerFactory.getLogger(EodService.class) ;
     private static final ExecutorService executor = Executors.newFixedThreadPool(7) ;
 
-    public static final String openedAccountsReport = "openedAccounts" ;
 
-    @Autowired
-    GenerateCompressedReportService generateCompressedReportService ;
-
-    public Boolean execute() {
+    /*public Boolean execute() {
         CountDownLatch countDownLatch = new CountDownLatch(1) ;
         boolean returnResult = true ;
         ArrayList<Callable> callables = new ArrayList<>() ;
@@ -68,7 +68,7 @@ public class EodService {
         @Override
         public Boolean call() throws Exception {
             try{
-                String reportFileName = this.generateCompressedReport(reportName) ;
+                String reportFileName = this.generateReportFile(reportName) ;
             }catch(ApplicationException e) {
                 LOG.error("报表文件{}生成及加密压缩流程也难怪以失败告终", reportName) ;
                 return false ;
@@ -77,11 +77,7 @@ public class EodService {
             }
             return true ;
         }
+*/
 
-        public String generateCompressedReport (String reportName) {
-            if(openedAccountsReport.equals(reportName))
-                return generateCompressedReportService.generateOpenedAccountsReport() ;
-            return "" ;
-        }
-    }
+   // }
 }

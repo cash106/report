@@ -15,21 +15,21 @@ import java.util.Date;
  */
 public class OpenedAccountNode extends ReportNode {
     /* 二级托管账号 */
-    private EscrowAccountField escrowAccount ;
+    private EscrowAccountField escrowAccountNumber;
     /* 身份识别码 */
-    private IdentityNumberField identityNumber ;
+    private IdentityNumberField identityCode;
     /* 投资人全称 */
     private InvestorFullnameField investorFullName ;
     /* 开户日期 */
-    private DateField date ;
+    private DateField createdDate;
 
-    public OpenedAccountNode setEscrowAccount(String escrowAccount) {
-        this.escrowAccount = new EscrowAccountField(escrowAccount) ;
+    public OpenedAccountNode setEscrowAccountNumber(String escrowAccountNumber) {
+        this.escrowAccountNumber = new EscrowAccountField(escrowAccountNumber) ;
         return this ;
     }
 
-    public OpenedAccountNode setIdentityNumber(String identityNumber) {
-        this.identityNumber = new IdentityNumberField(identityNumber) ;
+    public OpenedAccountNode setIdentityCode(String identityCode) {
+        this.identityCode = new IdentityNumberField(identityCode) ;
         return this ;
     }
 
@@ -38,8 +38,8 @@ public class OpenedAccountNode extends ReportNode {
         return this ;
     }
 
-    public OpenedAccountNode setDate(Date date) {
-        this.date = new DateField(date) ;
+    public OpenedAccountNode setCreatedDate(Date createdDate) {
+        this.createdDate = new DateField(createdDate) ;
         return this ;
     }
 
@@ -49,9 +49,9 @@ public class OpenedAccountNode extends ReportNode {
     }
 
     public String format() {
-        return  new StringBuffer() .append(date).
-                                                    append(escrowAccount).
-                                                    append(identityNumber).
+        return  new StringBuffer() .append(createdDate).
+                                                    append(escrowAccountNumber).
+                                                    append(identityCode).
                                                     append(investorFullName).
                                                     append(this.newLine()) .toString();
     }
