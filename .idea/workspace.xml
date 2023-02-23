@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676540615694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
+      <created>1677128562326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677128562326</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,26 +350,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1677128537950" />
-    <state width="1858" height="189" key="GridCell.Tab.0.bottom" timestamp="1677124045513">
+    <state width="1858" height="189" key="GridCell.Tab.0.bottom" timestamp="1677130142174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
-    <state width="1858" height="189" key="GridCell.Tab.0.center" timestamp="1677124045513">
+    <state width="1858" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142174" />
+    <state width="1858" height="189" key="GridCell.Tab.0.center" timestamp="1677130142173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
-    <state width="1858" height="189" key="GridCell.Tab.0.left" timestamp="1677124045513">
+    <state width="1858" height="189" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142173" />
+    <state width="1858" height="189" key="GridCell.Tab.0.left" timestamp="1677130142173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
-    <state width="1858" height="189" key="GridCell.Tab.0.right" timestamp="1677124045513">
+    <state width="1858" height="189" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142173" />
+    <state width="1858" height="189" key="GridCell.Tab.0.right" timestamp="1677130142174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1858" height="189" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
+    <state width="1858" height="189" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677130142174" />
     <state x="329" y="63" key="SettingsEditor" timestamp="1677128547089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="329" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1677128547089" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1677128566568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1677128566568" />
     <state x="532" y="231" key="run.anything.popup" timestamp="1677125590348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
