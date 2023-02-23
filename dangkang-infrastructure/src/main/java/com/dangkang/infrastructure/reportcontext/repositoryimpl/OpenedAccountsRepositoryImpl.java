@@ -1,9 +1,14 @@
 package com.dangkang.infrastructure.reportcontext.repositoryimpl;
 
-import com.dangkang.domain.reportcontext.model.Page;
 import com.dangkang.domain.reportcontext.repository.ReportRepository;
-import com.dangkang.infrastructure.reportcontext.config.ReportConfig;
+import com.dangkang.infrastructure.reportcontext.converter.OpenedAccountConverter;
+import com.dangkang.infrastructure.reportcontext.repositoryimpl.dataobject.OpenedAccountDO;
+import com.dangkang.infrastructure.reportcontext.repositoryimpl.mapper.OpenedAccountMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -21,18 +26,32 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository {
     @Autowired
     ReportFile reportFile ;
 
+    @Autowired
+    OpenedAccountMapper openedAccountMapper ;
+
     @Override
-    public Page getPage(Date date, int index, int size) {
-        return null;
+    public com.dangkang.domain.reportcontext.model.Page getPage(Date date, int index, int size) {
+        Pageable pageable = PageRequest.of(index - 1, size, Direction.DESC, "id") ;
+        Page<OpenedAccountDO> openedAccountDOPage = openedAccountMapper.findAllByDate(
+                this.generateConditionerDate(date)[0],
+                this.generateConditionerDate(date)[1],
+                pageable) ;
+        com.dangkang.domain.reportcontext.model.Page page = this.pageOf(
+                index,
+                openedAccountDOPage.getTotalElements(),
+                openedAccountDOPage.getTotalPages(),
+                OpenedAccountConverter.convertToNodeList(openedAccountDOPage.getContent())
+        ) ;
+        return page;
     }
 
     @Override
     public Integer getTotalRecords(Date date) {
-       return 0;//TODO
+        return openedAccountMapper.getTotalElementCount(this.generateConditionerDate(date)[0], this.generateConditionerDate(date)[1]) ;
     }
 
     @Override
-    public String saveToReportFile(Page page) {
+    public String saveToReportFile(com.dangkang.domain.reportcontext.model.Page page) {
         reportFile.save(page, REPORT_FILE_NAME) ;
         return REPORT_FILE_NAME ;
     }

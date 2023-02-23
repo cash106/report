@@ -4,11 +4,13 @@ import java.util.List;
 
 public class Page {
 
-    private int size =100;
+    private int size = 100;
 
     private int currentPage;
 
-    private int count;
+    private int totalPageCount ;
+
+    private long totalElementCount ;
 
     private List<Node> nodeList;
 
@@ -32,14 +34,6 @@ public class Page {
         return this;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public Page setCount(int count) {
-        this.count = count;
-        return this;
-    }
 
     public List<Node> getNodeList() {
         return nodeList;
@@ -48,6 +42,22 @@ public class Page {
     public Page setNodeList(List<Node> nodeList) {
         this.nodeList = nodeList;
         return this;
+    }
+
+    public int getTotalPageCount() {
+        return totalPageCount;
+    }
+
+    public void setTotalPageCount(int totalPageCount) {
+        this.totalPageCount = totalPageCount;
+    }
+
+    public long getTotalElementCount() {
+        return totalElementCount;
+    }
+
+    public void setTotalElementCount(long totalElementCount) {
+        this.totalElementCount = totalElementCount;
     }
 
     public  String format(){

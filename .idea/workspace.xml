@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -22,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="将tradecontext重构为examplecontext">
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Field.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Page.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/ReportField.java" afterDir="false" />
@@ -57,7 +54,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="D:\Program Files\Git\cmd\git.exe" />
+    <option name="PATH_TO_GIT" value="D:\Git\cmd\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -79,25 +76,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "spring.configuration.checksum": "b833a6c74d277cdf79f20bcd97106f16",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ddd-template\dangkang-domain\src\test" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dangkang.app.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ddd-template\dangkang-infrastructure\src\test\java\com\ddd\infrastructure\test" />
@@ -108,11 +92,27 @@
       <recent name="com.dangkang.app.service" />
       <recent name="com.dangkang.domain.test" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.dangkang.app.service" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ddd-template\dangkang-domain\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationServiceImplTest.execute">
+  <component name="RunManager" selected="Application.DangkangApplication">
+    <configuration name="DangkangApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dangkang.DangkangApplication" />
+      <module name="dangkang-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dangkang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dangkang-app" />
       <extension name="coverage">
@@ -146,6 +146,13 @@
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ddd-template" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,6 +160,33 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="ddd-template" />
       <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,19 +241,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="ApplicationForTest" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="dangkang-infrastructure" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dangkang.infrastructure.ApplicationForTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dangkang.infrastructure.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DangkangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="dangkang-start" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dangkang.DangkangApplication" />
@@ -229,6 +250,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DangkangApplication" />
         <item itemvalue="JUnit.ApplicationServiceImplTest.execute" />
         <item itemvalue="JUnit.ApplicationServiceImplTest" />
         <item itemvalue="Maven.dangkang [clean]" />
@@ -236,7 +258,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -301,6 +323,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -308,6 +331,41 @@
     <MESSAGE value="在模板项目中重构boundarycontext包模块，重新调整包定义" />
     <MESSAGE value="重构app包结构" />
     <MESSAGE value="将tradecontext重构为examplecontext" />
-    <option name="LAST_COMMIT_MESSAGE" value="将tradecontext重构为examplecontext" />
+    <MESSAGE value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <option name="LAST_COMMIT_MESSAGE" value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1677127474195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="718" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1677127474195" />
+    <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1677128537950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1677128537950" />
+    <state width="1858" height="189" key="GridCell.Tab.0.bottom" timestamp="1677124045513">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
+    <state width="1858" height="189" key="GridCell.Tab.0.center" timestamp="1677124045513">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="189" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
+    <state width="1858" height="189" key="GridCell.Tab.0.left" timestamp="1677124045513">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="189" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
+    <state width="1858" height="189" key="GridCell.Tab.0.right" timestamp="1677124045513">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1858" height="189" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677124045513" />
+    <state x="329" y="63" key="SettingsEditor" timestamp="1677128547089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="329" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1677128547089" />
+    <state x="532" y="231" key="run.anything.popup" timestamp="1677125590348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1677125590348" />
   </component>
 </project>
