@@ -22,97 +22,97 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。">
-      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/openedaccounts/serviceimpl/OpenedAccountGenerateReportFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/serviceimpl/AbstractGenerateReportFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/serviceimpl/SHGenerateReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/CompressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/DigestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/GenerateReportFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/TransferService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/dto/PageQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/dto/PageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/OpenedAccountConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_2_23_9_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_2_23_9_05__Changes_.xml" afterDir="false" />
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="重构">
+      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/SHGenerateReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/util/Compress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/util/Digest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/util/GenerateReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/util/Transfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/exception/ReportException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/EodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/EodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/GenerateCompressedReportService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/annotation/ApplicationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/ability/factoryimpl/DomainObjectFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/ability/ruleimpl/DomainLogicalRuleImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/ability/serviceimpl/DomainServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/service/ApplicationQueryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/service/ApplicationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/examplecontext/service/transaction/ApplicationServiceTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/exception/ExceptionAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/exception/ExceptionResolver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/reportcontext/EodService$ReportTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/reportcontext/EodService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/reportcontext/GenerateCompressedReportService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/validation/Validation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/classes/com/dangkang/app/validation/ValidationAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/dangkang-ddd-template.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/surefire-reports/TEST-com.dangkang.app.domain.examplecontext.ability.ruleimpl.DomainLogicalRuleImplTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/surefire-reports/com.dangkang.app.domain.examplecontext.ability.ruleimpl.DomainLogicalRuleImplTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-app/target/test-classes/com/dangkang/app/domain/examplecontext/ability/ruleimpl/DomainLogicalRuleImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/BusinessDateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/BusinessDateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/node/OpenedAccountNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/node/OpenedAccountNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/classes/com/dangkang/adapter/web/ApplicationServiceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/classes/com/dangkang/adapter/web/ReportAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/dangkang-ddd-template.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/EodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/EodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/openedaccounts/serviceimpl/OpenedAccountGenerateReportFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/openedaccounts/serviceimpl/OpenedAccountGenerateReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/serviceimpl/AbstractGenerateReportFileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/serviceimpl/SHGenerateReportService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/GenerateReportFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/ability/GenerateReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/DateField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/field/DateField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/EscrowAccountField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/field/EscrowAccountField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/IdentityNumberField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/field/IdentityNumberField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/field/InvestorFullnameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/field/InvestorFullnameField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/openedaccounts/node/OpenedAccountNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/node/OpenedAccountNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/repository/ReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/facade/CallRequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/facade/CallResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/facade/ExternalAccessFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/facade/QueryRequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/facade/QueryResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/factory/DomainObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/rule/DomainLogicalRule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/ability/service/DomainService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/model/DomainObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/examplecontext/repository/DomainObjectRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/ApplicationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/DataBaseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/ValidationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/database/DataBaseErrorManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/NetError.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/NetErrorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/NetErrorManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/strategy/BindErrorStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/strategy/ConnectErrorStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/strategy/NetErrorStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/strategy/SocketErrorStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/exception/net/strategy/SocketTimeoutErrorStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/ability/BusinessDateService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/Field.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/ReportField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/ReportNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/openedaccounts/field/DateField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/openedaccounts/field/EscrowAccountField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/openedaccounts/field/IdentityNumberField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/openedaccounts/field/InvestorFullnameField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/openedaccounts/node/OpenedAccountNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/model/util/FieldFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/classes/com/dangkang/domain/reportcontext/repository/ReportRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/dangkang-ddd-template.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/BusinessDateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/serviceimpl/BusinessDateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/converter/OpenedAccountConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/ReportFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/util/ReportFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/dataobject/OpenedAccountDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/dataobject/OpenedAccountDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/repositoryimpl/mapper/OpenedAccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/mapper/OpenedAccountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/tradecontext/mapper/DomainObjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverterImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverterImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/OpenedAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/dataobject/OpenedAccountDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/dataobject/OpenedAccountDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/openedaccounts/repositoryimpl/mapper/OpenedAccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/OpenedAccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/common/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/config/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/config/ConfigManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/config/ExternalConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverterImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverterImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalAccessFacadeImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/ExternalResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/NetClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/facadeimpl/QueryResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/repositoryimpl/DomainObjectRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/repositoryimpl/dataobject/DomainObjectDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/repositoryimpl/mapper/DomainObjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/examplecontext/repositoryimpl/mapper/DomainObjectMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/MaskConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/annotation/NotNull.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/annotation/Nullable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/annotation/VisibleForTesting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/DataMask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/DataMaskJsonFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/MaskMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/MaskStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/Sensitive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/SensitiveType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/strategy/EmailMask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/strategy/HashMask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/strategy/NameMask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/datamasking/strategy/PartMask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/util/EncodeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/util/FormatUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/util/HashUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/logmasking/util/HashUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/BusinessDateServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/config/ReportConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/converter/OpenedAccountConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/repositoryimpl/OpenedAccountsRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/repositoryimpl/ReportFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/repositoryimpl/dataobject/OpenedAccountDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/com/dangkang/infrastructure/reportcontext/repositoryimpl/mapper/OpenedAccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/config/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/config/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/config/external-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/config/external-prd.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/config/external-uat.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/data_mask.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/logback-dangkang.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/report.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/classes/tradecontext/mapper/DomainObjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/dangkang-ddd-template.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/test-classes/com/ddd/infrastructure/facadeimpl/ExternalAccessFacadeImplTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$USER_HOME$/Downloads/apache-maven-3.3.9-bin/apache-maven-3.3.9" />
+        <option name="localRepository" value="D:\mavenRepository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../maven/apache-maven-3.8.1" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -151,12 +152,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ddd-template\dangkang-domain\src\test" />
@@ -171,11 +172,11 @@
       <recent name="com.dangkang.app.reportcontext.serviceimpl" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dangkang.app.reportcontext.sh.serviceimpl" />
       <recent name="com.dangkang.infrastructure.reportcontext.openedaccounts" />
       <recent name="com.dangkang.domain.reportcontext.model.type.fields" />
       <recent name="com.dangkang.infrastructure" />
       <recent name="com.dangkang.app.service" />
-      <recent name="com.dangkang.domain.test" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.dangkang.app.service" />
@@ -369,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677130416701</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="重构">
+      <created>1677147403770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677147403770</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +402,7 @@
     <MESSAGE value="将tradecontext重构为examplecontext" />
     <MESSAGE value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
     <MESSAGE value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
-    <option name="LAST_COMMIT_MESSAGE" value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
+    <MESSAGE value="重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构" />
   </component>
 </project>

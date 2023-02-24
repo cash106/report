@@ -20,8 +20,7 @@ public interface ReportRepository {
 
     public Integer getTotalRecordCount(Date date) ;
 
-    public String saveToReportFile(PageResponse<Node> page) ;
-
+    public String batchSaveToReportFile(PageResponse<Node> page) ;
 
 
     public default int computePageCount (Integer totalCount, Integer pageSize) {
