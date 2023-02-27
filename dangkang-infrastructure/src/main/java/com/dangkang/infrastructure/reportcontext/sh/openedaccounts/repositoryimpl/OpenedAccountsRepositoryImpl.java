@@ -5,8 +5,10 @@ import com.dangkang.domain.reportcontext.model.Node;
 import com.dangkang.domain.reportcontext.repository.ReportRepository;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.OpenedAccountConverter;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
-import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.OpenedAccountMapper;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis.OpenedAccountDOIbatis;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.ibatis.OpenedAccountMapperIbatis;
 import com.dangkang.infrastructure.reportcontext.util.ReportFile;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Orkesh
@@ -34,18 +37,21 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository {
     ReportFile reportFile ;
 
     @Autowired
-    OpenedAccountMapper openedAccountMapper ;
+    OpenedAccountMapperIbatis openedAccountMapper ;
+
+//    @Autowired
+//    OpenedAccountMapper openedAccountMapper ;
 
     @Override
     public PageResponse<Node> getPage(Date date, int index, int size) {
-        Pageable pageable = PageRequest.of(index - 1, size, Direction.DESC, "id");
-        Page<OpenedAccountDO> dbPage = openedAccountMapper.findAllByDate(
+//        Pageable pageable = PageRequest.of(index - 1, size, Direction.DESC, "id");
+        List<OpenedAccountDOIbatis> openedAccountDOList = openedAccountMapper.findAllByDate(
                 new SimpleDateFormat(DB_DATE_FORMAT).format(date),
-                pageable);
+                new RowBounds( (index - 1) * size, size));
         PageResponse<Node> page = this.pageOf(
                 index,
-                dbPage.getTotalElements(),
-                OpenedAccountConverter.convert2NodeList(dbPage.getContent()));
+                openedAccountDOList.size(),
+                OpenedAccountConverter.convert2NodeList(openedAccountDOList));
 
         return page;
     }

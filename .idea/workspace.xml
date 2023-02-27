@@ -22,28 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="重构">
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/TestRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/dataobject/ibatis/OpenedAccountDOIbatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/ibatis/OpenedAccountMapperIbatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_2_23_9_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_2_23_9_05__Changes_.xml" afterDir="false" />
+    <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/target/dangkang-ddd-template.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/target/dangkang-ddd-template.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/src/main/java/com/dangkang/DangkangApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/target/classes/com/dangkang/DangkangApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/target/classes/com/dangkang/DangkangApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/target/dangkang-ddd-template.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/target/dangkang-ddd-template.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/TestRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/ibatis/OpenedAccountMapperIbatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/ibatis/OpenedAccountMapperIbatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverterImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +74,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/cash/material/codingWork/github-ddd-report/report&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/cash/cmbcWork/localTests/demo&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
@@ -313,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677147403770</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="项目orm映射框架转成mybatis。待完成的任务：1.持续完善分页功能、2、持续将报表后续逻辑开发完">
+      <created>1677461953695</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677461953695</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +331,8 @@
     <MESSAGE value="在report上下文中补全了大部分ORM映射有关的内容；&#10;实现了初步分页的功能并且用方老师抽象出的Page对象进行封装之。&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
     <MESSAGE value="将继承了JpaRepository的mapper中定义的方法修整（不再将Pageable和Modifying注解混搭）&#10;需完成的任务：1)写单元测试、生成单元测试覆盖率报告、2)拿一些数据去测试整个大applicationService、2)将原有的dangkangExample看方老师的需求进行删减、3)异常反馈解析的补充。" />
     <MESSAGE value="重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构" />
+    <MESSAGE value="项目orm映射框架转成mybatis。待完成的任务：1.持续完善分页功能、2、持续将报表后续逻辑开发完" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目orm映射框架转成mybatis。待完成的任务：1.持续完善分页功能、2、持续将报表后续逻辑开发完" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

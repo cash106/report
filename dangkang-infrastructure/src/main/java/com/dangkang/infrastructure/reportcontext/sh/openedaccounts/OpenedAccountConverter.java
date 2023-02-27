@@ -3,6 +3,7 @@ package com.dangkang.infrastructure.reportcontext.sh.openedaccounts;
 import com.dangkang.domain.reportcontext.model.Node;
 import com.dangkang.domain.reportcontext.model.sh.openedaccounts.node.OpenedAccountNode;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis.OpenedAccountDOIbatis;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -15,11 +16,11 @@ public interface OpenedAccountConverter {
     OpenedAccountConverter INSTANCE= Mappers.getMapper(OpenedAccountConverter.class);
 
     @Mapping(source="fullName" ,target="investorFullName")
-    public OpenedAccountNode toNode(OpenedAccountDO openedAccountDO );
+    public OpenedAccountNode toNode(OpenedAccountDOIbatis openedAccountDO );
 
-    public static List<Node> convert2NodeList(List<OpenedAccountDO> openedAccountDOList) {
+    public static List<Node> convert2NodeList(List<OpenedAccountDOIbatis> openedAccountDOList) {
         List<Node> nodeList = new ArrayList<>() ;
-        for(OpenedAccountDO openedAccountDO:openedAccountDOList) {
+        for(OpenedAccountDOIbatis openedAccountDO:openedAccountDOList) {
             nodeList.add(OpenedAccountConverter.INSTANCE.toNode(openedAccountDO));
                    /* new OpenedAccountNode()
                             .setCreatedDate(openedAccountDOList.get(i).getCreateDate())

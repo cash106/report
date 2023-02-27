@@ -21,6 +21,7 @@ public interface OpenedAccountMapperIbatis {
             @Result(property = "createdDate", column = "created_date")
     })
     List<OpenedAccountDOIbatis> findAllByDate(@Param("date") String date, RowBounds rowBounds) ;
-//
-//    int getTotalElementCount(@Param("name") String date) ;
+
+    @Select("SELECT count(1) FROM tb_account_log WHERE DATE(created_date) BETWEEN #{date} AND #{date}")
+    Integer getTotalElementCount(@Param("date") String date) ;
 }
