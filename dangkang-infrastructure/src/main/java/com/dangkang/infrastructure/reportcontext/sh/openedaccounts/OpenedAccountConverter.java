@@ -2,7 +2,6 @@ package com.dangkang.infrastructure.reportcontext.sh.openedaccounts;
 
 import com.dangkang.domain.reportcontext.model.Node;
 import com.dangkang.domain.reportcontext.model.sh.openedaccounts.node.OpenedAccountNode;
-import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis.OpenedAccountDOIbatis;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -6,6 +6,7 @@ import com.dangkang.domain.reportcontext.model.sh.openedaccounts.field.EscrowAcc
 import com.dangkang.domain.reportcontext.model.sh.openedaccounts.field.IdentityNumberField;
 import com.dangkang.domain.reportcontext.model.sh.openedaccounts.field.InvestorFullnameField;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**

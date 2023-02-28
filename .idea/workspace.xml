@@ -23,12 +23,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68c53214-28fe-4fc2-8044-658cfc75f9f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-adapter/src/main/java/com/dangkang/adapter/web/ReportAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/EodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/EodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/SHGenerateReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-app/src/main/java/com/dangkang/app/reportcontext/sh/service/SHGenerateReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/dto/request/AbstractRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/dto/request/MultipleQueryRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/dto/response/AbstractResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/dto/response/MultipleResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/dto/response/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/api/ApplicationQueryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/api/ApplicationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/dto/request/ApplicationQueryRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/dto/request/ApplicationServiceRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/dto/response/ApplicationServiceResultDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/dto/response/QueryResultDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/examplecontext/dto/validator/ApplicationServiceDtoValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/validator/FluentValidateCallBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/validator/FluentValidatorConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/classes/com/dangkang/client/validator/PhoneNumberValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/dangkang-ddd-template.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/node/OpenedAccountNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-domain/src/main/java/com/dangkang/domain/reportcontext/model/sh/openedaccounts/node/OpenedAccountNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/OpenedAccountsRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/TestRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/dataobject/OpenedAccountDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/OpenedAccountMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/ibatis/OpenedAccountMapperIbatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/java/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/repositoryimpl/mapper/ibatis/OpenedAccountMapperIbatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/reportcontext/sh/openedaccounts/OpenedAccountConverterImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dangkang-infrastructure/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/ApplicationServiceDtoConverterImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-infrastructure/target/generated-sources/annotations/com/dangkang/infrastructure/examplecontext/converter/DomainObjectConverterImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/target/classes/com/dangkang/DangkangApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/target/dangkang-ddd-template.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dangkang-start/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +79,19 @@
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="C:\cash\developTools\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="80a4752f-2abf-44ef-a7de-5d2922f0f18b" />
+        <option name="url" value="https://github.com/cash106/report.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -314,11 +359,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="3fdfd757-fabf-4140-9e1c-2e71f4fa690b">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/cash/material/codingWork/github-ddd-report/report/.idea" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="3fdfd757-fabf-4140-9e1c-2e71f4fa690b" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
