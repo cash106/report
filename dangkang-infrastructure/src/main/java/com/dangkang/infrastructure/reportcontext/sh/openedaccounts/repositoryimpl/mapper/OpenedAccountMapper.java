@@ -1,8 +1,7 @@
-package com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.ibatis;
+package com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper;
 
-import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis.OpenedAccountDOIbatis;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
 import org.apache.ibatis.annotations.*;
-import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
  * @time 2023/2/26 22:36
  */
 @Mapper
-public interface OpenedAccountMapperIbatis {
+public interface OpenedAccountMapper {
     @Select("SELECT id, escrow_account_number, identity_code, full_name, created_date FROM tb_account_log WHERE DATE(created_date) BETWEEN #{date} AND #{date} ORDER BY id DESC")
     @Results({
             @Result(property = "id", column = "id"),
@@ -20,7 +19,7 @@ public interface OpenedAccountMapperIbatis {
             @Result(property = "fullName", column = "full_name"),
             @Result(property = "createdDate", column = "created_date")
     })
-    List<OpenedAccountDOIbatis> findAllByDate(@Param("date") String date) ;
+    List<OpenedAccountDO> findAllByDate(@Param("date") String date) ;
 
     @Select("SELECT count(1) FROM tb_account_log WHERE DATE(created_date) BETWEEN #{date} AND #{date}")
     Integer getTotalElementCount(@Param("date") String date) ;

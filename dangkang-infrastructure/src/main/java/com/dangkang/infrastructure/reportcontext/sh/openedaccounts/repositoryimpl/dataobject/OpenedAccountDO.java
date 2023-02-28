@@ -1,4 +1,4 @@
-package com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis;
+package com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject;
 
 import java.util.Date;
 
@@ -8,7 +8,7 @@ import java.util.Date;
  *
  * 开户数据 DATA OBJECT （为mybatis映射而存在的）
  */
-public class OpenedAccountDOIbatis {
+public class OpenedAccountDO {
     private Long id ;
 
     private String escrowAccountNumber ;
@@ -19,10 +19,10 @@ public class OpenedAccountDOIbatis {
 
     private Date createdDate ;
 
-    public OpenedAccountDOIbatis() {
+    public OpenedAccountDO() {
     }
 
-    public OpenedAccountDOIbatis(Long id, String escrowAccountNumber, String identityCode, String fullName, Date createdDate) {
+    public OpenedAccountDO(Long id, String escrowAccountNumber, String identityCode, String fullName, Date createdDate) {
         this.id = id;
         this.escrowAccountNumber = escrowAccountNumber;
         this.identityCode = identityCode;

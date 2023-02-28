@@ -4,8 +4,8 @@ import com.dangkang.domain.reportcontext.dto.PageResponse;
 import com.dangkang.domain.reportcontext.model.Node;
 import com.dangkang.domain.reportcontext.repository.ReportRepository;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.OpenedAccountConverter;
-import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.ibatis.OpenedAccountDOIbatis;
-import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.ibatis.OpenedAccountMapperIbatis;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
+import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.OpenedAccountMapper;
 import com.dangkang.infrastructure.reportcontext.util.ReportFile;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,12 +32,12 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
     ReportFile reportFile ;
 
     @Autowired
-    OpenedAccountMapperIbatis openedAccountMapper ;
+    OpenedAccountMapper openedAccountMapper ;
 
     @Override
     public PageResponse<Node>  getPage (Date date, int index, int size) {
         PageHelper.startPage(index, size) ;
-        List<OpenedAccountDOIbatis> openedAccountDOIbatis = openedAccountMapper.findAllByDate(new SimpleDateFormat(DB_DATE_FORMAT).format(date)) ;
+        List<OpenedAccountDO> openedAccountDOIbatis = openedAccountMapper.findAllByDate(new SimpleDateFormat(DB_DATE_FORMAT).format(date)) ;
         PageResponse<Node> page = this.pageOf(index, openedAccountDOIbatis.size(), OpenedAccountConverter.convert2NodeList(openedAccountDOIbatis)) ;
         return page ;
     }
