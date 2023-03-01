@@ -19,8 +19,8 @@ public interface OpenedAccountMapper {
             @Result(property = "fullName", column = "full_name"),
             @Result(property = "createdDate", column = "created_date")
     })
-    List<OpenedAccountDO> findAllByDate(@Param("date") String date) ;
+    List<OpenedAccountDO> pageFind(@Param("date") String date) ;
 
     @Select("SELECT count(1) FROM tb_account_log WHERE DATE(created_date) BETWEEN #{date} AND #{date}")
-    Integer getTotalElementCount(@Param("date") String date) ;
+    Integer getRecordTotalCount(@Param("date") String date) ;
 }
