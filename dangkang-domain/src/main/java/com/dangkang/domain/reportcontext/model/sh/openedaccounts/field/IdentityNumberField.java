@@ -27,4 +27,8 @@ public class IdentityNumberField implements Field {
     public String format() {
         return this.identityNumber ;
     }
+
+    public String getIdentityNumber() {
+        return identityNumber;
+    }
 }

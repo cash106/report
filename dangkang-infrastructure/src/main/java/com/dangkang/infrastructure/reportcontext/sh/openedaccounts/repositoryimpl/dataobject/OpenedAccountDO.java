@@ -34,39 +34,44 @@ public class OpenedAccountDO {
         return id;
     }
 
-    public void setId(Long id) {
+    public OpenedAccountDO setId(Long id) {
         this.id = id;
+        return this ;
     }
 
     public String getEscrowAccountNumber() {
         return escrowAccountNumber;
     }
 
-    public void setEscrowAccountNumber(String escrowAccountNumber) {
+    public OpenedAccountDO setEscrowAccountNumber(String escrowAccountNumber) {
         this.escrowAccountNumber = escrowAccountNumber;
+        return this ;
     }
 
     public String getIdentityCode() {
         return identityCode;
     }
 
-    public void setIdentityCode(String identityCode) {
+    public OpenedAccountDO setIdentityCode(String identityCode) {
         this.identityCode = identityCode;
+        return this ;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
+    public OpenedAccountDO setFullName(String fullName) {
         this.fullName = fullName;
+        return this ;
     }
 
     public Date getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public OpenedAccountDO setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
+        return this ;
     }
 }

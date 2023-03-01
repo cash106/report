@@ -27,4 +27,8 @@ public class InvestorFullnameField implements Field {
     public String format() {
         return this.investorFullName ;
     }
+
+    public String getInvestorFullName() {
+        return investorFullName;
+    }
 }

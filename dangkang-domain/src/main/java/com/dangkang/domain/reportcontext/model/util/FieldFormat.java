@@ -17,8 +17,13 @@ public class FieldFormat {
     private static void checkLength(String str){
         assert str!=null && str.length()!=0 :"输入字符串不能为null或空";
     }
-    private static void check(String str, int length){
+    public static void check(String str, int length){
         assert str!=null && str.length()<length :"输入字符串不能为null或空并长度不能大于"+length;
+    }
+
+    public static void check2(String str, int length) {
+        if(str == null)
+            throw new IllegalArgumentException("参数不能空") ;
     }
 
     private static final char[] fill(char c,int length){

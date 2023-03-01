@@ -28,4 +28,8 @@ public class DateField implements Field {
     public String format() {
         return this.openedDate ;
     }
+
+    public String getOpenedDate() {
+        return openedDate;
+    }
 }

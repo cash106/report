@@ -27,4 +27,8 @@ public class EscrowAccountField implements Field {
     public String format() {
         return this.escrowAccount ;
     }
+
+    public String getEscrowAccount() {
+        return escrowAccount;
+    }
 }

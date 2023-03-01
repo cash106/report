@@ -21,13 +21,8 @@ public interface OpenedAccountConverter {
         List<Node> nodeList = new ArrayList<>() ;
         for(OpenedAccountDO openedAccountDO:openedAccountDOList) {
             nodeList.add(OpenedAccountConverter.INSTANCE.toNode(openedAccountDO));
-                   /* new OpenedAccountNode()
-                            .setCreatedDate(openedAccountDOList.get(i).getCreateDate())
-                            .setInvestorFullName(openedAccountDOList.get(i).getFullName())
-                            .setEscrowAccountNumber(openedAccountDOList.get(i).getEscrowAccountNumber())
-                            .setIdentityCode(openedAccountDOList.get(i).getIdentityCode())*/
-
         }
         return nodeList ;
     }
+
 }

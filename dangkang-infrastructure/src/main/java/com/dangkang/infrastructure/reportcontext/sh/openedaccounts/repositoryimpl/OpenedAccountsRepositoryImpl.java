@@ -2,6 +2,7 @@ package com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryim
 
 import com.dangkang.domain.reportcontext.dto.PageResponse;
 import com.dangkang.domain.reportcontext.model.Node;
+import com.dangkang.domain.reportcontext.model.sh.openedaccounts.node.OpenedAccountNode;
 import com.dangkang.domain.reportcontext.repository.ReportRepository;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.OpenedAccountConverter;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
@@ -11,7 +12,9 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -51,5 +54,9 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
     public String batchSaveToReportFile(PageResponse<Node> page) {
         reportFile.save(page, REPORT_FILE_NAME) ;
         return REPORT_FILE_NAME ;
+    }
+
+    public int batchSaveToDB(List<OpenedAccountDO> nodes) {
+        return openedAccountMapper.insertCollectList(nodes) ;
     }
 }
