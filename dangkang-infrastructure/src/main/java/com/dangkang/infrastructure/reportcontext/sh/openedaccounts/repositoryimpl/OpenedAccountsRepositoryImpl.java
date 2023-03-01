@@ -35,7 +35,7 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
     OpenedAccountMapper openedAccountMapper ;
 
     @Override
-    public PageResponse<Node>  getPage (Date date, int index, int size) {
+    public PageResponse<Node> pageFind(Date date, int index, int size) {
         PageHelper.startPage(index, size) ;
         List<OpenedAccountDO> openedAccountDOIbatis = openedAccountMapper.pageFind(new SimpleDateFormat(DB_DATE_FORMAT).format(date)) ;
         PageResponse<Node> page = this.pageOf(index, openedAccountDOIbatis.size(), OpenedAccountConverter.convert2NodeList(openedAccountDOIbatis)) ;
@@ -43,7 +43,7 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
     }
 
     @Override
-    public Integer getTotalRecordCount(Date date) {
+    public Integer getRecordTotalCount(Date date) {
         return openedAccountMapper.getRecordTotalCount(new SimpleDateFormat(DB_DATE_FORMAT).format(date)) ;
     }
 

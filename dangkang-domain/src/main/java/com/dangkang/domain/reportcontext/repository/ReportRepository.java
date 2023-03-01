@@ -16,9 +16,9 @@ public interface ReportRepository {
 
 
 
-    public PageResponse<Node> getPage (Date date, int index, int size) ;
+    public PageResponse<Node> pageFind(Date date, int index, int size) ;
 
-    public Integer getTotalRecordCount(Date date) ;
+    public Integer getRecordTotalCount(Date date) ;
 
     public String batchSaveToReportFile(PageResponse<Node> page) ;
 
