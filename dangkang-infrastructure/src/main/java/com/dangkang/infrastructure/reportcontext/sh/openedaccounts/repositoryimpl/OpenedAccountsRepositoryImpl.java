@@ -27,7 +27,7 @@ import java.util.List;
 public class OpenedAccountsRepositoryImpl implements ReportRepository{
 
     public static final String REPORT_FILE_NAME = "BankAccountOpen.txt" ; //清算所开户数据文件具体文件名 + 扩展名
-
+    public static final String COMPRESSED_FILE_NAME = "BankAccountOpen.zip" ;
     public static final String DB_DATE_FORMAT = "yyyy-MM-dd" ;
     public static final String SYSTEM_DATE_FORMAT = "yyyyMMdd" ;
 
@@ -36,6 +36,16 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
 
     @Autowired
     OpenedAccountMapper openedAccountMapper ;
+
+    @Override
+    public String reportNameWithExtension() {
+        return REPORT_FILE_NAME ;
+    }
+
+    @Override
+    public String zipNameWithExtension() {
+        return COMPRESSED_FILE_NAME;
+    }
 
     @Override
     public PageResponse<Node> pageFind(Date date, int index, int size) {

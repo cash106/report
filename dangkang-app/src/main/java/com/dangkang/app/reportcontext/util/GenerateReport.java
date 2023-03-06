@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class GenerateReport {
-
     private static final Logger LOG = LoggerFactory.getLogger(GenerateReport.class);
     @Autowired
     ReportConfig reportConfig;

@@ -14,8 +14,8 @@ import java.util.List;
  */
 public interface ReportRepository {
 
-
-
+    public String reportNameWithExtension() ;
+    public String zipNameWithExtension() ;
     public PageResponse<Node> pageFind(Date date, int index, int size) ;
 
     public Integer getRecordTotalCount(Date date) ;
