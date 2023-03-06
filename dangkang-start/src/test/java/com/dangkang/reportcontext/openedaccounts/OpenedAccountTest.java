@@ -71,7 +71,7 @@ public class OpenedAccountTest {
 
     /* 将插入到数据库中的数据取出来测试 */
     @Test
-    @DisplayName("从关系型数据库读数据转换成PageResponse对象的测试")
+    @DisplayName("pageFind")
     public void testPageFind() throws ParseException {
         Date queryDate=new SimpleDateFormat(DB_DATE_FORMAT).parse("2023-03-01");
         PageResponse<Node> page = openedAccountsRepository.pageFind(queryDate, 1, 10) ;

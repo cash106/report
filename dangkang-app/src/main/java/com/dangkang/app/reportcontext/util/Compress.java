@@ -1,19 +1,14 @@
 package com.dangkang.app.reportcontext.util;
 
 import com.dangkang.domain.reportcontext.ability.BusinessDateService;
-import com.dangkang.domain.reportcontext.repository.ReportRepository;
+import com.dangkang.domain.reportcontext.exception.ReportException;
 import com.dangkang.infrastructure.reportcontext.config.ReportConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -26,24 +21,24 @@ public class Compress {
     @Autowired
     BusinessDateService businessDateService;
 
-    public String compress(ReportRepository repository) {
-        String reportName = "" ;
-        File file = new File(reportConfig.getRootPath(), repository.reportNameWithExtension());
-        String zipFileName = file.getName().concat(".zip");
-        try (FileOutputStream fos = new FileOutputStream(zipFileName);ZipOutputStream zos = new ZipOutputStream(fos)){
-            zos.putNextEntry(new ZipEntry(file.getName()));
-
-            byte[] bytes = Files.readAllBytes(Paths.get(file.getPath()));
-            zos.write(bytes, 0, bytes.length);
+    public String compress(String  reportFileName) {
+        File reportFile = new File(reportConfig.getRootPath(),reportFileName);
+        String zipReportFileName = reportFile.getName().concat(".zip");
+        try (FileOutputStream fos = new FileOutputStream(zipReportFileName);ZipOutputStream zos = new ZipOutputStream(fos)){
+            zos.putNextEntry(new ZipEntry(reportFile.getName()));
+            byte []  buf=new byte[2048];
+            FileInputStream ios=new FileInputStream(reportFile);
+            int reads=-1;
+            while((reads= ios.read(buf))!=-1){
+                zos.write(buf, 0, reads);
+            }
             zos.closeEntry();
-            reportName = zipFileName ;
+            LOG.info("报表文件{}压缩成zip文件{}",reportFileName,zipReportFileName);
         } catch (FileNotFoundException ex) {
-            LOG.error("需压缩的文件 {} 并不存在", repository.reportNameWithExtension());
+            throw new ReportException().setPromptMessage("需压缩的文件 {} 不存在",reportFileName);
         } catch (IOException ex) {
-            LOG.error("在针对 {} 进行压缩时发生了 I/O error: " + ex);
+            throw new ReportException().setCause(ex).setPromptMessage("压缩的文件 {} 失败",reportFileName);
         }
-        return reportName ;
+        return zipReportFileName ;
     }
-
-
 }
