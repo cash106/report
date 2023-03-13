@@ -28,9 +28,9 @@ public class Compress {
             zos.putNextEntry(new ZipEntry(reportFile.getName()));
             byte []  buf=new byte[2048];
             FileInputStream ios=new FileInputStream(reportFile);
-            int reads=-1;
-            while((reads= ios.read(buf))!=-1){
-                zos.write(buf, 0, reads);
+            int len=-1;
+            while((len= ios.read(buf))!=-1){
+                zos.write(buf, 0, len);
             }
             zos.closeEntry();
             LOG.info("报表文件{}压缩成zip文件{}",reportFileName,zipReportFileName);

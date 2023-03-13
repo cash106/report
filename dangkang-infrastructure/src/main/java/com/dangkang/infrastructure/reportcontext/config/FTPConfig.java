@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource(value = "classpath:ftp.properties")
 @ConfigurationProperties(prefix = "shftp")
-public class FtpConfig {
+public class FTPConfig {
 
     private String ftpHost ;
     private int ftpPort ;
