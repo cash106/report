@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * 描述 :         报表有关的Config
  */
 @Component
-@PropertySource(value = "classpath:report.properties")
+@PropertySource(value = "classpath:config/report.properties")
 @ConfigurationProperties(prefix = "report")
 public class ReportConfig {
 
