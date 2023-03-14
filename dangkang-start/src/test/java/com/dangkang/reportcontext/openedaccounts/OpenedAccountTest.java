@@ -13,8 +13,7 @@ import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +37,7 @@ import static com.dangkang.infrastructure.reportcontext.sh.openedaccounts.reposi
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest(classes = DangkangApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@FixMethodOrder(value = MethodSorters.DEFAULT)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class OpenedAccountTest {
 
     /* 需在生成假数据阶段所生成的假数据总数 */
@@ -55,23 +54,20 @@ public class OpenedAccountTest {
 
     @BeforeAll
     @Test
-    @DisplayName("生成测试数据")
-    public void prepareTestData() {
-        openedAccountList = generateOpenedAccountTestData(COUNT);
-    }
-
-    @Test
-    @DisplayName("将测试数据持久化至关系型数据库")
+    @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
+    @Order(1)
     @Ignore
-    public void testBatchSaveToDB () {
-        /* 将其持久化至关系型数据库 */
+    public void prepareTestDataAndBatchSaveToDB() {
+        openedAccountList = generateOpenedAccountTestData(COUNT);
         int affectedRows = openedAccountsRepository.batchSaveToDB(openedAccountList);
+        Assert.assertEquals(COUNT, affectedRows);
         Assert.assertEquals(COUNT, affectedRows);
     }
 
     /* 将插入到数据库中的数据取出来测试 */
     @Test
     @DisplayName("pageFind")
+    @Order(2)
     public void testPageFind() throws ParseException {
         Date queryDate=new SimpleDateFormat(DB_DATE_FORMAT).parse("2023-03-01");
         PageResponse<Node> page = openedAccountsRepository.pageFind(queryDate, 1, 10) ;
@@ -80,6 +76,7 @@ public class OpenedAccountTest {
 
     @Test
     @DisplayName("生成报表文件测试")
+    @Order(3)
     public void testGenerateReportService() {
         String returntedResult = openedAccountGenerateReportService.execute() ;
         Assert.assertEquals("BankAccountOpen.txt", returntedResult) ;

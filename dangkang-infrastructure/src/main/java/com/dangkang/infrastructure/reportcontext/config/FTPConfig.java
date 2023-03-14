@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @time 2023/3/6 10:39
  */
 @Component
-@PropertySource(value = "classpath:ftp.properties")
+@PropertySource(value = "classpath:config/ftp.properties")
 @ConfigurationProperties(prefix = "shftp")
 public class FTPConfig {
 

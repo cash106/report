@@ -1,20 +1,14 @@
 package com.dangkang.app.reportcontext.sh.service;
-
 import com.dangkang.app.annotation.ApplicationService;
 import com.dangkang.app.exception.ExceptionResolver;
 import com.dangkang.client.dto.response.Response;
-import com.dangkang.domain.exception.ApplicationException;
 import com.dangkang.domain.reportcontext.ability.GenerateReportService;
 import com.dangkang.domain.reportcontext.exception.ReportException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.*;
-
 /**
  * @author Orkesh
  * @date 2023/2/21 14:31

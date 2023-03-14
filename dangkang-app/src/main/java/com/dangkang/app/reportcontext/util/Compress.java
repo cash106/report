@@ -23,8 +23,8 @@ public class Compress {
 
     public String compress(String  reportFileName) {
         File reportFile = new File(reportConfig.getRootPath(),reportFileName);
-        String zipReportFileName = reportFile.getName().concat(".zip");
-        try (FileOutputStream fos = new FileOutputStream(zipReportFileName);ZipOutputStream zos = new ZipOutputStream(fos)){
+        String zipReportFileName = reportFile.getName().substring(0, reportFile.getName().lastIndexOf('.')).concat(".zip");
+        try (FileOutputStream fos = new FileOutputStream(reportConfig.getRootPath() + zipReportFileName);ZipOutputStream zos = new ZipOutputStream(fos)){
             zos.putNextEntry(new ZipEntry(reportFile.getName()));
             byte []  buf=new byte[2048];
             FileInputStream ios=new FileInputStream(reportFile);

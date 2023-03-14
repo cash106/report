@@ -1,4 +1,4 @@
-package com.dangkang.adapter.web;
+package com.dangkang.adapter.web.reportcontext;
 
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.OpenedAccountsRepositoryImpl;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.mapper.OpenedAccountMapper;
