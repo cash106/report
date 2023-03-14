@@ -1,6 +1,8 @@
 package com.dangkang.app.reportcontext.sh.service;
 import com.dangkang.app.annotation.ApplicationService;
 import com.dangkang.app.exception.ExceptionResolver;
+import com.dangkang.app.reportcontext.util.Compress;
+import com.dangkang.app.reportcontext.util.Digest;
 import com.dangkang.client.dto.response.Response;
 import com.dangkang.domain.reportcontext.ability.GenerateReportService;
 import com.dangkang.domain.reportcontext.exception.ReportException;
@@ -18,7 +20,13 @@ import java.util.concurrent.*;
 public class EodService {
 
    @Autowired
-    private  SHGenerateReportService shGenerateReportService;
+   private  SHGenerateReportService shGenerateReportService;
+
+   @Autowired
+   private Compress compress ;
+
+   @Autowired
+   private Digest digest ;
 
     private static final Logger LOG = LoggerFactory.getLogger(EodService.class) ;
     private   ExecutorService executor =Executors.newFixedThreadPool(10);
@@ -54,6 +62,13 @@ public class EodService {
                 GenerateReportService gs=EodService.this.shGenerateReportService.getService(reportName);
                 String reportFileName="";
                 if(gs!=null) reportFileName =gs .execute() ;
+                /* 加密压缩和MD5摘要生成 */
+                if(!reportFileName.equals("")) {
+                    String compressedFileName = compress.compress(reportFileName);
+                    LOG.info("对[{}]进行压缩已成功。所生成的压缩文件名为[{}]", reportFileName, compressedFileName) ;
+                    String MD5Str = digest.execute(reportFileName);
+                    LOG.info("对[{}]进行MD5摘要生成已成功。所生成的压缩文件名为[{}]", reportFileName, MD5Str) ;
+                }
                 LOG.info("报表[{}]成功生成报表文件为[{}]", reportName,reportFileName) ;
             }catch(Exception e) {
                 throw new ReportException().setPromptMessage("报表%s生成失败",reportName).setCause(e);
