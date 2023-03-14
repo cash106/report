@@ -62,6 +62,7 @@ public class EodService {
                 GenerateReportService gs=EodService.this.shGenerateReportService.getService(reportName);
                 String reportFileName="";
                 if(gs!=null) reportFileName =gs .execute() ;
+                LOG.info("报表[{}]成功生成报表文件为[{}]", reportName,reportFileName) ;
                 /* 加密压缩和MD5摘要生成 */
                 if(!reportFileName.equals("")) {
                     String compressedFileName = compress.compress(reportFileName);
@@ -69,7 +70,6 @@ public class EodService {
                     String MD5Str = digest.execute(reportFileName);
                     LOG.info("对[{}]进行MD5摘要生成已成功。所生成的压缩文件名为[{}]", reportFileName, MD5Str) ;
                 }
-                LOG.info("报表[{}]成功生成报表文件为[{}]", reportName,reportFileName) ;
             }catch(Exception e) {
                 throw new ReportException().setPromptMessage("报表%s生成失败",reportName).setCause(e);
             }finally {
