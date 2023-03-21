@@ -18,7 +18,7 @@ public class FieldFormat {
         assert str!=null && str.length()!=0 :"输入字符串不能为null或空";
     }
     public static void check(String str, int length){
-        assert str!=null && str.length()<length :"输入字符串不能为null或空并长度不能大于"+length;
+        assert str!=null && str.length()<=length :"输入字符串不能为null或空并长度不能大于"+length;
     }
 
     public static void check2(String str, int length) {
