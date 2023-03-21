@@ -25,7 +25,7 @@ public class GenerateReport {
         for (int i = 0; i < pageCount; ++i) {
             int pageIndex = i + 1;
             PageResponse<Node> page = reportRepository.pageFind(businessDateService.getBusinessDate(), pageIndex, reportConfig.getPageSize());
-            reportFileName = reportRepository.batchSaveToReportFile(page);
+            reportFileName = reportRepository.toShanghaiClearingHouse(page);
             LOG.info("第{}页数据已被写入报表文件{}", pageIndex, reportFileName);
         }
         return reportFileName;

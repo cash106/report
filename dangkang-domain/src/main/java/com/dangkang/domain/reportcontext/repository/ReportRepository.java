@@ -20,7 +20,7 @@ public interface ReportRepository {
 
     public Integer getRecordTotalCount(Date date) ;
 
-    public String batchSaveToReportFile(PageResponse<Node> page) ;
+    public String toShanghaiClearingHouse(PageResponse<Node> page) ;
 
 
     public default int computePageCount (Integer totalCount, Integer pageSize) {

@@ -61,7 +61,7 @@ public class OpenedAccountsRepositoryImpl implements ReportRepository{
     }
 
     @Override
-    public String batchSaveToReportFile(PageResponse<Node> page) {
+    public String toShanghaiClearingHouse(PageResponse<Node> page) {
         reportFile.save(page, REPORT_FILE_NAME) ;
         return REPORT_FILE_NAME ;
     }
