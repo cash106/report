@@ -9,15 +9,15 @@ import com.dangkang.domain.reportcontext.dto.PageResponse;
 import com.dangkang.domain.reportcontext.model.Node;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.OpenedAccountsRepositoryImpl;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
-import org.junit.Assert;
-import org.junit.FixMethodOrder;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+
+
 import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,12 +58,12 @@ public class OpenedAccountTest {
     @Test
     @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
     @Order(1)
-    @Ignore
+
 
     public void prepareTestDataAndBatchSaveToDB() {
         openedAccountList = generateOpenedAccountTestData(COUNT);
         int affectedRows = openedAccountsRepository.batchSaveToDB(openedAccountList);
-        Assert.assertEquals(COUNT, affectedRows);
+        Assertions.assertEquals(COUNT, affectedRows);
     }
 
     /*
@@ -72,13 +72,13 @@ public class OpenedAccountTest {
     @BeforeAll
     @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
     @Order(1)
-    @Ignore
+
     @ParameterizedTest
     @MethodSource("generateOpenedAccountTestData")
     public void prepareTestDataAndBatchSaveToDB(List<OpenedAccountDO> accountList ) {
         openedAccountList = generateOpenedAccountTestData(COUNT);
         int affectedRows = openedAccountsRepository.batchSaveToDB(accountList);
-        Assert.assertEquals(COUNT, affectedRows);
+        Assertions.assertEquals(COUNT, affectedRows);
     }
 
 
@@ -90,7 +90,7 @@ public class OpenedAccountTest {
     public void testPageFind() throws ParseException {
         Date queryDate=new SimpleDateFormat(DB_DATE_FORMAT).parse("2023-03-01");
         PageResponse<Node> page = openedAccountsRepository.pageFind(queryDate, 1, 10) ;
-        Assert.assertNotEquals(null, page.getData()) ;
+        Assertions.assertNotEquals(null, page.getData()) ;
     }
 
     @Test
@@ -98,7 +98,7 @@ public class OpenedAccountTest {
     @Order(3)
     public void testGenerateReportService() {
         String returntedResult = openedAccountGenerateReportService.execute() ;
-        Assert.assertEquals("BankAccountOpen.txt", returntedResult) ;
+        Assertions.assertEquals("BankAccountOpen.txt", returntedResult) ;
     }
 
     /**
