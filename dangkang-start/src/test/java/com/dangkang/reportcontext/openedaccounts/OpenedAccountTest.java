@@ -14,6 +14,8 @@ import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,12 +59,29 @@ public class OpenedAccountTest {
     @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
     @Order(1)
     @Ignore
+
     public void prepareTestDataAndBatchSaveToDB() {
         openedAccountList = generateOpenedAccountTestData(COUNT);
         int affectedRows = openedAccountsRepository.batchSaveToDB(openedAccountList);
         Assert.assertEquals(COUNT, affectedRows);
+    }
+
+    /*
+     参数化测试
+     */
+    @BeforeAll
+    @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
+    @Order(1)
+    @Ignore
+    @ParameterizedTest
+    @MethodSource("generateOpenedAccountTestData")
+    public void prepareTestDataAndBatchSaveToDB(List<OpenedAccountDO> accountList ) {
+        openedAccountList = generateOpenedAccountTestData(COUNT);
+        int affectedRows = openedAccountsRepository.batchSaveToDB(accountList);
         Assert.assertEquals(COUNT, affectedRows);
     }
+
+
 
     /* 将插入到数据库中的数据取出来测试 */
     @Test
@@ -87,6 +106,7 @@ public class OpenedAccountTest {
      * @param count 需要生成的开户数据总数
      * @return
      */
+
     private List<OpenedAccountDO> generateOpenedAccountTestData(int count) {
         /* 托管账号 */
         List<OpenedAccountDO> list = new ArrayList<>(count) ;
@@ -108,5 +128,9 @@ public class OpenedAccountTest {
             list.add(openedAccountDO) ;
         }
         return list ;
+    }
+
+    private List<OpenedAccountDO> generateOpenedAccountTestData() {
+        return generateOpenedAccountTestData(COUNT);
     }
 }
