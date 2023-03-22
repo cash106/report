@@ -40,7 +40,7 @@ import static com.dangkang.infrastructure.reportcontext.sh.openedaccounts.reposi
 @AutoConfigureMockMvc
 @SpringBootTest(classes = DangkangApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class OpenedAccountTest {
+public class OpenedAccountReportTest {
 
     /* 需在生成假数据阶段所生成的假数据总数 */
     private static final int COUNT = 203 ;
@@ -55,11 +55,8 @@ public class OpenedAccountTest {
     OpenedAccountGenerateReportService openedAccountGenerateReportService ;
 
     @BeforeAll
-    @Test
     @DisplayName("生成测试数据并将测试数据持久化至关系型数据库")
     @Order(1)
-
-
     public void prepareTestDataAndBatchSaveToDB() {
         openedAccountList = generateOpenedAccountTestData(COUNT);
         int affectedRows = openedAccountsRepository.batchSaveToDB(openedAccountList);
@@ -98,7 +95,7 @@ public class OpenedAccountTest {
     @Order(3)
     public void testGenerateReportService() {
         String returntedResult = openedAccountGenerateReportService.execute() ;
-        Assertions.assertEquals("BankAccountOpen.txt", returntedResult) ;
+        Assertions.assertEquals(OpenedAccountsRepositoryImpl.REPORT_FILE_NAME, returntedResult) ;
     }
 
     /**
