@@ -7,6 +7,7 @@ import com.dangkang.DangkangApplication;
 import com.dangkang.app.reportcontext.sh.openedaccounts.serviceimpl.OpenedAccountGenerateReportService;
 import com.dangkang.domain.reportcontext.dto.PageResponse;
 import com.dangkang.domain.reportcontext.model.Node;
+import com.dangkang.infrastructure.reportcontext.config.ReportConfig;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.OpenedAccountsRepositoryImpl;
 import com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.dataobject.OpenedAccountDO;
 
@@ -23,6 +24,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -31,6 +33,8 @@ import java.util.Date;
 import java.util.List;
 
 import static com.dangkang.infrastructure.reportcontext.sh.openedaccounts.repositoryimpl.OpenedAccountsRepositoryImpl.DB_DATE_FORMAT;
+import static org.junit.jupiter.api.AssertTrue.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author Orkesh
@@ -50,6 +54,8 @@ public class OpenedAccountReportTest {
     private  List<OpenedAccountDO> openedAccountList;
     @Autowired
     OpenedAccountsRepositoryImpl openedAccountsRepository;
+    @Autowired
+    ReportConfig reportConfig;
 
     @Autowired
     OpenedAccountGenerateReportService openedAccountGenerateReportService ;
@@ -96,6 +102,7 @@ public class OpenedAccountReportTest {
     public void testGenerateReportService() {
         String returntedResult = openedAccountGenerateReportService.execute() ;
         Assertions.assertEquals(OpenedAccountsRepositoryImpl.REPORT_FILE_NAME, returntedResult) ;
+        assertTrue(new File(reportConfig.getRootPath(),returntedResult).exists());
     }
 
     /**
